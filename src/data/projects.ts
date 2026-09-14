@@ -14,6 +14,7 @@ export interface Project {
   visualAlt: string;
   visualLabel: string;
   github: string;
+  liveDemo?: string;
   highlights: string[];
   testing?: string[];
   architecture?: string[];
