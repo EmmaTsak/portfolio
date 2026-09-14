@@ -145,6 +145,13 @@ p { color: var(--muted); }
   margin-bottom: 26px;
 }
 
+.project-card__links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 640px) {
   .recommendation-card {
     padding: 28px 22px;
