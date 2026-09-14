@@ -1,4 +1,4 @@
-# Emmanouela Tsakalidou — Portfolio
+# Emmanouela Tsakalidou - Portfolio
 
 Recruiter-focused software-development portfolio built with React, TypeScript and Vite. The site positions software development as the primary identity, with quality engineering and UI/UX as complementary, evidence-backed strengths.
 
