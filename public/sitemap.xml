@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>http://localhost:5173/</loc></url>
+  <url><loc>http://localhost:5173/projects</loc></url>
+  <url><loc>http://localhost:5173/projects/pricewise</loc></url>
+  <url><loc>http://localhost:5173/projects/cpp-sensor-dashboard</loc></url>
+  <url><loc>http://localhost:5173/projects/video-games-api</loc></url>
+  <url><loc>http://localhost:5173/projects/android-contacts-app</loc></url>
+  <url><loc>http://localhost:5173/projects/reposentry</loc></url>
+  <url><loc>http://localhost:5173/resume</loc></url>
+</urlset>

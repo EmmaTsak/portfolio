@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Redirecting…</title></head><body><script>
+(function () {
+  var path = window.location.pathname;
+  var query = window.location.search;
+  var hash = window.location.hash;
+  var onGithubPages = window.location.hostname.endsWith('github.io');
+  var parts = path.split('/').filter(Boolean);
+  var base = onGithubPages && parts.length ? '/' + parts[0] + '/' : '/';
+  var route = onGithubPages ? '/' + parts.slice(1).join('/') : path;
+  sessionStorage.setItem('spa-redirect', route + query + hash);
+  window.location.replace(base);
+})();
+</script></body></html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+<rect width="1200" height="720" rx="36" fill="#17131a"/><text x="70" y="90" fill="#b2a7b8" font-family="Arial" font-size="24">MOBILE PROJECT · ANDROID CONTACTS APP</text>
+<g font-family="Arial" text-anchor="middle">
+<rect x="80" y="245" width="220" height="170" rx="25" fill="#211a25" stroke="#b06eda" stroke-width="3"/><text x="190" y="315" fill="white" font-size="31">Compose UI</text><text x="190" y="355" fill="#b2a7b8" font-size="20">screens + navigation</text>
+<rect x="365" y="245" width="220" height="170" rx="25" fill="#211a25" stroke="#4d4352" stroke-width="2"/><text x="475" y="315" fill="white" font-size="31">ViewModel</text><text x="475" y="355" fill="#b2a7b8" font-size="20">state + logic</text>
+<rect x="650" y="245" width="220" height="170" rx="25" fill="#211a25" stroke="#4d4352" stroke-width="2"/><text x="760" y="315" fill="white" font-size="31">Repository</text><text x="760" y="355" fill="#b2a7b8" font-size="20">data abstraction</text>
+<rect x="935" y="245" width="190" height="170" rx="25" fill="#211a25" stroke="#b06eda" stroke-width="3"/><text x="1030" y="315" fill="white" font-size="31">Room</text><text x="1030" y="355" fill="#b2a7b8" font-size="20">local database</text>
+<path d="M300 330H365M585 330H650M870 330H935" stroke="#b06eda" stroke-width="5"/></g>
+<text x="70" y="650" fill="#8f8494" font-family="Arial" font-size="21">Repository-backed MVVM architecture illustration — not an app screenshot.</text></svg>
