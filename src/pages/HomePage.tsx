@@ -1,4 +1,16 @@
-import { ArrowRight, CheckCircle2, ClipboardCheck, Github, Linkedin, Mail, Palette, ShieldCheck, TerminalSquare } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle2,
+  ClipboardCheck,
+  FileText,
+  Github,
+  Linkedin,
+  Mail,
+  Palette,
+  Quote,
+  ShieldCheck,
+  TerminalSquare,
+} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { featuredProjects } from '../data/projects';
 import { experience, profile, skillGroups } from '../data/profile';
@@ -21,6 +33,46 @@ export function HomePage() {
 
     <section className="section" id="experience"><div className="container"><SectionHeading eyebrow="Experience" title="Where development and quality met"/><div className="timeline">{experience.map((item) => <Reveal key={item.role}><article className="timeline-item"><div className="timeline-period">{item.period}</div><div><h3>{item.role}</h3><p className="timeline-company">{item.company}</p><ul>{item.points.map((point) => <li key={point}>{point}</li>)}</ul></div></article></Reveal>)}</div></div></section>
 
+    <Reveal>
+      <section className="section section--soft" id="recommendation">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Recommendation"
+            title="What it was like to work with me"
+            description="A professional recommendation from my software-development internship at Valmore Technologies."
+          />
+    
+          <article className="recommendation-card">
+            <Quote className="recommendation-icon" />
+    
+            <blockquote className="recommendation-quote">
+              “Her strong work ethic and willingness to support the team made her
+              a valued member of our organization.”
+            </blockquote>
+    
+            <div className="recommendation-author">
+              <strong>Dimitris Ampelakiotis</strong>
+              <span>Co-Owner & CTO · Valmore Technologies</span>
+            </div>
+    
+            <p className="recommendation-context">
+              Software Development Internship · React Native · Testing · Debugging · Troubleshooting
+            </p>
+    
+            <a
+              className="button button--ghost"
+              href={`${import.meta.env.BASE_URL}Valmore_Recommendation_Emmanouela_Tsakalidou.pdf`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FileText />
+              View full recommendation
+            </a>
+          </article>
+        </div>
+      </section>
+    </Reveal>
+    
     <Reveal><section className="section section--soft" id="education"><div className="container"><SectionHeading eyebrow="Education" title="Software-development foundations, applied in projects"/><div className="education-grid"><article><span>Sep 2024 — Jun 2026</span><h3>BSc (Hons) Computing (Software Development)</h3><p>University of Essex</p><p>Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints.</p></article><article><span>Sep 2023 — Jun 2024</span><h3>Web Designer/Developer — Video Games</h3><p>IVT OMIROS</p><p>Earlier web-development and design study that supports the interface and user-experience side of my software work.</p></article></div></div></section></Reveal>
 
     <section className="section" id="skills"><div className="container"><SectionHeading eyebrow="Skills" title="Evidence over proficiency bars" description="Technologies are grouped by how I use them, not assigned arbitrary percentages."/><div className="skills-grid">{skillGroups.map((group) => <Reveal key={group.title}><article className="skill-card"><h3>{group.title}</h3><div className="tag-row">{group.items.map((item) => <span className="tag" key={item}>{item}</span>)}</div></article></Reveal>)}</div></div></section>
