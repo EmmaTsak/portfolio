@@ -118,6 +118,20 @@ p { color: var(--muted); }
   display: block;
 }
 
+.about-relocation {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: -20px 0 28px;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(176, 110, 218, 0.08);
+  color: var(--purple-strong);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
 .recommendation-card {
   max-width: 900px;
   padding: 42px;
