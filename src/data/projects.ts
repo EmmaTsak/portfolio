@@ -35,6 +35,7 @@ export const projects: Project[] = [
     visualAlt: 'Implemented PriceWise compare-prices page with search and supermarket filters.',
     visualLabel: 'Implemented application',
     github: 'https://github.com/EmmaTsak/pricewise-app',
+    liveDemo: 'https://pricewise-web-production.up.railway.app',
     highlights: ['Product search and supermarket filters', 'Scheduled scraping instead of per-search scraping', 'Account-free shopping list with optional email delivery', 'Greek/English interface'],
     testing: ['Manual frontend flow testing', 'API endpoint checks', 'Scraper behaviour and error handling', 'Socket.IO refresh behaviour'],
   },
