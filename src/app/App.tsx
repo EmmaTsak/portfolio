@@ -27,10 +27,28 @@ export function App() {
   const location = useLocation();
   useEffect(() => {
     if (location.hash) {
-      requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView({ behavior: 'smooth' }));
-      return;
+      const sectionId = location.hash.slice(1);
+  
+      const scrollToSection = () => {
+        const element = document.getElementById(sectionId);
+  
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+        }
+      };
+  
+      const timeout = window.setTimeout(scrollToSection, 100);
+  
+      return () => window.clearTimeout(timeout);
     }
-    window.scrollTo({ top: 0, behavior: 'auto' });
+  
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto',
+    });
   }, [location.pathname, location.hash]);
 
   return (
