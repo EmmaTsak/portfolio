@@ -1,4 +1,4 @@
-import { ArrowLeft, Github, Layers3, Mail, Search, ShieldCheck, ShoppingCart, TestTube2 } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Github, Layers3, Mail, Search, ShieldCheck, ShoppingCart, TestTube2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SafeImage } from '../components/SafeImage';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -13,7 +13,27 @@ const research = [
 export function PriceWisePage() {
   usePageMeta({ title: 'PriceWise Case Study — Emmanouela Tsakalidou', description: 'Research, UX process and engineering architecture behind PriceWise, a grocery price comparison bachelor thesis prototype.', path: '/projects/pricewise' });
   return <>
-    <section className="case-hero section page-top"><div className="container"><Link className="back-link" to="/projects"><ArrowLeft/>All projects</Link><div className="case-hero-grid"><div><p className="eyebrow">Flagship case study · Bachelor thesis</p><h1>PriceWise</h1><p className="case-lead">A full-stack grocery price comparison prototype designed to make it easier to compare products across Greek supermarket websites and organise a shopping list without requiring an account.</p><div className="tag-row"><span className="tag">Full Stack</span><span className="tag">Research</span><span className="tag">UI/UX</span><span className="tag">Manual Testing</span></div><div className="button-row"><a className="button button--primary" href="https://github.com/EmmaTsak/pricewise-app" target="_blank" rel="noreferrer"><Github/>View repository</a></div></div><div className="case-visual"><SafeImage src={`${import.meta.env.BASE_URL}assets/pricewise-app-home.webp`} alt="Implemented PriceWise compare-prices page in English, showing the navigation, hero message, search field and filters."/><span className="visual-label">Implemented PriceWise interface</span></div></div></div></section>
+    <section className="case-hero section page-top"><div className="container"><Link className="back-link" to="/projects"><ArrowLeft/>All projects</Link><div className="case-hero-grid"><div><p className="eyebrow">Flagship case study · Bachelor thesis</p><h1>PriceWise</h1><p className="case-lead">A full-stack grocery price comparison prototype designed to make it easier to compare products across Greek supermarket websites and organise a shopping list without requiring an account.</p><div className="tag-row"><span className="tag">Full Stack</span><span className="tag">Research</span><span className="tag">UI/UX</span><span className="tag">Manual Testing</span></div><div className="button-row">
+  <a
+    className="button button--primary"
+    href="https://pricewise-web-production.up.railway.app"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <ExternalLink />
+    Live demo
+  </a>
+
+  <a
+    className="button button--ghost"
+    href="https://github.com/EmmaTsak/pricewise-app"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <Github />
+    View repository
+  </a>
+</div></div><div className="case-visual"><SafeImage src={`${import.meta.env.BASE_URL}assets/pricewise-app-home.webp`} alt="Implemented PriceWise compare-prices page in English, showing the navigation, hero message, search field and filters."/><span className="visual-label">Implemented PriceWise interface</span></div></div></div></section>
 
     <section className="section section--soft"><div className="container"><div className="case-section-head"><p className="eyebrow">The problem</p><h2>Price data exists, but not in one consistent place.</h2><p>Greek supermarket sites differ in structure, naming, categories and availability. Comparing them manually takes time; engineering a unified view also requires collection, normalisation, storage and matching across inconsistent sources.</p></div><div className="research-grid">{research.map((item) => <div className="stat-card" key={item.value}><strong>{item.value}</strong><span>{item.label}</span></div>)}</div></div></section>
 
