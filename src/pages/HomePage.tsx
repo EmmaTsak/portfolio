@@ -151,6 +151,73 @@ export function HomePage() {
         and UI/UX as complementary strengths.
       </p>
     </div>
-  </div><div className="contact-actions"><a className="button button--primary" href={`mailto:${profile.email}`}><Mail/>Email me</a><button className="button button--ghost" onClick={copyEmail}>Copy email</button><a href={profile.github} target="_blank" rel="noreferrer"><Github/>GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin/>LinkedIn</a></div></div></section>
+  <section className="section" id="contact">
+  <div className="container contact-card">
+
+    <div className="contact-profile">
+      <img
+        src={`${import.meta.env.BASE_URL}assets/136719701.jpg`}
+        alt="Portrait of Emmanouela Tsakalidou"
+      />
+
+      <div>
+        <p className="eyebrow">Contact</p>
+
+        <h2>
+          Looking for a developer who cares how the software behaves?
+        </h2>
+
+        <p>
+          I’m interested in software-development roles, with quality engineering
+          and UI/UX as complementary strengths.
+        </p>
+
+        <a
+          className="contact-email"
+          href={`mailto:${profile.email}`}
+        >
+          <Mail />
+          {profile.email}
+        </a>
+      </div>
+    </div>
+
+    <div className="contact-actions">
+      <a
+        className="button button--primary"
+        href={`mailto:${profile.email}`}
+      >
+        <Mail />
+        Email me
+      </a>
+
+      <button
+        className="button button--ghost"
+        onClick={copyEmail}
+      >
+        Copy email
+      </button>
+
+      <a
+        href={profile.github}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Github />
+        GitHub
+      </a>
+
+      <a
+        href={profile.linkedin}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Linkedin />
+        LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>
   </>;
 }
