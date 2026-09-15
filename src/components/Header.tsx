@@ -5,7 +5,7 @@ import { profile } from '../data/profile';
 
 const links = [
   { label: 'Home', to: '/' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Projects', to: '/#projects' },
   { label: 'Experience', to: '/#experience' },
   { label: 'Skills', to: '/#skills' },
   { label: 'Contact', to: '/#contact' },
@@ -20,6 +20,7 @@ export function Header() {
   const handleNav = () => setOpen(false);
 
   useEffect(() => {
+    // Project detail / all-projects pages
     if (location.pathname.startsWith('/projects')) {
       setActiveSection('Projects');
       return;
@@ -31,18 +32,21 @@ export function Header() {
     }
 
     const updateActiveSection = () => {
+      const projects = document.getElementById('projects');
       const experience = document.getElementById('experience');
       const skills = document.getElementById('skills');
       const contact = document.getElementById('contact');
 
-      const offset = window.scrollY + 180;
+      const position = window.scrollY + 180;
 
-      if (contact && offset >= contact.offsetTop) {
+      if (contact && position >= contact.offsetTop) {
         setActiveSection('Contact');
-      } else if (skills && offset >= skills.offsetTop) {
+      } else if (skills && position >= skills.offsetTop) {
         setActiveSection('Skills');
-      } else if (experience && offset >= experience.offsetTop) {
+      } else if (experience && position >= experience.offsetTop) {
         setActiveSection('Experience');
+      } else if (projects && position >= projects.offsetTop) {
+        setActiveSection('Projects');
       } else {
         setActiveSection('Home');
       }
