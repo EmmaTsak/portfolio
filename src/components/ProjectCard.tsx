@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github } from 'lucide-react';
+import { ArrowUpRight, ExternalLink, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import type { Project } from '../data/projects';
 import { SafeImage } from './SafeImage';
