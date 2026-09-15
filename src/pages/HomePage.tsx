@@ -55,11 +55,15 @@ export function HomePage() {
           title="Engineering with quality and usability in the loop"
           description="My experience spans application development, testing, debugging and interface work. I like projects where implementation decisions can be traced back to user needs and verified behaviour."
         />
-
+      
+        <p className="about-relocation">
+          Open to relocation across Europe · Greek & English
+        </p>
+      
         <div className="about-photo">
           <img
             src={`${import.meta.env.BASE_URL}assets/136719701.jpg`}
-            alt="Portrait"
+            alt="Portrait of Emmanouela Tsakalidou"
           />
         </div>
       </div>
