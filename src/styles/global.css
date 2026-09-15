@@ -194,6 +194,25 @@ p { color: var(--muted); }
   border: 1px solid var(--line);
 }
 
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+  color: var(--purple-strong);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-email:hover {
+  color: white;
+}
+
+.contact-email svg {
+  width: 18px;
+  height: 18px;
+}
+
 @media (max-width: 700px) {
   .contact-profile {
     grid-template-columns: 1fr;
