@@ -45,7 +45,48 @@ export function HomePage() {
   </span>
 </code></div><div className="hero-mini-grid"><div><TerminalSquare/><strong>Build</strong><span>Frontend, backend & APIs</span></div><div><ShieldCheck/><strong>Validate</strong><span>Testing & debugging</span></div><div><Palette/><strong>Design</strong><span>User-centred interfaces</span></div></div></div></div></section>
 
-    <Reveal><section className="section section--soft" id="about"><div className="container split-intro"><SectionHeading eyebrow="About" title="Engineering with quality and usability in the loop" description="My experience spans application development, testing, debugging and interface work. I like projects where implementation decisions can be traced back to user needs and verified behaviour."/><div className="fact-grid"><div><span>01</span><strong>Full-stack foundation</strong><p>React, Node.js, APIs, relational and NoSQL databases.</p></div><div><span>02</span><strong>Quality mindset</strong><p>Jest, manual validation, API testing, debugging and defect investigation.</p></div><div><span>03</span><strong>UI/UX awareness</strong><p>Figma, research, personas, journeys and responsive interface decisions.</p></div></div></div></section></Reveal>
+    <Reveal>
+  <section className="section section--soft" id="about">
+    <div className="container split-intro">
+
+      <div className="about-intro">
+        <SectionHeading
+          eyebrow="About"
+          title="Engineering with quality and usability in the loop"
+          description="My experience spans application development, testing, debugging and interface work. I like projects where implementation decisions can be traced back to user needs and verified behaviour."
+        />
+
+        <div className="about-photo">
+          <img
+            src={`${import.meta.env.BASE_URL}assets/136719701.jpg`}
+            alt="Portrait"
+          />
+        </div>
+      </div>
+
+      <div className="fact-grid">
+        <div>
+          <span>01</span>
+          <strong>Full-stack foundation</strong>
+          <p>React, Node.js, APIs, relational and NoSQL databases.</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <strong>Quality mindset</strong>
+          <p>Jest, manual validation, API testing, debugging and defect investigation.</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <strong>UI/UX awareness</strong>
+          <p>Figma, research, personas, journeys and responsive interface decisions.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Reveal>
 
     <section className="section" id="featured-work"><div className="container"><SectionHeading eyebrow="Selected work" title="Projects that show how I build" description="A focused selection chosen for technical depth, range and relevance to software-engineering roles."/><div className="project-grid">{featuredProjects.map((project) => <Reveal key={project.slug}><ProjectCard project={project}/></Reveal>)}</div><div className="section-cta"><Link className="button button--ghost" to="/projects">See all projects <ArrowRight /></Link></div></div></section>
 
