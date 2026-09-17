@@ -117,15 +117,13 @@ export function HomePage() {
               Software Development Internship · React Native · Testing · Debugging · Troubleshooting
             </p>
     
-            <a
+            <Link
               className="button button--ghost"
-              href={`${import.meta.env.BASE_URL}Letter%20of%20Recommendation-Emmanouela%20Tsakalidou.pdf`}
-              target="_blank"
-              rel="noreferrer"
+              to="/recommendation"
             >
               <FileText />
               View full recommendation
-            </a>
+            </Link>
           </article>
         </div>
       </section>

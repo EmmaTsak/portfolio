@@ -9,6 +9,7 @@ import { PriceWisePage } from '../pages/PriceWisePage';
 import { ProjectDetailPage } from '../pages/ProjectDetailPage';
 import { ResumePage } from '../pages/ResumePage';
 import { NotFoundPage } from '../pages/NotFoundPage';
+import { RecommendationPage } from '../pages/RecommendationPage';
 
 export function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ export function AppRoutes() {
       <Route path="/projects/pricewise" element={<PriceWisePage />} />
       <Route path="/projects/:slug" element={<ProjectDetailPage />} />
       <Route path="/resume" element={<ResumePage />} />
+      <Route path="/recommendation" element={<RecommendationPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
