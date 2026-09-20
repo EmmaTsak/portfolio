@@ -18,6 +18,8 @@ import { ProjectCard } from '../components/ProjectCard';
 import { Reveal } from '../components/Reveal';
 import { SectionHeading } from '../components/SectionHeading';
 import { usePageMeta } from '../hooks/usePageMeta';
+import { AcademicCourseCard } from '../components/AcademicCourseCard';
+import { academicCourses } from '../data/coursework';
 
 export function HomePage() {
   usePageMeta({ title: 'Emmanouela Tsakalidou | Portfolio', description: profile.positioning, path: '/' });
@@ -130,6 +132,24 @@ export function HomePage() {
     </Reveal>
     
     <Reveal><section className="section section--soft" id="education"><div className="container"><SectionHeading eyebrow="Education" title="Software-development foundations, applied in projects"/><div className="education-grid"><article><span>Sep 2024 — Jun 2026</span><h3>BSc (Hons) Computing (Software Development)</h3><p>University of Essex</p><p>Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints.</p></article><article><span>Sep 2023 — Jun 2024</span><h3>Web Designer/Developer — Video Games</h3><p>IVT OMIROS</p><p>Earlier web-development and design study that supports the interface and user-experience side of my software work.</p></article></div></div></section></Reveal>
+
+    <section className="section" id="coursework">
+      <div className="container">
+        <SectionHeading
+          eyebrow="Academic coursework"
+          title="Relevant technical coursework"
+          description="Selected coursework from my BSc (Hons) Computing (Software Development), covering backend development, databases, mobile development, systems programming, networking, software engineering and user-centred design."
+        />
+
+        <div className="course-grid">
+          {academicCourses.map((course) => (
+            <Reveal key={course.name}>
+              <AcademicCourseCard course={course} />
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
 
     <section className="section" id="skills"><div className="container"><SectionHeading eyebrow="Skills" title="Evidence over proficiency bars" description="Technologies are grouped by how I use them, not assigned arbitrary percentages."/><div className="skills-grid">{skillGroups.map((group) => <Reveal key={group.title}><article className="skill-card"><h3>{group.title}</h3><div className="tag-row">{group.items.map((item) => <span className="tag" key={item}>{item}</span>)}</div></article></Reveal>)}</div></div></section>
 

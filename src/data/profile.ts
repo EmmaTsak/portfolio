@@ -19,16 +19,6 @@ export const experience = [
       'Built reusable React Native components and validated behaviour, consistency and feature integration.',
     ],
   },
-  {
-    period: 'Jul 2020 — Oct 2020',
-    role: 'Online Store Co-Administrator',
-    company: 'Zozefina Jewelry — Little Zozefina · Larissa',
-    points: [
-      'Updated customer-facing product information, prices, images and multimedia content.',
-      'Checked storefront content for accuracy and consistency.',
-      'Produced and edited product photography for e-commerce and marketing use.',
-    ],
-  },
 ];
 
 export const skillGroups = [
