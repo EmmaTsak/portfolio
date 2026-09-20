@@ -42,11 +42,11 @@ export const projects: Project[] = [
   {
     slug: 'vinted-relisting-assistant',
     name: 'Vinted Relisting Assistant',
-    eyebrow: 'Python · Desktop application · Active development',
+    eyebrow: 'Python · Desktop application · In development',
     description:
       'A privacy-first Windows desktop application for organising second-hand marketplace listings, planning daily relisting work and managing a local inventory without automating marketplace publishing.',
     role: 'Desktop application developer · UI/UX designer',
-    status: 'Active development',
+    status: 'In development',
     featured: true,
     categories: ['Automation', 'QA / Testing', 'UI/UX'],
     tech: [
