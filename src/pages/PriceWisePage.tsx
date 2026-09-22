@@ -1,4 +1,4 @@
-import { ArrowLeft, ExternalLink, Github, Layers3, Mail, Search, ShieldCheck, ShoppingCart, TestTube2 } from 'lucide-react';
+import { ArrowLeft, FileText, ExternalLink, Github, Layers3, Mail, Search, ShieldCheck, ShoppingCart, TestTube2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { SafeImage } from '../components/SafeImage';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -33,6 +33,15 @@ export function PriceWisePage() {
     <Github />
     View repository
   </a>
+
+  <Link
+    className="button button--ghost"
+    to="/projects/pricewise/thesis"
+  >
+    <FileText />
+    View thesis (Greek)
+  </Link>
+
 </div></div><div className="case-visual"><SafeImage src={`${import.meta.env.BASE_URL}assets/pricewise-app-home.webp`} alt="Implemented PriceWise compare-prices page in English, showing the navigation, hero message, search field and filters."/><span className="visual-label">Implemented PriceWise interface</span></div></div></div></section>
 
     <section className="section section--soft"><div className="container"><div className="case-section-head"><p className="eyebrow">The problem</p><h2>Price data exists, but not in one consistent place.</h2><p>Greek supermarket sites differ in structure, naming, categories and availability. Comparing them manually takes time; engineering a unified view also requires collection, normalisation, storage and matching across inconsistent sources.</p></div><div className="research-grid">{research.map((item) => <div className="stat-card" key={item.value}><strong>{item.value}</strong><span>{item.label}</span></div>)}</div></div></section>
@@ -50,6 +59,47 @@ export function PriceWisePage() {
     <section className="section"><div className="container two-column-case"><div><p className="eyebrow">Quality & testing</p><h2>What was actually tested</h2><p>The thesis describes the technical evaluation as primarily manual testing. That distinction matters: Playwright was used for dynamic web scraping, not claimed as end-to-end UI test automation.</p><ul className="check-list"><li><TestTube2/>Frontend navigation and behaviour</li><li><TestTube2/>Adding/removing items and local-list storage</li><li><TestTube2/>Email delivery and language switching</li><li><TestTube2/>Filtering and Socket.IO interface refresh</li><li><TestTube2/>Backend endpoints, database connectivity and scraper behaviour</li><li><TestTube2/>Error handling for incomplete or invalid cases</li></ul></div><div className="callout-card"><span>Future quality work</span><h3>Automated Jest tests were proposed, not fabricated.</h3><p>The thesis identifies unit and integration tests for data cleaning, product normalisation, API endpoints, shopping-list logic and frontend helpers as a future improvement.</p></div></div></section>
 
     <section className="section section--soft"><div className="container two-column-case"><div><p className="eyebrow">Engineering challenges</p><h2>Where the complexity lives</h2><ul className="bullet-list"><li>Different supermarket HTML structures and JavaScript-loading behaviour</li><li>Selectors and scraping logic that can break when external sites change</li><li>Normalising and matching products with similar names but different quantities or brands</li><li>Keeping the multilingual interface clear without pretending product data is automatically translated</li><li>Balancing data freshness with responsible, limited scraping frequency</li></ul></div><div><p className="eyebrow">Next iterations</p><h2>What I would improve next</h2><ul className="bullet-list"><li>Improve product matching and comparison accuracy</li><li>Run focused usability tests with task-based observations</li><li>Add price history and threshold notifications</li><li>Explore a mobile app with offline shopping-list support</li><li>Add systematic unit and integration testing</li></ul></div></div></section>
+
+    <section className="section section--soft">
+      <div className="container two-column-case">
+        <div>
+          <p className="eyebrow">
+            Full academic report
+          </p>
+
+          <h2>
+            Want the complete research and technical documentation?
+          </h2>
+
+          <p>
+            The full thesis documents the research process,
+            requirements, design decisions, implementation,
+            architecture, testing and evaluation behind PriceWise.
+          </p>
+        </div>
+
+        <div className="callout-card">
+          <span>BSc thesis</span>
+
+          <h3>
+            Read the complete PriceWise thesis
+          </h3>
+
+          <p>
+            View the original academic report directly in the
+            portfolio or download the PDF.
+          </p>
+
+          <Link
+            className="button button--primary"
+            to="/projects/pricewise/thesis"
+          >
+            <FileText />
+            Open thesis
+          </Link>
+        </div>
+      </div>
+    </section>
 
     <section className="section"><div className="container contact-card"><div><p className="eyebrow">Explore the code</p><h2>Want to see how PriceWise is structured?</h2><p>The public repository contains the frontend, backend, Docker configuration and scraper workflow.</p></div><div className="contact-actions"><a className="button button--primary" href="https://github.com/EmmaTsak/pricewise-app" target="_blank" rel="noreferrer"><Github/>GitHub repository</a><a className="button button--ghost" href="mailto:tsakalidouemmanouela@gmail.com"><Mail/>Ask me about it</a></div></div></section>
   </>;
