@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Αρχική",
+    "projects": "Projects",
+    "experience": "Εμπειρία",
+    "skills": "Δεξιότητες",
+    "contact": "Επικοινωνία"
+  },
+  "language": {
+    "english": "Αγγλικά",
+    "greek": "Ελληνικά",
+    "switchToEnglish": "Αλλαγή στα Αγγλικά",
+    "switchToGreek": "Αλλαγή στα Ελληνικά"
+  },
+  "home": {
+    "hero": {
+      "availability": "Ανοιχτή σε ευκαιρίες ανάπτυξης λογισμικού και διασφάλισης ποιότητας",
+      "role": "Software Developer",
+      "positioning": "Αναπτύσσω αξιόπιστες εφαρμογές σε frontend, backend και APIs, με έμφαση στην ποιότητα του λογισμικού και την εμπειρία του χρήστη από την αρχή.",
+      "softwareDevelopment": "Ανάπτυξη Λογισμικού",
+      "qualityEngineering": "Ποιότητα Λογισμικού",
+      "uiux": "UI/UX",
+      "viewWork": "Δείτε τη δουλειά μου",
+      "viewCv": "Βιογραφικό",
+      "build": "Ανάπτυξη",
+      "buildDescription": "Frontend, backend & APIs",
+      "validate": "Έλεγχος",
+      "validateDescription": "Testing & debugging",
+      "design": "Σχεδιασμός",
+      "designDescription": "Διεπαφές με επίκεντρο τον χρήστη"
+    },
+    "about": {
+      "eyebrow": "Σχετικά με εμένα",
+      "title": "Ανάπτυξη λογισμικού με έμφαση στην ποιότητα και τη χρηστικότητα",
+      "description": "Η εμπειρία μου περιλαμβάνει ανάπτυξη εφαρμογών, testing, debugging και σχεδιασμό διεπαφών. Προτιμώ έργα όπου οι τεχνικές αποφάσεις βασίζονται στις ανάγκες των χρηστών και η συμπεριφορά του λογισμικού μπορεί να επαληθευτεί.",
+      "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
+      "fullStackTitle": "Full-stack βάση",
+      "fullStackDescription": "React, Node.js, APIs, σχεσιακές και NoSQL βάσεις δεδομένων.",
+      "qualityTitle": "Έμφαση στην ποιότητα",
+      "qualityDescription": "Jest, χειροκίνητοι έλεγχοι, API testing, debugging και διερεύνηση σφαλμάτων.",
+      "uxTitle": "Γνώση UI/UX",
+      "uxDescription": "Figma, έρευνα, personas, user journeys και responsive σχεδιασμός."
+    }
+  }
+}

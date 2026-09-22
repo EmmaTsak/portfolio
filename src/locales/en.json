@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "language": {
+    "english": "English",
+    "greek": "Greek",
+    "switchToEnglish": "Switch to English",
+    "switchToGreek": "Switch to Greek"
+  },
+  "home": {
+    "hero": {
+      "availability": "Open to software development and quality-engineering opportunities",
+      "role": "Software Developer",
+      "positioning": "Software developer building reliable applications across frontend, backend and APIs — with software quality and user experience considered from the start.",
+      "softwareDevelopment": "Software Development",
+      "qualityEngineering": "Quality Engineering",
+      "uiux": "UI/UX",
+      "viewWork": "View my work",
+      "viewCv": "View CV",
+      "build": "Build",
+      "buildDescription": "Frontend, backend & APIs",
+      "validate": "Validate",
+      "validateDescription": "Testing & debugging",
+      "design": "Design",
+      "designDescription": "User-centred interfaces"
+    },
+    "about": {
+      "eyebrow": "About",
+      "title": "Engineering with quality and usability in the loop",
+      "description": "My experience spans application development, testing, debugging and interface work. I like projects where implementation decisions can be traced back to user needs and verified behaviour.",
+      "relocation": "Open to relocation across Europe · Greek & English",
+      "fullStackTitle": "Full-stack foundation",
+      "fullStackDescription": "React, Node.js, APIs, relational and NoSQL databases.",
+      "qualityTitle": "Quality mindset",
+      "qualityDescription": "Jest, manual validation, API testing, debugging and defect investigation.",
+      "uxTitle": "UI/UX awareness",
+      "uxDescription": "Figma, research, personas, journeys and responsive interface decisions."
+    }
+  }
+}

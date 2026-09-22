@@ -1,26 +1,29 @@
 import { useEffect, useState } from 'react';
-import { Github, Linkedin, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { profile } from '../data/profile';
+import { useTranslation } from 'react-i18next';
 
-const links = [
-  { label: 'Home', to: '/' },
-  { label: 'Projects', to: '/#projects' },
-  { label: 'Experience', to: '/#experience' },
-  { label: 'Skills', to: '/#skills' },
-  { label: 'Contact', to: '/#contact' },
-];
+import { ThemeToggle } from './ThemeToggle';
+import { LanguageToggle } from './LanguageToggle';
 
 export function Header() {
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
 
   const location = useLocation();
+  const { t } = useTranslation();
+
+  const links = [
+    { id: 'Home', label: t('nav.home'), to: '/' },
+    { id: 'Projects', label: t('nav.projects'), to: '/#projects' },
+    { id: 'Experience', label: t('nav.experience'), to: '/#experience' },
+    { id: 'Skills', label: t('nav.skills'), to: '/#skills' },
+    { id: 'Contact', label: t('nav.contact'), to: '/#contact' },
+  ];
 
   const handleNav = () => setOpen(false);
 
   useEffect(() => {
-    // Project detail / all-projects pages
     if (location.pathname.startsWith('/projects')) {
       setActiveSection('Projects');
       return;
@@ -73,7 +76,6 @@ export function Header() {
           onClick={handleNav}
         >
           <span className="brand-mark">ET</span>
-          <span>Emmanouela</span>
         </Link>
 
         <button
@@ -93,33 +95,18 @@ export function Header() {
         >
           {links.map((link) => (
             <Link
-              key={link.label}
+              key={link.id}
               to={link.to}
               onClick={handleNav}
-              className={activeSection === link.label ? 'active' : undefined}
+              className={activeSection === link.id ? 'active' : undefined}
             >
               {link.label}
             </Link>
           ))}
 
           <div className="nav-socials">
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="GitHub"
-            >
-              <Github />
-            </a>
-
-            <a
-              href={profile.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-            >
-              <Linkedin />
-            </a>
+            <LanguageToggle />
+            <ThemeToggle />
           </div>
         </nav>
       </div>

@@ -20,12 +20,21 @@ import { SectionHeading } from '../components/SectionHeading';
 import { usePageMeta } from '../hooks/usePageMeta';
 import { AcademicCourseCard } from '../components/AcademicCourseCard';
 import { academicCourses } from '../data/coursework';
+import { useTranslation } from 'react-i18next';
 
 export function HomePage() {
+  const { t } = useTranslation();
+
   usePageMeta({ title: 'Emmanouela Tsakalidou | Portfolio', description: profile.positioning, path: '/' });
   const copyEmail = async () => navigator.clipboard.writeText(profile.email);
   return <>
-    <section className="hero section"><div className="container hero-grid"><div className="hero-copy"><p className="availability"><span /> Open to software development and quality-engineering opportunities</p><p className="eyebrow">Software Developer</p><h1>Emmanouela<br/><span>Tsakalidou</span></h1><p className="hero-lead">{profile.positioning}</p><div className="discipline-line"><strong>Software Development</strong><span>Quality Engineering</span><span>UI/UX</span></div><div className="button-row"><a className="button button--primary" href="#projects">View my work <ArrowRight /></a><Link className="button button--ghost" to="/resume">View CV</Link></div><div className="hero-socials"><a href={profile.github} target="_blank" rel="noreferrer"><Github />GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin />LinkedIn</a><a href={`mailto:${profile.email}`}><Mail />Email</a></div></div><div className="hero-panel" aria-label="Engineering focus"><div className="code-card"><div className="code-card__top"><span/><span/><span/></div><code>
+    <section className="hero section"><div className="container hero-grid"><div className="hero-copy">
+      <p className="availability">
+        <span />
+        Open to software development and quality-engineering opportunities
+      </p>
+<p className="eyebrow">{t('home.hero.role')}</p><h1>Emmanouela<br/><span>Tsakalidou</span></h1>
+<p className="hero-lead">{t('home.hero.positioning')}</p><div className="discipline-line"><strong>{t('home.hero.softwareDevelopment')}</strong><span>{t('home.hero.qualityEngineering')}</span><span>{t('home.hero.uiux')}</span></div><div className="button-row"><a className="button button--primary" href="#projects">View my work <ArrowRight /></a><Link className="button button--ghost" to="/resume">View CV</Link></div><div className="hero-socials"><a href={profile.github} target="_blank" rel="noreferrer"><Github />GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin />LinkedIn</a><a href={`mailto:${profile.email}`}><Mail />Email</a></div></div><div className="hero-panel" aria-label="Engineering focus"><div className="code-card"><div className="code-card__top"><span/><span/><span/></div><code>
   <span className="code-line">
     <span className="code-muted">const</span> developer = {'{'}
   </span>

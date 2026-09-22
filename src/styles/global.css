@@ -977,6 +977,27 @@ p { color: var(--muted); }
   color: var(--muted);
 }
 
+/* Final light-theme text polish */
+
+[data-theme='light'] .hero-socials a:hover,
+[data-theme='light'] .contact-actions > a:not(.button):hover,
+[data-theme='light'] .back-link:hover {
+  color: var(--text);
+}
+
+[data-theme='light'] .project-role strong,
+[data-theme='light'] .stat-card strong {
+  color: var(--text);
+}
+
+[data-theme='light'] .quality-list strong {
+  color: var(--text);
+}
+
+[data-theme='light'] .recommendation-author strong {
+  color: var(--text);
+}
+
 /* Mobile navigation */
 
 @media (max-width: 760px) {
