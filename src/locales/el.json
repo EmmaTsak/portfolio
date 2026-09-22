@@ -40,6 +40,185 @@
       "qualityDescription": "Jest, χειροκίνητοι έλεγχοι, API testing, debugging και διερεύνηση σφαλμάτων.",
       "uxTitle": "Γνώση UI/UX",
       "uxDescription": "Figma, έρευνα, personas, user journeys και responsive σχεδιασμός."
+    },
+    "selectedWork": {
+      "eyebrow": "Επιλεγμένα projects",
+      "title": "Projects που δείχνουν τον τρόπο που αναπτύσσω λογισμικό",
+      "description": "Μια επιλεγμένη συλλογή έργων με τεχνικό βάθος, διαφορετικές τεχνολογίες και άμεση συνάφεια με ρόλους software engineering.",
+      "seeAll": "Όλα τα projects"
+    },
+    "quality": {
+      "eyebrow": "Ποιότητα λογισμικού",
+      "title": "Το testing δεν είναι κάτι που αφήνω για το τέλος.",
+      "description": "Κατά τη διάρκεια της πρακτικής μου έγραφα και εκτελούσα Jest tests, αναπαρήγαγα σφάλματα, έκανα debugging και υποστήριζα τη διαδικασία προετοιμασίας για releases. Στο PriceWise, η αξιολόγηση της πτυχιακής βασίστηκε κυρίως σε χειροκίνητο testing, ενώ τα αυτοματοποιημένα Jest tests καταγράφηκαν ξεκάθαρα ως μελλοντική βελτίωση και όχι ως ήδη ολοκληρωμένη εργασία.",
+      "testingTitle": "Testing",
+      "testingDescription": "Jest, API validation, χειροκίνητες ροές και έλεγχοι συμπεριφοράς",
+      "investigationTitle": "Διερεύνηση",
+      "investigationDescription": "Αναπαραγωγή σφαλμάτων, troubleshooting και ανάλυση βασικής αιτίας",
+      "releaseTitle": "Release thinking",
+      "releaseDescription": "Συνέπεια, integration και αναμενόμενη συμπεριφορά"
+    },
+    "experience": {
+      "eyebrow": "Εμπειρία",
+      "title": "Εκεί όπου η ανάπτυξη λογισμικού συνάντησε την ποιότητα",
+      "period": "Φεβ 2025 — Σεπ 2025",
+      "role": "Πρακτική Άσκηση — Software Developer",
+      "company": "Valmore · Αθήνα",
+      "point1": "Ανάπτυξη, testing και συντήρηση λειτουργιών εφαρμογών στο πλαίσιο agile κύκλων ανάπτυξης.",
+      "point2": "Δημιουργία και εκτέλεση Jest tests για τον εντοπισμό σφαλμάτων νωρίτερα στη διαδικασία ανάπτυξης.",
+      "point3": "Αναπαραγωγή και διερεύνηση σφαλμάτων με δομημένο troubleshooting και root-cause analysis.",
+      "point4": "Ανάπτυξη επαναχρησιμοποιήσιμων React Native components και έλεγχος συμπεριφοράς, συνέπειας και σωστής ενσωμάτωσης λειτουργιών."
+    },
+    "recommendation": {
+      "eyebrow": "Συστατική επιστολή",
+      "title": "Πώς ήταν η συνεργασία μαζί μου",
+      "description": "Επαγγελματική σύσταση από την πρακτική μου στην ανάπτυξη λογισμικού στη Valmore Technologies.",
+      "authorRole": "Συνιδιοκτήτης & CTO · Valmore Technologies",
+      "context": "Software Development Internship · React Native · Testing · Debugging · Troubleshooting",
+      "button": "Προβολή πλήρους συστατικής επιστολής"
+    },
+    "education": {
+      "eyebrow": "Εκπαίδευση",
+      "title": "Βάσεις στην ανάπτυξη λογισμικού, εφαρμοσμένες σε πραγματικά projects",
+      "essex": {
+        "period": "Σεπ 2024 - Ιουν 2026",
+        "title": "BSc (Hons) Computing (Software Development)",
+        "institution": "University of Essex",
+        "description": "Οι σπουδές μου περιλάμβαναν ανάπτυξη λογισμικού, APIs, βάσεις δεδομένων, testing και debugging. Στο Advanced Programming ανέπτυξα RESTful API με JWT authentication και έλεγχο μέσω Postman για filtering, sorting, pagination και προστατευμένα endpoints."
+      },
+      "omiros": {
+        "period": "Σεπ 2023 - Ιουν 2024",
+        "title": "Web Designer/Developer - Video Games",
+        "institution": "IVT OMIROS",
+        "description": "Προγενέστερες σπουδές στο web development και τον σχεδιασμό, που ενίσχυσαν την πλευρά του interface και του user experience στη δουλειά μου ως developer."
+      }
+    },
+    "coursework": {
+      "eyebrow": "Ακαδημαϊκά μαθήματα",
+      "title": "Σχετικά τεχνικά μαθήματα",
+      "description": "Επιλεγμένα μαθήματα από το BSc (Hons) Computing (Software Development), με αντικείμενα όπως backend development, βάσεις δεδομένων, mobile development, systems programming, δίκτυα, software engineering και user-centred design.",
+      "academicWorkLabel": "Ακαδημαϊκή εργασία:",
+      "keyTopics": "Βασικά θέματα του μαθήματος {{name}}",
+      "additionalTopics": "Επιπλέον θέματα: {{topics}}",
+      "more": "+{{count}} ακόμα",
+      "courses": {
+        "advancedProgramming": {
+          "name": "Προχωρημένος Προγραμματισμός",
+          "area": "Backend",
+          "description": "Ανάπτυξη backend εφαρμογών και RESTful APIs με Node.js, Express και MongoDB, με έμφαση στην αρχιτεκτονική APIs, το asynchronous JavaScript, middleware, authentication και τη δομημένη πρόσβαση σε δεδομένα.",
+          "academicWork": "Ανάπτυξη και testing ενός RESTful API για τη διαχείριση δεδομένων video games, με routing, σύνδεση με βάση δεδομένων, advanced querying, προστατευμένες λειτουργίες και API validation."
+        },
+        "advancedDatabases": {
+          "name": "Προχωρημένες Βάσεις Δεδομένων",
+          "area": "Βάσεις Δεδομένων",
+          "description": "Μελέτη προχωρημένου σχεδιασμού και υλοποίησης σχεσιακών βάσεων δεδομένων με Oracle RDBMS, SQL και Oracle APEX, με έμφαση στη δημιουργία αξιόπιστων database applications βάσει πραγματικών απαιτήσεων."
+        },
+        "operatingSystems": {
+          "name": "Λειτουργικά Συστήματα & Προγραμματισμός Δικτύων",
+          "area": "Συστήματα",
+          "description": "Μελέτη της αρχιτεκτονικής λειτουργικών συστημάτων και περιβαλλόντων UNIX/Linux, με πρακτικό systems programming σε C και network programming μέσω TCP sockets."
+        },
+        "mobileProgramming": {
+          "name": "Προγραμματισμός για Κινητές Συσκευές",
+          "area": "Mobile",
+          "description": "Μελέτη ανάπτυξης Android εφαρμογών με Kotlin και Android Studio, καλύπτοντας σύγχρονη mobile architecture, τοπική αποθήκευση δεδομένων, application components και επικοινωνία με backend services."
+        },
+        "oop": {
+          "name": "Αντικειμενοστραφής Προγραμματισμός",
+          "area": "Σχεδιασμός Λογισμικού",
+          "description": "Ανάπτυξη ισχυρών βάσεων στον αντικειμενοστραφή προγραμματισμό, τους αλγορίθμους, τις δομές δεδομένων και τον σχεδιασμό λογισμικού με C# και το .NET ecosystem."
+        },
+        "networksSecurity": {
+          "name": "Δίκτυα Υπολογιστών & Ασφάλεια",
+          "area": "Δίκτυα",
+          "description": "Μελέτη σύγχρονων δικτύων υπολογιστών και βασικών αρχών ασφάλειας, όπως TCP/IP communication, network analysis, routing, κρυπτογραφία και μηχανισμοί προστασίας δικτύων."
+        },
+        "softwareEngineering": {
+          "name": "Μηχανική Λογισμικού",
+          "area": "Software Engineering",
+          "description": "Μελέτη μεθοδολογιών ανάπτυξης λογισμικού, requirements analysis, system modelling, τεχνικής τεκμηρίωσης και του software development lifecycle."
+        },
+        "webProgramming": {
+          "name": "Προγραμματισμός Διαδικτυακών Εφαρμογών",
+          "area": "Web Development",
+          "description": "Μελέτη αρχών full-stack web development με έμφαση στην client-server αρχιτεκτονική και την ανάπτυξη δυναμικών web εφαρμογών."
+        },
+        "hci": {
+          "name": "Αλληλεπίδραση Ανθρώπου-Υπολογιστή",
+          "area": "UX",
+          "description": "Μελέτη του user-centred software design και των αρχών που χρησιμοποιούνται για τη δημιουργία εύχρηστων, προσβάσιμων και κατανοητών ψηφιακών διεπαφών."
+        }
+      }
+    },
+    "skills": {
+      "eyebrow": "Δεξιότητες",
+      "title": "Πραγματική εμπειρία αντί για αυθαίρετα ποσοστά",
+      "description": "Οι τεχνολογίες ομαδοποιούνται με βάση τον τρόπο που τις χρησιμοποιώ και όχι με αυθαίρετα ποσοστά επάρκειας.",
+      "groups": {
+        "development": "Ανάπτυξη Λογισμικού",
+        "frontendMobile": "Frontend & Mobile",
+        "backendApis": "Backend & APIs",
+        "testingQuality": "Testing & Ποιότητα",
+        "data": "Δεδομένα",
+        "toolsDesign": "Εργαλεία & Σχεδιασμός"
+      }
+    },
+    "contact": {
+      "eyebrow": "Επικοινωνία",
+      "title": "Αναζητάτε developer που ενδιαφέρεται πραγματικά για το πώς συμπεριφέρεται το λογισμικό;",
+      "description": "Με ενδιαφέρουν θέσεις ανάπτυξης λογισμικού, με το quality engineering και το UI/UX ως συμπληρωματικά δυνατά σημεία.",
+      "portraitAlt": "Φωτογραφία της Εμμανουέλας Τσακαλίδου, software developer, με φόντο το γραφείο της.",
+      "emailMe": "Στείλτε μου email",
+      "copyEmail": "Αντιγραφή email"
+    }
+  },
+  "projects": {
+    "card": {
+      "openCaseStudy": "Προβολή του case study για το {{name}}",
+      "technologies": "Τεχνολογίες",
+      "liveDemo": "Live demo",
+      "github": "{{name}} στο GitHub"
+    },
+    "items": {
+      "pricewise": {
+        "eyebrow": "Πτυχιακή εργασία · Κεντρικό case study",
+        "description": "Ένα full-stack πρωτότυπο σύγκρισης τιμών προϊόντων για ελληνικά σούπερ μάρκετ, που συνδυάζει προγραμματισμένη συλλογή δεδομένων, σύγκριση προϊόντων και λίστα αγορών με έμφαση στην ιδιωτικότητα.",
+        "status": "Λειτουργικό πρωτότυπο",
+        "visualAlt": "Η υλοποιημένη σελίδα σύγκρισης τιμών του PriceWise με αναζήτηση και φίλτρα σούπερ μάρκετ.",
+        "visualLabel": "Υλοποιημένη εφαρμογή"
+      },
+      "vinted-relisting-assistant": {
+        "eyebrow": "Python · Desktop εφαρμογή · Σε ανάπτυξη",
+        "description": "Μια εφαρμογή Windows με έμφαση στην ιδιωτικότητα για την οργάνωση αγγελιών μεταχειρισμένων ειδών, τον προγραμματισμό καθημερινών επαναδημοσιεύσεων και τη διαχείριση τοπικού inventory, χωρίς αυτοματοποίηση της δημοσίευσης στην πλατφόρμα.",
+        "status": "Σε ανάπτυξη",
+        "visualAlt": "Το dark-mode dashboard της εφαρμογής Vinted Relisting Assistant για Windows.",
+        "visualLabel": "Υλοποιημένη desktop εφαρμογή"
+      },
+      "cpp-sensor-dashboard": {
+        "eyebrow": "Modern C++ · HTTP API · Dashboard",
+        "description": "Ένας προσομοιωτής αισθητήρων τύπου IoT με multithreaded backend σε C++17, JSON HTTP API και dashboard μέσω browser.",
+        "visualAlt": "Διάγραμμα αρχιτεκτονικής που παρουσιάζει C++ backend, HTTP JSON API και web dashboard.",
+        "visualLabel": "Διάγραμμα αρχιτεκτονικής"
+      },
+      "video-games-api": {
+        "eyebrow": "Backend · REST · Authentication",
+        "description": "Ένα RESTful API σε Node.js που παρουσιάζει authentication, επαναχρησιμοποιήσιμα query features, μοντελοποίηση MongoDB και κεντρική διαχείριση σφαλμάτων.",
+        "visualAlt": "Διάγραμμα αρχιτεκτονικής με Express REST endpoints συνδεδεμένα με MongoDB.",
+        "visualLabel": "Διάγραμμα αρχιτεκτονικής"
+      },
+      "android-contacts-app": {
+        "eyebrow": "Kotlin · Jetpack Compose · MVVM",
+        "description": "Μια native Android εφαρμογή διαχείρισης επαφών με reactive Compose UI, αποθήκευση μέσω Room και αρχιτεκτονική ViewModel/Repository.",
+        "visualAlt": "Διάγραμμα αρχιτεκτονικής MVVM για την εφαρμογή διαχείρισης επαφών Android.",
+        "visualLabel": "Διάγραμμα αρχιτεκτονικής"
+      },
+      "reposentry": {
+        "eyebrow": "Python · Engineering tooling · Σε εξέλιξη",
+        "description": "Ένα εργαλείο σε Python που αναπτύσσεται για την ανάλυση της κατάστασης GitHub repositories και τη δημιουργία πρακτικών αναφορών με προτεινόμενες ενέργειες.",
+        "status": "Σε ανάπτυξη",
+        "visualAlt": "Concept διάγραμμα για το RepoSentry CLI και τη ροή ανάλυσης repository.",
+        "visualLabel": "Concept visual · έργο σε εξέλιξη"
+      }
     }
   }
 }

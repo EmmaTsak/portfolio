@@ -1,46 +1,76 @@
 import { ExternalLink, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import type { Project } from '../data/projects';
 import { SafeImage } from './SafeImage';
 
 export function ProjectCard({ project }: { project: Project }) {
+  const { t } = useTranslation();
+
+  const translationBase = `projects.items.${project.slug}`;
+
+  const eyebrow = t(`${translationBase}.eyebrow`, {
+    defaultValue: project.eyebrow,
+  });
+
+  const description = t(`${translationBase}.description`, {
+    defaultValue: project.description,
+  });
+
+  const visualAlt = t(`${translationBase}.visualAlt`, {
+    defaultValue: project.visualAlt,
+  });
+
+  const visualLabel = t(`${translationBase}.visualLabel`, {
+    defaultValue: project.visualLabel,
+  });
+
+  const status = project.status
+    ? t(`${translationBase}.status`, {
+        defaultValue: project.status,
+      })
+    : undefined;
+
   return (
     <article className="project-card">
       <Link
         className="project-card__overlay-link"
         to={`/projects/${project.slug}`}
-        aria-label={`View ${project.name} case study`}
+        aria-label={t('projects.card.openCaseStudy', {
+          name: project.name,
+        })}
       />
 
       <div className="project-card__visual">
         <SafeImage
           src={`${import.meta.env.BASE_URL}${project.visual}`}
-          alt={project.visualAlt}
+          alt={visualAlt}
         />
 
         <span className="visual-label">
-          {project.visualLabel}
+          {visualLabel}
         </span>
       </div>
 
       <div className="project-card__body">
         <div className="project-meta">
-          <span>{project.eyebrow}</span>
+          <span>{eyebrow}</span>
 
-          {project.status && (
+          {status && (
             <span className="status-pill">
-              {project.status}
+              {status}
             </span>
           )}
         </div>
 
         <h3>{project.name}</h3>
 
-        <p>{project.description}</p>
+        <p>{description}</p>
 
         <div
           className="tag-row"
-          aria-label="Technologies"
+          aria-label={t('projects.card.technologies')}
         >
           {project.tech.slice(0, 5).map((tag) => (
             <span className="tag" key={tag}>
@@ -59,7 +89,7 @@ export function ProjectCard({ project }: { project: Project }) {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Live demo
+                  {t('projects.card.liveDemo')}
                   <ExternalLink />
                 </a>
               )}
@@ -70,7 +100,9 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.github}
               target="_blank"
               rel="noreferrer"
-              aria-label={`${project.name} on GitHub`}
+              aria-label={t('projects.card.github', {
+                name: project.name,
+              })}
             >
               <Github />
             </a>

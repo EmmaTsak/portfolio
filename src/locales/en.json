@@ -40,6 +40,185 @@
       "qualityDescription": "Jest, manual validation, API testing, debugging and defect investigation.",
       "uxTitle": "UI/UX awareness",
       "uxDescription": "Figma, research, personas, journeys and responsive interface decisions."
+    },
+    "selectedWork": {
+      "eyebrow": "Selected work",
+      "title": "Projects that show how I build",
+      "description": "A focused selection chosen for technical depth, range and relevance to software-engineering roles.",
+      "seeAll": "See all projects"
+    },
+    "quality": {
+      "eyebrow": "Quality engineering",
+      "title": "I don’t treat testing as an afterthought.",
+      "description": "My internship work included writing and executing Jest tests, reproducing defects, debugging and supporting release readiness. In PriceWise, the thesis evaluation was primarily manual testing, with automated Jest tests explicitly documented as future work rather than claimed as completed.",
+      "testingTitle": "Testing",
+      "testingDescription": "Jest, API validation, manual flows, behaviour checks",
+      "investigationTitle": "Investigation",
+      "investigationDescription": "Defect reproduction, troubleshooting, root-cause analysis",
+      "releaseTitle": "Release thinking",
+      "releaseDescription": "Consistency, integration and expected behaviour"
+    },
+    "experience": {
+      "eyebrow": "Experience",
+      "title": "Where development and quality met",
+      "period": "Feb 2025 — Sep 2025",
+      "role": "Software Developer Intern",
+      "company": "Valmore · Athens",
+      "point1": "Developed, tested and maintained application features within agile development cycles.",
+      "point2": "Created and executed Jest test scripts to identify defects earlier in the development process.",
+      "point3": "Reproduced and investigated defects using structured troubleshooting and root-cause analysis.",
+      "point4": "Built reusable React Native components and validated behaviour, consistency and feature integration."
+    },
+    "recommendation": {
+      "eyebrow": "Recommendation",
+      "title": "What it was like to work with me",
+      "description": "A professional recommendation from my software-development internship at Valmore Technologies.",
+      "authorRole": "Co-Owner & CTO · Valmore Technologies",
+      "context": "Software Development Internship · React Native · Testing · Debugging · Troubleshooting",
+      "button": "View full recommendation"
+    },
+    "education": {
+      "eyebrow": "Education",
+      "title": "Software-development foundations, applied in projects",
+      "essex": {
+        "period": "Sep 2024 - Jun 2026",
+        "title": "BSc (Hons) Computing (Software Development)",
+        "institution": "University of Essex",
+        "description": "Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints."
+      },
+      "omiros": {
+        "period": "Sep 2023 - Jun 2024",
+        "title": "Web Designer/Developer - Video Games",
+        "institution": "IVT OMIROS",
+        "description": "Earlier web-development and design study that supports the interface and user-experience side of my software work."
+      }
+    },
+    "coursework": {
+      "eyebrow": "Academic coursework",
+      "title": "Relevant technical coursework",
+      "description": "Selected coursework from my BSc (Hons) Computing (Software Development), covering backend development, databases, mobile development, systems programming, networking, software engineering and user-centred design.",
+      "academicWorkLabel": "Academic work:",
+      "keyTopics": "{{name}} key topics",
+      "additionalTopics": "Additional topics: {{topics}}",
+      "more": "+{{count}} more",
+      "courses": {
+        "advancedProgramming": {
+          "name": "Advanced Programming",
+          "area": "Backend",
+          "description": "Developed backend applications and RESTful APIs using Node.js, Express and MongoDB, with emphasis on API architecture, asynchronous JavaScript, middleware, authentication and structured data access.",
+          "academicWork": "Developed and tested a RESTful API for managing video-game data, including routing, database integration, advanced querying, protected functionality and API validation."
+        },
+        "advancedDatabases": {
+          "name": "Advanced Databases",
+          "area": "Databases",
+          "description": "Studied advanced relational database design and implementation using Oracle RDBMS, SQL and Oracle APEX, with focus on designing reliable database applications around real-world requirements."
+        },
+        "operatingSystems": {
+          "name": "Operating Systems & Network Programming",
+          "area": "Systems",
+          "description": "Studied operating-system architecture and UNIX/Linux environments with practical systems programming in C and network programming using TCP sockets."
+        },
+        "mobileProgramming": {
+          "name": "Mobile Programming",
+          "area": "Mobile",
+          "description": "Studied Android application development using Kotlin and Android Studio, covering modern mobile architecture, local persistence, application components and communication with backend services."
+        },
+        "oop": {
+          "name": "Object-Oriented Programming",
+          "area": "Software Design",
+          "description": "Developed a strong foundation in object-oriented programming, algorithms, data structures and software design using C# and the .NET ecosystem."
+        },
+        "networksSecurity": {
+          "name": "Computer Networks & Security",
+          "area": "Networking",
+          "description": "Studied modern computer networking and network-security fundamentals, including TCP/IP communication, network analysis, routing, cryptography and common security mechanisms."
+        },
+        "softwareEngineering": {
+          "name": "Software Engineering",
+          "area": "Engineering",
+          "description": "Studied software-development methodologies, requirements analysis, system modelling, documentation and the software development lifecycle."
+        },
+        "webProgramming": {
+          "name": "Web Application Programming",
+          "area": "Web Development",
+          "description": "Studied full-stack web-development principles with emphasis on client-server architecture and the development of dynamic web applications."
+        },
+        "hci": {
+          "name": "Human-Computer Interaction",
+          "area": "UX",
+          "description": "Studied user-centred software design and the principles used to create usable, accessible and intuitive digital interfaces."
+        }
+      }
+    },
+    "skills": {
+      "eyebrow": "Skills",
+      "title": "Evidence over proficiency bars",
+      "description": "Technologies are grouped by how I use them, not assigned arbitrary percentages.",
+      "groups": {
+        "development": "Development",
+        "frontendMobile": "Frontend & Mobile",
+        "backendApis": "Backend & APIs",
+        "testingQuality": "Testing & Quality",
+        "data": "Data",
+        "toolsDesign": "Tools & Design"
+      }
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Looking for a developer who cares how the software behaves?",
+      "description": "I’m interested in software-development roles, with quality engineering and UI/UX as complementary strengths.",
+      "portraitAlt": "Portrait of Emmanouela Tsakalidou",
+      "emailMe": "Email me",
+      "copyEmail": "Copy email"
+    }
+  },
+  "projects": {
+    "card": {
+      "openCaseStudy": "View {{name}} case study",
+      "technologies": "Technologies",
+      "liveDemo": "Live demo",
+      "github": "{{name}} on GitHub"
+    },
+    "items": {
+      "pricewise": {
+        "eyebrow": "Bachelor thesis · Flagship case study",
+        "description": "A full-stack grocery price comparison prototype for Greek supermarkets, combining scheduled data collection, product comparison and a privacy-conscious shopping-list flow.",
+        "status": "Functional prototype",
+        "visualAlt": "Implemented PriceWise compare-prices page with search and supermarket filters.",
+        "visualLabel": "Implemented application"
+      },
+      "vinted-relisting-assistant": {
+        "eyebrow": "Python · Desktop application · In development",
+        "description": "A privacy-first Windows desktop application for organising second-hand marketplace listings, planning daily relisting work and managing a local inventory without automating marketplace publishing.",
+        "status": "In development",
+        "visualAlt": "Dark-mode dashboard of the Vinted Relisting Assistant Windows desktop application.",
+        "visualLabel": "Implemented desktop application"
+      },
+      "cpp-sensor-dashboard": {
+        "eyebrow": "Modern C++ · HTTP API · Dashboard",
+        "description": "An IoT-style sensor simulator with a multithreaded C++17 backend, JSON HTTP API and browser dashboard.",
+        "visualAlt": "Architecture illustration showing a C++ backend, HTTP JSON API and web dashboard.",
+        "visualLabel": "Architecture illustration"
+      },
+      "video-games-api": {
+        "eyebrow": "Backend · REST · Authentication",
+        "description": "A RESTful Node.js API demonstrating authentication, reusable query features, MongoDB modelling and centralized error handling.",
+        "visualAlt": "Architecture illustration showing Express REST endpoints connected to MongoDB.",
+        "visualLabel": "Architecture illustration"
+      },
+      "android-contacts-app": {
+        "eyebrow": "Kotlin · Jetpack Compose · MVVM",
+        "description": "A native Android contacts manager with reactive Compose UI, Room persistence and a ViewModel/Repository architecture.",
+        "visualAlt": "MVVM architecture illustration for the Android contacts application.",
+        "visualLabel": "Architecture illustration"
+      },
+      "reposentry": {
+        "eyebrow": "Python · Engineering tooling · In progress",
+        "description": "A Python engineering tool being developed to analyse GitHub repository health and produce actionable reports.",
+        "status": "In development",
+        "visualAlt": "Concept illustration for the RepoSentry CLI and repository-analysis flow.",
+        "visualLabel": "Concept visual · project in progress"
+      }
     }
   }
 }
