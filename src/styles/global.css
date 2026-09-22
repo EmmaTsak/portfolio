@@ -770,15 +770,48 @@ p { color: var(--muted); }
   color: var(--text);
 }
 
-/* Keep code card dark intentionally */
+/* Hero code card */
 
 [data-theme='light'] .code-card {
   background:
     linear-gradient(
       145deg,
-      rgba(181, 168, 191, 0.98),
-      rgba(29, 23, 33, 0.98)
+      rgba(255, 255, 255, 0.96),
+      rgba(242, 237, 245, 0.94)
     );
+
+  border-color: rgba(77, 67, 82, 0.16);
+
+  box-shadow:
+    0 24px 60px rgba(52, 38, 61, 0.10);
+}
+
+[data-theme='light'] .code-card code {
+  color: #665a6c;
+}
+
+[data-theme='light'] .code-card code span {
+  color: #2d2331;
+}
+
+[data-theme='light'] .code-card code em {
+  color: var(--purple-strong);
+}
+
+[data-theme='light'] .code-card .code-muted {
+  color: #897c90 !important;
+}
+
+[data-theme='light'] .code-card__top span {
+  background: #c8becd;
+}
+
+[data-theme='light'] .code-card__top span:nth-child(2) {
+  background: #aa91b8;
+}
+
+[data-theme='light'] .code-card__top span:nth-child(3) {
+  background: var(--purple);
 }
 
 [data-theme='light'] .hero-mini-grid div {
