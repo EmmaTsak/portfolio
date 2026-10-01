@@ -6,6 +6,12 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "names": {
+    "firstName": "Emmanouela",
+    "lastName": "Tsakalidou",
+    "fullName": "Emmanouela Tsakalidou",
+    "supervisor": "Dimitris Ampelakiotis"
+  },
   "language": {
     "english": "English",
     "greek": "Greek",
@@ -179,6 +185,27 @@
       "liveDemo": "Live demo",
       "github": "{{name}} on GitHub"
     },
+    "page": {
+      "metaTitle": "Projects - Emmanouela Tsakalidou",
+      "metaDescription": "Selected software-development projects across full stack, backend, mobile, C++, testing and UI/UX.",
+      "eyebrow": "Projects",
+      "title": "Selected engineering work",
+      "description": "Filter by the kind of evidence you want to see. Stronger, more complete projects are prioritised over showing every repository.",
+      "filterLabel": "Filter projects",
+      "filters": {
+        "all": "All",
+        "fullStack": "Full Stack",
+        "backend": "Backend",
+        "mobile": "Mobile",
+        "systems": "Systems",
+        "automation": "Automation",
+        "qaTesting": "QA / Testing",
+        "uiux": "UI/UX"
+      },
+      "emptyTitle": "No projects match that filter.",
+      "emptyDescription": "Choose another category to continue browsing.",
+      "showAll": "Show all projects"
+    },
     "items": {
       "pricewise": {
         "eyebrow": "Bachelor thesis · Flagship case study",
@@ -186,6 +213,13 @@
         "status": "Functional prototype",
         "visualAlt": "Implemented PriceWise compare-prices page with search and supermarket filters.",
         "visualLabel": "Implemented application"
+      },
+      "jenkins-ci-reliability-lab": {
+        "eyebrow": "DevOps · Jenkins · CI reliability",
+        "description": "A hands-on Jenkins CI reliability lab exploring distributed builds, agent capacity, failure classification, monitoring, secure credentials and operational troubleshooting.",
+        "status": "Completed lab",
+        "visualAlt": "Successful Jenkins CI pipeline showing distributed build stages and agent execution.",
+        "visualLabel": "Implemented Jenkins CI environment"
       },
       "vinted-relisting-assistant": {
         "eyebrow": "Python · Desktop application · In development",
@@ -220,5 +254,29 @@
         "visualLabel": "Concept visual · project in progress"
       }
     }
+  },
+  "recommendationPage": {
+    "metaTitle": "Recommendation — {{name}}",
+    "metaDescription": "Professional recommendation from {{name}}’s software-development internship at Valmore Technologies.",
+    "back": "Back to portfolio",
+    "eyebrow": "Recommendation",
+    "title": "Professional recommendation",
+    "description": "Recommendation from {{supervisor}}, Co-Owner & CTO at Valmore Technologies, following my software-development internship.",
+    "documentTitle": "Valmore Technologies — Recommendation"
+  },
+  "documentViewer": {
+    "document": "Document",
+    "download": "Download",
+    "originalPdf": "Original PDF",
+    "loading": "Loading document…",
+    "error": "Unable to display this PDF.",
+    "previousPage": "Previous page",
+    "nextPage": "Next page",
+    "page": "Page",
+    "of": "of"
+  },
+  "footer": {
+    "tagline": "Software development, software quality and user-centred interfaces.",
+    "builtWith": "Built with React + TypeScript"
   }
 }

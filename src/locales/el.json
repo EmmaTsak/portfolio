@@ -6,6 +6,12 @@
     "skills": "Δεξιότητες",
     "contact": "Επικοινωνία"
   },
+  "names": {
+    "firstName": "Εμμανουέλα",
+    "lastName": "Τσακαλίδου",
+    "fullName": "Εμμανουέλα Τσακαλίδου",
+    "supervisor": "Δημήτρης Αμπελακιώτης"
+  },
   "language": {
     "english": "Αγγλικά",
     "greek": "Ελληνικά",
@@ -179,6 +185,27 @@
       "liveDemo": "Live demo",
       "github": "{{name}} στο GitHub"
     },
+    "page": {
+      "metaTitle": "Projects - Εμμανουέλα Τσακαλίδου",
+      "metaDescription": "Επιλεγμένα έργα ανάπτυξης λογισμικού σε full stack, backend, mobile, C++, testing και UI/UX.",
+      "eyebrow": "Projects",
+      "title": "Επιλεγμένα έργα software engineering",
+      "description": "Φιλτράρετε τα έργα ανάλογα με το είδος τεχνικής εμπειρίας που θέλετε να δείτε. Δίνεται προτεραιότητα σε πιο ολοκληρωμένες και ουσιαστικές υλοποιήσεις αντί να εμφανίζεται κάθε repository.",
+      "filterLabel": "Φιλτράρισμα έργων",
+      "filters": {
+        "all": "Όλα",
+        "fullStack": "Full Stack",
+        "backend": "Backend",
+        "mobile": "Mobile",
+        "systems": "Συστήματα",
+        "automation": "Automation",
+        "qaTesting": "QA / Testing",
+        "uiux": "UI/UX"
+      },
+      "emptyTitle": "Δεν υπάρχουν έργα σε αυτή την κατηγορία.",
+      "emptyDescription": "Επιλέξτε διαφορετική κατηγορία για να συνεχίσετε.",
+      "showAll": "Προβολή όλων"
+    },
     "items": {
       "pricewise": {
         "eyebrow": "Πτυχιακή εργασία · Κεντρικό case study",
@@ -186,6 +213,13 @@
         "status": "Λειτουργικό πρωτότυπο",
         "visualAlt": "Η υλοποιημένη σελίδα σύγκρισης τιμών του PriceWise με αναζήτηση και φίλτρα σούπερ μάρκετ.",
         "visualLabel": "Υλοποιημένη εφαρμογή"
+      },
+      "jenkins-ci-reliability-lab": {
+        "eyebrow": "DevOps · Jenkins · Αξιοπιστία CI",
+        "description": "Ένα πρακτικό Jenkins CI reliability lab με distributed builds, δοκιμές χωρητικότητας agents και executors, κατηγοριοποίηση αποτυχιών, monitoring, ασφαλή διαχείριση credentials και operational troubleshooting.",
+        "status": "Ολοκληρωμένο lab",
+        "visualAlt": "Επιτυχημένο Jenkins CI pipeline με distributed build stages και εκτέλεση σε Jenkins agents.",
+        "visualLabel": "Υλοποιημένο Jenkins CI environment"
       },
       "vinted-relisting-assistant": {
         "eyebrow": "Python · Desktop εφαρμογή · Σε ανάπτυξη",
@@ -220,5 +254,29 @@
         "visualLabel": "Concept visual · έργο σε εξέλιξη"
       }
     }
+  },
+  "recommendationPage": {
+    "metaTitle": "Συστατική επιστολή — {{name}}",
+    "metaDescription": "Επαγγελματική συστατική επιστολή από την πρακτική άσκηση της {{name}} στη Valmore Technologies.",
+    "back": "Επιστροφή στο portfolio",
+    "eyebrow": "Συστατική επιστολή",
+    "title": "Επαγγελματική συστατική επιστολή",
+    "description": "Συστατική επιστολή από τον {{supervisor}}, Συνιδιοκτήτη & CTO της Valmore Technologies, μετά την πρακτική μου στην ανάπτυξη λογισμικού.",
+    "documentTitle": "Valmore Technologies — Συστατική επιστολή"
+  },
+  "documentViewer": {
+    "document": "Έγγραφο",
+    "download": "Λήψη",
+    "originalPdf": "Πρωτότυπο PDF",
+    "loading": "Φόρτωση εγγράφου…",
+    "error": "Δεν ήταν δυνατή η εμφάνιση του PDF.",
+    "previousPage": "Προηγούμενη σελίδα",
+    "nextPage": "Επόμενη σελίδα",
+    "page": "Σελίδα",
+    "of": "από"
+  },
+  "footer": {
+    "tagline": "Ανάπτυξη λογισμικού, ποιότητα λογισμικού και διεπαφές με επίκεντρο τον χρήστη.",
+    "builtWith": "Δημιουργήθηκε με React + TypeScript"
   }
 }

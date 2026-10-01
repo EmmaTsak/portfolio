@@ -64,9 +64,9 @@ export function HomePage() {
             </p>
 
             <h1>
-              Emmanouela
+              {t('names.firstName')}
               <br />
-              <span>Tsakalidou</span>
+              <span>{t('names.lastName')}</span>
             </h1>
 
             <p className="hero-lead">
@@ -456,7 +456,7 @@ export function HomePage() {
 
               <div className="recommendation-author">
                 <strong>
-                  Dimitris Ampelakiotis
+                  {t('names.supervisor')}
                 </strong>
 
                 <span>

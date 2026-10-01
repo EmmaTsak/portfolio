@@ -1,6 +1,12 @@
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Download, ExternalLink } from 'lucide-react';
+import {
+  ChevronLeft,
+  ChevronRight,
+  Download,
+  ExternalLink,
+} from 'lucide-react';
 import { Document, Page, pdfjs } from 'react-pdf';
+import { useTranslation } from 'react-i18next';
 
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import 'react-pdf/dist/Page/TextLayer.css';
@@ -21,22 +27,34 @@ export function DocumentViewer({
   title,
   downloadName,
 }: DocumentViewerProps) {
-  const [numPages, setNumPages] = useState(0);
-  const [pageNumber, setPageNumber] = useState(1);
+  const { t } = useTranslation();
+
+  const [numPages, setNumPages] =
+    useState(0);
+
+  const [pageNumber, setPageNumber] =
+    useState(1);
 
   const previousPage = () => {
-    setPageNumber((page) => Math.max(page - 1, 1));
+    setPageNumber((page) =>
+      Math.max(page - 1, 1)
+    );
   };
 
   const nextPage = () => {
-    setPageNumber((page) => Math.min(page + 1, numPages));
+    setPageNumber((page) =>
+      Math.min(page + 1, numPages)
+    );
   };
 
   return (
     <div className="document-viewer">
       <div className="document-viewer__toolbar">
         <div>
-          <span className="document-viewer__label">Document</span>
+          <span className="document-viewer__label">
+            {t('documentViewer.document')}
+          </span>
+
           <strong>{title}</strong>
         </div>
 
@@ -47,7 +65,7 @@ export function DocumentViewer({
             download={downloadName}
           >
             <Download />
-            Download
+            {t('documentViewer.download')}
           </a>
 
           <a
@@ -57,7 +75,9 @@ export function DocumentViewer({
             rel="noreferrer"
           >
             <ExternalLink />
-            Original PDF
+            {t(
+              'documentViewer.originalPdf'
+            )}
           </a>
         </div>
       </div>
@@ -67,15 +87,21 @@ export function DocumentViewer({
           file={file}
           loading={
             <div className="document-viewer__message">
-              Loading document…
+              {t(
+                'documentViewer.loading'
+              )}
             </div>
           }
           error={
             <div className="document-viewer__message">
-              Unable to display this PDF.
+              {t(
+                'documentViewer.error'
+              )}
             </div>
           }
-          onLoadSuccess={({ numPages: loadedPages }) => {
+          onLoadSuccess={({
+            numPages: loadedPages,
+          }) => {
             setNumPages(loadedPages);
             setPageNumber(1);
           }}
@@ -95,20 +121,29 @@ export function DocumentViewer({
             type="button"
             onClick={previousPage}
             disabled={pageNumber <= 1}
-            aria-label="Previous page"
+            aria-label={t(
+              'documentViewer.previousPage'
+            )}
           >
             <ChevronLeft />
           </button>
 
           <span>
-            Page <strong>{pageNumber}</strong> of {numPages}
+            {t('documentViewer.page')}{' '}
+            <strong>{pageNumber}</strong>{' '}
+            {t('documentViewer.of')}{' '}
+            {numPages}
           </span>
 
           <button
             type="button"
             onClick={nextPage}
-            disabled={pageNumber >= numPages}
-            aria-label="Next page"
+            disabled={
+              pageNumber >= numPages
+            }
+            aria-label={t(
+              'documentViewer.nextPage'
+            )}
           >
             <ChevronRight />
           </button>
