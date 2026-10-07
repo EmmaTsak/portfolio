@@ -1,5 +1,13 @@
-import { ArrowLeft, Github } from 'lucide-react';
-import { Link, useParams } from 'react-router-dom';
+import {
+  ArrowLeft,
+  Github,
+} from 'lucide-react';
+import {
+  Link,
+  useParams,
+} from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 import { projects } from '../data/projects';
 import { SafeImage } from '../components/SafeImage';
 import { NotFoundProject } from './NotFoundPage';
@@ -7,15 +15,54 @@ import { usePageMeta } from '../hooks/usePageMeta';
 
 export function ProjectDetailPage() {
   const { slug } = useParams();
+  const { t } = useTranslation();
 
-  const project = projects.find((item) => item.slug === slug);
+  const project = projects.find(
+    (item) => item.slug === slug
+  );
+
+  const translationBase = project
+    ? `projects.items.${project.slug}`
+    : '';
+
+  const description = project
+    ? t(`${translationBase}.description`, {
+        defaultValue: project.description,
+      })
+    : t(
+        'projects.detail.notFoundDescription'
+      );
+
+  const eyebrow = project
+    ? t(`${translationBase}.eyebrow`, {
+        defaultValue: project.eyebrow,
+      })
+    : '';
+
+  const role = project
+    ? t(`${translationBase}.role`, {
+        defaultValue: project.role,
+      })
+    : '';
+
+  const visualAlt = project
+    ? t(`${translationBase}.visualAlt`, {
+        defaultValue: project.visualAlt,
+      })
+    : '';
 
   usePageMeta({
     title: project
-      ? `${project.name} — Emmanouela Tsakalidou`
-      : 'Project not found — Emmanouela Tsakalidou',
-    description:
-      project?.description || 'The requested project could not be found.',
+      ? `${project.name} — ${t(
+          'names.fullName'
+        )}`
+      : t(
+          'projects.detail.notFoundTitle',
+          {
+            name: t('names.fullName'),
+          }
+        ),
+    description,
     path: project
       ? `/projects/${project.slug}`
       : '/projects/missing',
@@ -29,31 +76,48 @@ export function ProjectDetailPage() {
     <>
       <section className="case-hero section page-top">
         <div className="container">
-          <Link className="back-link" to="/projects">
+          <Link
+            className="back-link"
+            to="/projects"
+          >
             <ArrowLeft />
-            All projects
+            {t(
+              'projects.detail.allProjects'
+            )}
           </Link>
 
           <div className="project-detail-hero">
             <div className="project-detail-copy">
-              <p className="eyebrow">{project.eyebrow}</p>
+              <p className="eyebrow">
+                {eyebrow}
+              </p>
 
               <h1>{project.name}</h1>
 
               <p className="case-lead">
-                {project.description}
+                {description}
               </p>
 
               <p className="project-role">
-                <strong>Role:</strong> {project.role}
+                <strong>
+                  {t(
+                    'projects.detail.role'
+                  )}
+                </strong>{' '}
+                {role}
               </p>
 
               <div className="tag-row">
-                {project.tech.map((item) => (
-                  <span className="tag" key={item}>
-                    {item}
-                  </span>
-                ))}
+                {project.tech.map(
+                  (item) => (
+                    <span
+                      className="tag"
+                      key={item}
+                    >
+                      {item}
+                    </span>
+                  )
+                )}
               </div>
 
               <div className="button-row">
@@ -64,7 +128,9 @@ export function ProjectDetailPage() {
                   rel="noreferrer"
                 >
                   <Github />
-                  View repository
+                  {t(
+                    'projects.detail.viewRepository'
+                  )}
                 </a>
               </div>
             </div>
@@ -72,7 +138,7 @@ export function ProjectDetailPage() {
             <div className="case-visual project-detail-visual">
               <SafeImage
                 src={`${import.meta.env.BASE_URL}${project.visual}`}
-                alt={project.visualAlt}
+                alt={visualAlt}
               />
             </div>
           </div>
@@ -83,48 +149,84 @@ export function ProjectDetailPage() {
         <div className="container detail-grid">
           <article>
             <p className="eyebrow">
-              What it demonstrates
+              {t(
+                'projects.detail.demonstratesEyebrow'
+              )}
             </p>
 
-            <h2>Engineering evidence</h2>
+            <h2>
+              {t(
+                'projects.detail.evidenceTitle'
+              )}
+            </h2>
 
             <ul className="bullet-list">
-              {project.highlights.map((highlight) => (
-                <li key={highlight}>
-                  {highlight}
-                </li>
-              ))}
+              {project.highlights.map(
+                (highlight, index) => (
+                  <li key={highlight}>
+                    {t(
+                      `${translationBase}.highlights.${index}`,
+                      {
+                        defaultValue:
+                          highlight,
+                      }
+                    )}
+                  </li>
+                )
+              )}
             </ul>
           </article>
 
           <article>
             <p className="eyebrow">
-              Architecture / quality
+              {t(
+                'projects.detail.architectureEyebrow'
+              )}
             </p>
 
-            <h2>How it is structured</h2>
+            <h2>
+              {t(
+                'projects.detail.structureTitle'
+              )}
+            </h2>
 
             {project.architecture ? (
               <ul className="bullet-list">
-                {project.architecture.map((item) => (
-                  <li key={item}>
-                    {item}
-                  </li>
-                ))}
+                {project.architecture.map(
+                  (item, index) => (
+                    <li key={item}>
+                      {t(
+                        `${translationBase}.architecture.${index}`,
+                        {
+                          defaultValue:
+                            item,
+                        }
+                      )}
+                    </li>
+                  )
+                )}
               </ul>
             ) : project.testing ? (
               <ul className="bullet-list">
-                {project.testing.map((item) => (
-                  <li key={item}>
-                    {item}
-                  </li>
-                ))}
+                {project.testing.map(
+                  (item, index) => (
+                    <li key={item}>
+                      {t(
+                        `${translationBase}.testing.${index}`,
+                        {
+                          defaultValue:
+                            item,
+                        }
+                      )}
+                    </li>
+                  )
+                )}
               </ul>
             ) : (
               <p>
-                This project focuses primarily on backend implementation
-                and data modelling. See the repository for source-level
-                details.
+                {t(
+                  'projects.detail.fallback'
+                )}
               </p>
             )}
           </article>

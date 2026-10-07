@@ -6,6 +6,20 @@
     "skills": "Δεξιότητες",
     "contact": "Επικοινωνία"
   },
+  "ui": {
+    "header": {
+      "homeLabel": "Αρχική σελίδα της Εμμανουέλας Τσακαλίδου",
+      "openNavigation": "Άνοιγμα navigation",
+      "closeNavigation": "Κλείσιμο navigation",
+      "primaryNavigation": "Κύριο navigation"
+    },
+    "theme": {
+      "switchToLight": "Αλλαγή σε light mode",
+      "switchToDark": "Αλλαγή σε dark mode"
+    },
+    "skipToContent": "Μετάβαση στο κύριο περιεχόμενο",
+    "offline": "Φαίνεται ότι είστε offline. Το τοπικό περιεχόμενο του portfolio παραμένει διαθέσιμο, αλλά ορισμένα εξωτερικά links μπορεί να μη φορτώσουν."
+  },
   "names": {
     "firstName": "Εμμανουέλα",
     "lastName": "Τσακαλίδου",
@@ -33,12 +47,16 @@
       "validate": "Έλεγχος",
       "validateDescription": "Testing & debugging",
       "design": "Σχεδιασμός",
-      "designDescription": "Διεπαφές με επίκεντρο τον χρήστη"
+      "designDescription": "Διεπαφές με επίκεντρο τον χρήστη",
+      "metaTitle": "{{name}} | Portfolio",
+      "metaDescription": "Software developer που αναπτύσσει αξιόπιστες εφαρμογές σε frontend, backend και APIs, με έμφαση στην ποιότητα λογισμικού και την εμπειρία χρήστη από την αρχή.",
+      "engineeringFocus": "Τεχνική κατεύθυνση",
+      "email": "Email"
     },
     "about": {
       "eyebrow": "Σχετικά με εμένα",
       "title": "Ανάπτυξη λογισμικού με έμφαση στην ποιότητα και τη χρηστικότητα",
-      "description": "Η εμπειρία μου περιλαμβάνει ανάπτυξη εφαρμογών, testing, debugging και σχεδιασμό διεπαφών. Προτιμώ έργα όπου οι τεχνικές αποφάσεις βασίζονται στις ανάγκες των χρηστών και η συμπεριφορά του λογισμικού μπορεί να επαληθευτεί.",
+      "description": "Η εμπειρία μου περιλαμβάνει ανάπτυξη εφαρμογών, testing, debugging και σχεδιασμό διεπαφών. Προτιμώ projects όπου οι τεχνικές αποφάσεις βασίζονται στις ανάγκες των χρηστών και η συμπεριφορά του λογισμικού μπορεί να επαληθευτεί.",
       "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
       "fullStackTitle": "Full-stack βάση",
       "fullStackDescription": "React, Node.js, APIs, σχεσιακές και NoSQL βάσεις δεδομένων.",
@@ -50,7 +68,7 @@
     "selectedWork": {
       "eyebrow": "Επιλεγμένα projects",
       "title": "Projects που δείχνουν τον τρόπο που αναπτύσσω λογισμικό",
-      "description": "Μια επιλεγμένη συλλογή έργων με τεχνικό βάθος, διαφορετικές τεχνολογίες και άμεση συνάφεια με ρόλους software engineering.",
+      "description": "Μια επιλεγμένη συλλογή projects με τεχνικό βάθος, διαφορετικές τεχνολογίες και άμεση συνάφεια με ρόλους software engineering.",
       "seeAll": "Όλα τα projects"
     },
     "quality": {
@@ -81,7 +99,8 @@
       "description": "Επαγγελματική σύσταση από την πρακτική μου στην ανάπτυξη λογισμικού στη Valmore Technologies.",
       "authorRole": "Συνιδιοκτήτης & CTO · Valmore Technologies",
       "context": "Software Development Internship · React Native · Testing · Debugging · Troubleshooting",
-      "button": "Προβολή πλήρους συστατικής επιστολής"
+      "button": "Προβολή πλήρους συστατικής επιστολής",
+      "quote": "Η ισχυρή εργασιακή της ηθική και η προθυμία της να υποστηρίζει την ομάδα την έκαναν πολύτιμο μέλος του οργανισμού μας."
     },
     "education": {
       "eyebrow": "Εκπαίδευση",
@@ -186,12 +205,12 @@
       "github": "{{name}} στο GitHub"
     },
     "page": {
-      "metaTitle": "Projects - Εμμανουέλα Τσακαλίδου",
-      "metaDescription": "Επιλεγμένα έργα ανάπτυξης λογισμικού σε full stack, backend, mobile, C++, testing και UI/UX.",
+      "metaTitle": "Projects — Εμμανουέλα Τσακαλίδου",
+      "metaDescription": "Επιλεγμένα software-development projects σε full stack, backend, mobile, C++, testing και UI/UX.",
       "eyebrow": "Projects",
-      "title": "Επιλεγμένα έργα software engineering",
-      "description": "Φιλτράρετε τα έργα ανάλογα με το είδος τεχνικής εμπειρίας που θέλετε να δείτε. Δίνεται προτεραιότητα σε πιο ολοκληρωμένες και ουσιαστικές υλοποιήσεις αντί να εμφανίζεται κάθε repository.",
-      "filterLabel": "Φιλτράρισμα έργων",
+      "title": "Επιλεγμένα software engineering projects",
+      "description": "Φιλτράρετε τα projects ανάλογα με το είδος τεχνικής εμπειρίας που θέλετε να δείτε. Δίνεται προτεραιότητα σε πιο ολοκληρωμένα και ουσιαστικά projects αντί να εμφανίζεται κάθε repository.",
+      "filterLabel": "Φιλτράρισμα projects",
       "filters": {
         "all": "Όλα",
         "fullStack": "Full Stack",
@@ -202,9 +221,9 @@
         "qaTesting": "QA / Testing",
         "uiux": "UI/UX"
       },
-      "emptyTitle": "Δεν υπάρχουν έργα σε αυτή την κατηγορία.",
+      "emptyTitle": "Δεν υπάρχουν projects σε αυτή την κατηγορία.",
       "emptyDescription": "Επιλέξτε διαφορετική κατηγορία για να συνεχίσετε.",
-      "showAll": "Προβολή όλων"
+      "showAll": "Προβολή όλων των projects"
     },
     "items": {
       "pricewise": {
@@ -219,41 +238,134 @@
         "description": "Ένα πρακτικό Jenkins CI reliability lab με distributed builds, δοκιμές χωρητικότητας agents και executors, κατηγοριοποίηση αποτυχιών, monitoring, ασφαλή διαχείριση credentials και operational troubleshooting.",
         "status": "Ολοκληρωμένο lab",
         "visualAlt": "Επιτυχημένο Jenkins CI pipeline με distributed build stages και εκτέλεση σε Jenkins agents.",
-        "visualLabel": "Υλοποιημένο Jenkins CI environment"
+        "visualLabel": "Υλοποιημένο Jenkins CI environment",
+        "role": "DevOps / CI engineering",
+        "highlights": {
+          "0": "Jenkins controller σε Docker με persistent storage και δύο inbound Jenkins agents",
+          "1": "Distributed και parallel CI execution με agent labels και executors",
+          "2": "Κατηγοριοποίηση αποτυχιών σε product, infrastructure και dependency/environment failures",
+          "3": "Μηχανισμοί αξιοπιστίας pipeline με timeout, retries, build retention και artifact retention",
+          "4": "Ενσωμάτωση Jenkins Credential Store με ασφαλές runtime credential injection",
+          "5": "Capacity experiments με build queues, executors και πολλαπλούς agents",
+          "6": "Monitoring μέσω Jenkins REST API για agents, queue state, builds και failures",
+          "7": "Τεκμηρίωση operational troubleshooting και incident response"
+        },
+        "architecture": {
+          "0": "Windows host → WSL2 Ubuntu → Docker",
+          "1": "Jenkins controller σε Docker με persistent αποθήκευση μέσω jenkins_home",
+          "2": "Δύο inbound Jenkins agents σε Docker",
+          "3": "GitHub → Poll SCM → Jenkins Pipeline from SCM",
+          "4": "Parallel quality checks με Ruff και pytest",
+          "5": "Operational checks για disk capacity και Jenkins connectivity",
+          "6": "Archived και fingerprinted Jenkins build artifacts",
+          "7": "Python monitoring dashboard μέσω Jenkins REST API"
+        }
       },
       "vinted-relisting-assistant": {
         "eyebrow": "Python · Desktop εφαρμογή · Σε ανάπτυξη",
         "description": "Μια εφαρμογή Windows με έμφαση στην ιδιωτικότητα για την οργάνωση αγγελιών μεταχειρισμένων ειδών, τον προγραμματισμό καθημερινών επαναδημοσιεύσεων και τη διαχείριση τοπικού inventory, χωρίς αυτοματοποίηση της δημοσίευσης στην πλατφόρμα.",
         "status": "Σε ανάπτυξη",
         "visualAlt": "Το dark-mode dashboard της εφαρμογής Vinted Relisting Assistant για Windows.",
-        "visualLabel": "Υλοποιημένη desktop εφαρμογή"
+        "visualLabel": "Υλοποιημένη desktop εφαρμογή",
+        "role": "Desktop application developer · UI/UX designer",
+        "highlights": {
+          "0": "Καθημερινή ουρά επαναδημοσίευσης με ιστορικό, προτεραιότητες και παρακολούθηση κατάστασης αγγελιών",
+          "1": "Προχωρημένη αναζήτηση, filtering, sorting και παραμετροποιήσιμο pagination",
+          "2": "Τοπική διαχείριση φωτογραφιών με previews και thumbnail caching",
+          "3": "Privacy-first τοπική αρχιτεκτονική χωρίς απαίτηση για marketplace credentials"
+        },
+        "testing": {
+          "0": "Αυτοματοποιημένο test suite με pytest",
+          "1": "Έλεγχος τοπικής βάσης δεδομένων και βασικών workflows",
+          "2": "Χειρισμός missing images και fallback states",
+          "3": "Standalone Windows executable μέσω PyInstaller"
+        }
       },
       "cpp-sensor-dashboard": {
         "eyebrow": "Modern C++ · HTTP API · Dashboard",
         "description": "Ένας προσομοιωτής αισθητήρων τύπου IoT με multithreaded backend σε C++17, JSON HTTP API και dashboard μέσω browser.",
         "visualAlt": "Διάγραμμα αρχιτεκτονικής που παρουσιάζει C++ backend, HTTP JSON API και web dashboard.",
-        "visualLabel": "Διάγραμμα αρχιτεκτονικής"
+        "visualLabel": "Διάγραμμα αρχιτεκτονικής",
+        "role": "Developer",
+        "highlights": {
+          "0": "Background ενημερώσεις αισθητήρων με std::thread",
+          "1": "Thread-safe shared state με mutex locking",
+          "2": "Ορισμός αισθητήρων μέσω configuration",
+          "3": "Ιστορικό, min/max/average statistics και warning states"
+        },
+        "architecture": {
+          "0": "C++17 sensor manager",
+          "1": "HTTP JSON API",
+          "2": "HTML/CSS/JavaScript dashboard"
+        }
       },
       "video-games-api": {
         "eyebrow": "Backend · REST · Authentication",
         "description": "Ένα RESTful API σε Node.js που παρουσιάζει authentication, επαναχρησιμοποιήσιμα query features, μοντελοποίηση MongoDB και κεντρική διαχείριση σφαλμάτων.",
         "visualAlt": "Διάγραμμα αρχιτεκτονικής με Express REST endpoints συνδεδεμένα με MongoDB.",
-        "visualLabel": "Διάγραμμα αρχιτεκτονικής"
+        "visualLabel": "Διάγραμμα αρχιτεκτονικής",
+        "role": "Backend developer",
+        "highlights": {
+          "0": "CRUD endpoints για game resources",
+          "1": "JWT signup/login flow και password hashing",
+          "2": "Filtering, sorting, pagination και field limiting",
+          "3": "Aggregation endpoints και κεντρική διαχείριση operational errors"
+        }
       },
       "android-contacts-app": {
         "eyebrow": "Kotlin · Jetpack Compose · MVVM",
         "description": "Μια native Android εφαρμογή διαχείρισης επαφών με reactive Compose UI, αποθήκευση μέσω Room και αρχιτεκτονική ViewModel/Repository.",
         "visualAlt": "Διάγραμμα αρχιτεκτονικής MVVM για την εφαρμογή διαχείρισης επαφών Android.",
-        "visualLabel": "Διάγραμμα αρχιτεκτονικής"
+        "visualLabel": "Διάγραμμα αρχιτεκτονικής",
+        "role": "Android developer",
+        "highlights": {
+          "0": "Προσθήκη, επεξεργασία και διαγραφή επαφών",
+          "1": "Αποθήκευση δεδομένων μέσω Room database",
+          "2": "Reactive state μέσω ViewModel",
+          "3": "Compose Navigation μεταξύ λίστας και φόρμας επαφής"
+        }
       },
       "reposentry": {
         "eyebrow": "Python · Engineering tooling · Σε εξέλιξη",
         "description": "Ένα εργαλείο σε Python που αναπτύσσεται για την ανάλυση της κατάστασης GitHub repositories και τη δημιουργία πρακτικών αναφορών με προτεινόμενες ενέργειες.",
         "status": "Σε ανάπτυξη",
         "visualAlt": "Concept διάγραμμα για το RepoSentry CLI και τη ροή ανάλυσης repository.",
-        "visualLabel": "Concept visual · έργο σε εξέλιξη"
+        "visualLabel": "Concept visual · project σε εξέλιξη",
+        "role": "Developer",
+        "highlights": {
+          "0": "CLI entry point με Typer",
+          "1": "Strict static typing με mypy",
+          "2": "Development setup με pytest",
+          "3": "Linting και formatting με Ruff"
+        },
+        "testing": {
+          "0": "pytest",
+          "1": "pytest-asyncio",
+          "2": "pytest-cov",
+          "3": "respx"
+        }
       }
+    },
+    "detail": {
+      "allProjects": "Όλα τα projects",
+      "role": "Ρόλος:",
+      "viewRepository": "Προβολή repository",
+      "demonstratesEyebrow": "Τι δείχνει το project",
+      "evidenceTitle": "Τεχνική εμπειρία",
+      "architectureEyebrow": "Αρχιτεκτονική / ποιότητα",
+      "structureTitle": "Πώς είναι δομημένο",
+      "fallback": "Αυτό το project επικεντρώνεται κυρίως στην υλοποίηση backend και στη μοντελοποίηση δεδομένων. Περισσότερες τεχνικές λεπτομέρειες υπάρχουν στο repository.",
+      "notFoundTitle": "Το project δεν βρέθηκε — {{name}}",
+      "notFoundDescription": "Το project που ζητήθηκε δεν βρέθηκε."
     }
+  },
+  "resumePage": {
+    "metaTitle": "Βιογραφικό — {{name}}",
+    "metaDescription": "Βιογραφικό της {{name}}, software developer με εμπειρία σε development, testing και APIs.",
+    "eyebrow": "Βιογραφικό",
+    "title": "Εμπειρία, εκπαίδευση και τεχνικές δεξιότητες",
+    "description": "Δείτε το βιογραφικό μου απευθείας μέσα από το portfolio ή κατεβάστε το πρωτότυπο PDF.",
+    "documentTitle": "{{name}} — CV"
   },
   "recommendationPage": {
     "metaTitle": "Συστατική επιστολή — {{name}}",
@@ -263,6 +375,188 @@
     "title": "Επαγγελματική συστατική επιστολή",
     "description": "Συστατική επιστολή από τον {{supervisor}}, Συνιδιοκτήτη & CTO της Valmore Technologies, μετά την πρακτική μου στην ανάπτυξη λογισμικού.",
     "documentTitle": "Valmore Technologies — Συστατική επιστολή"
+  },
+  "thesisPage": {
+    "metaTitle": "Πτυχιακή PriceWise — {{name}}",
+    "metaDescription": "Η πλήρης πτυχιακή εργασία BSc (Hons) Computing Software Development που τεκμηριώνει την έρευνα, τον σχεδιασμό, την υλοποίηση και την αξιολόγηση του PriceWise.",
+    "back": "Επιστροφή στο PriceWise",
+    "eyebrow": "Πτυχιακή εργασία · Ελληνικά",
+    "title": "PriceWise — Πλήρης Πτυχιακή Εργασία",
+    "description": "Η πλήρης πτυχιακή εργασία BSc (Hons), με τεκμηρίωση της έρευνας, του σχεδιασμού, της υλοποίησης και της αξιολόγησης του PriceWise. Το πρωτότυπο ακαδημαϊκό κείμενο είναι γραμμένο στα Ελληνικά.",
+    "documentTitle": "PriceWise — Πτυχιακή Εργασία"
+  },
+  "priceWisePage": {
+    "metaTitle": "PriceWise Case Study — {{name}}",
+    "metaDescription": "Η έρευνα, η διαδικασία UX και η τεχνική αρχιτεκτονική πίσω από το PriceWise, ένα prototype σύγκρισης τιμών supermarket στο πλαίσιο πτυχιακής εργασίας.",
+
+    "back": "Όλα τα projects",
+
+    "hero": {
+      "eyebrow": "Flagship case study · Πτυχιακή εργασία",
+      "description": "Ένα full-stack prototype σύγκρισης τιμών προϊόντων, σχεδιασμένο για ευκολότερη σύγκριση μεταξύ ελληνικών supermarket και οργάνωση shopping list χωρίς να απαιτείται λογαριασμός.",
+      "liveDemo": "Live demo",
+      "repository": "Προβολή repository",
+      "thesis": "Προβολή πτυχιακής",
+      "visualAlt": "Υλοποιημένη σελίδα σύγκρισης τιμών του PriceWise με navigation, search field και φίλτρα.",
+      "visualLabel": "Υλοποιημένο PriceWise interface"
+    },
+
+    "research": {
+      "eyebrow": "Το πρόβλημα",
+      "title": "Τα δεδομένα τιμών υπάρχουν, αλλά όχι σε ένα ενιαίο και συνεπές σημείο.",
+      "description": "Τα ελληνικά supermarket websites διαφέρουν ως προς τη δομή, την ονομασία προϊόντων, τις κατηγορίες και τη διαθεσιμότητα. Η χειροκίνητη σύγκριση απαιτεί χρόνο, ενώ η δημιουργία μιας ενιαίας προβολής απαιτεί συλλογή, κανονικοποίηση, αποθήκευση και αντιστοίχιση δεδομένων από διαφορετικές πηγές.",
+      "participantLabel": "συμμετέχοντες στο ερωτηματολόγιο ανάλυσης αναγκών",
+      "comparisonLabel": "επέλεξαν τη σύγκριση τιμών προϊόντων ως επιθυμητή λειτουργία",
+      "uiLabel": "αξιολόγησαν το απλό και εύχρηστο UI ως σημαντικό ή πολύ σημαντικό",
+      "accuracyLabel": "δήλωσαν ότι ανακριβείς ή παλιές τιμές θα μπορούσαν να τους κάνουν να σταματήσουν να χρησιμοποιούν την εφαρμογή"
+    },
+
+    "ux": {
+      "eyebrow": "UX process",
+      "title": "Τα ευρήματα της έρευνας διαμόρφωσαν το prototype.",
+      "description": "Η πτυχιακή ξεκίνησε από τα αποτελέσματα του ερωτηματολογίου και προχώρησε σε requirements, personas, customer journey, Figma mockups, υλοποίηση και τεχνική αξιολόγηση.",
+      "processLabel": "Διαδικασία σχεδιασμού PriceWise",
+      "steps": {
+        "research": "Έρευνα",
+        "requirements": "Requirements",
+        "personas": "Personas",
+        "journey": "Customer journey",
+        "figma": "Figma mockups",
+        "implementation": "Υλοποίηση",
+        "evaluation": "Χειροκίνητη αξιολόγηση",
+        "iteration": "Iteration"
+      },
+      "personas": {
+        "giorgosLabel": "Persona 01",
+        "giorgosTitle": "Γιώργος · 21 · Φοιτητής",
+        "giorgosDescription": "Δίνει έμφαση στην τιμή, είναι εξοικειωμένος με την τεχνολογία και θέλει γρήγορη αναζήτηση προϊόντων, φίλτρα supermarket και shopping list χωρίς λογαριασμό.",
+        "mariaLabel": "Persona 02",
+        "mariaTitle": "Μαρία · 35 · Εργαζόμενη μητέρα",
+        "mariaDescription": "Θέλει να εξοικονομεί χρόνο, να συγκρίνει γνωστά supermarket και να δημιουργεί μια απλή λίστα που μπορεί προαιρετικά να στείλει μέσω email.",
+        "nikosLabel": "Persona 03",
+        "nikosTitle": "Νίκος · 50 · Αγορές για το νοικοκυριό",
+        "nikosDescription": "Προτιμά ξεκάθαρη αναζήτηση, ευανάγνωστες τιμές και απλό navigation αντί για πολύπλοκες ροές με πολλές λειτουργίες."
+      }
+    },
+
+    "implementation": {
+      "eyebrow": "Υλοποιημένη εφαρμογή",
+      "title": "Ένα λειτουργικό prototype και όχι μόνο ένα Figma concept.",
+      "description": "Τα screenshots παρουσιάζουν το υλοποιημένο PriceWise interface: αναζήτηση και filtering, συγκρίσιμα αποτελέσματα προϊόντων, το supermarket comparison modal, την αποθηκευμένη shopping list και το responsive mobile layout.",
+      "homeAlt": "Υλοποιημένη αρχική σελίδα του PriceWise με αναζήτηση προϊόντων και φίλτρα κατηγορίας και supermarket.",
+      "homeCaption": "Σύγκριση τιμών · υλοποιημένο interface",
+      "resultsAlt": "Υλοποιημένα αποτελέσματα αναζήτησης PriceWise με συγκρίσιμα προϊόντα από διαφορετικά supermarket.",
+      "resultsCaption": "Αποτελέσματα αναζήτησης · πραγματικά δεδομένα προϊόντων",
+      "compareAlt": "Υλοποιημένο comparison modal του PriceWise με το ίδιο προϊόν από διαφορετικά supermarket, τιμές και δυνατότητα προσθήκης στη λίστα.",
+      "compareCaption": "Product comparison modal",
+      "listAlt": "Υλοποιημένη shopping list του PriceWise με αποθηκευμένο προϊόν, τιμή, supermarket, remove action και προαιρετική αποστολή μέσω email.",
+      "listCaption": "Shopping list · desktop",
+      "mobileAlt": "Υλοποιημένη shopping list του PriceWise σε mobile layout.",
+      "mobileCaption": "Responsive shopping list · mobile",
+      "privacyAlt": "Υλοποιημένη privacy page του PriceWise με πληροφορίες απορρήτου, navigation και footer.",
+      "privacyCaption": "Privacy-first εμπειρία χρήστη"
+    },
+
+    "designEvolution": {
+      "eyebrow": "Εξέλιξη σχεδιασμού",
+      "title": "Τα mockups ήταν η αφετηρία και όχι μια αμετάβλητη προδιαγραφή.",
+      "description": "Η πτυχιακή καταγράφει αλλαγές που έγιναν κατά την υλοποίηση, όπως η προσθήκη product modal και ορατού EL/EN language switch μετά τα αρχικά Figma mockups.",
+      "homeAlt": "Αρχικό Figma mockup της αρχικής σελίδας του PriceWise.",
+      "homeCaption": "Home · αρχικό Figma mockup",
+      "searchAlt": "Αρχικό Figma mockup των αποτελεσμάτων αναζήτησης του PriceWise.",
+      "searchCaption": "Search results · αρχικό Figma mockup",
+      "listAlt": "Αρχικό Figma mockup της shopping list του PriceWise.",
+      "listCaption": "Shopping list · αρχικό Figma mockup"
+    },
+
+    "architecture": {
+      "eyebrow": "Αρχιτεκτονική",
+      "title": "Διαχωρισμός frontend, backend, database και data-collection workflows.",
+      "client": "Client",
+      "clientDetails": "Axios · react-i18next · socket.io-client",
+      "api": "API",
+      "apiDetails": "REST endpoints · Socket.IO · Nodemailer",
+      "data": "Data",
+      "dataDetails": "Products · supermarkets · categories · comparison groups",
+      "collection": "Collection",
+      "collectionDetails": "Source-specific scrapers",
+      "schedule": "Schedule",
+      "scheduleDetails": "Καθημερινό refresh αντί για scraping σε κάθε αναζήτηση",
+      "uiRefresh": "UI refresh",
+      "uiRefreshDetails": "Refresh των συνδεδεμένων clients μετά από ενημέρωση δεδομένων"
+    },
+
+    "features": {
+      "eyebrow": "Βασικές λειτουργίες",
+      "title": "Ένα σκόπιμα εστιασμένο prototype.",
+      "searchTitle": "Αναζήτηση & σύγκριση",
+      "searchDescription": "Αναζήτηση προϊόντων και περιορισμός των αποτελεσμάτων σε επιλεγμένες αλυσίδες supermarket.",
+      "listTitle": "Shopping list",
+      "listDescription": "Τοπική αποθήκευση της λίστας χωρίς υποχρεωτική δημιουργία λογαριασμού και προαιρετική αποστολή μέσω email.",
+      "collectionTitle": "Scheduled data collection",
+      "collectionDescription": "Εκτέλεση supermarket-specific scrapers σε ελεγχόμενο schedule αντί για κάθε αναζήτηση του χρήστη.",
+      "privacyTitle": "Privacy-conscious flow",
+      "privacyDescription": "Ελαχιστοποίηση συλλογής προσωπικών δεδομένων και προαιρετική αποστολή email με συναίνεση του χρήστη."
+    },
+
+    "quality": {
+      "eyebrow": "Ποιότητα & testing",
+      "title": "Τι ελέγχθηκε πραγματικά",
+      "description": "Η πτυχιακή περιγράφει την τεχνική αξιολόγηση κυρίως ως χειροκίνητο testing. Η διάκριση είναι σημαντική: το Playwright χρησιμοποιήθηκε για dynamic web scraping και όχι ως end-to-end UI test automation.",
+      "checks": {
+        "frontend": "Frontend navigation και συμπεριφορά",
+        "list": "Προσθήκη/αφαίρεση προϊόντων και local-list storage",
+        "email": "Αποστολή email και language switching",
+        "filtering": "Filtering και Socket.IO interface refresh",
+        "backend": "Backend endpoints, database connectivity και scraper behaviour",
+        "errors": "Error handling για ελλιπείς ή μη έγκυρες περιπτώσεις"
+      },
+      "futureLabel": "Μελλοντικές βελτιώσεις ποιότητας",
+      "futureTitle": "Τα automated Jest tests προτάθηκαν ως μελλοντική βελτίωση και δεν παρουσιάζονται ως ήδη υλοποιημένα.",
+      "futureDescription": "Η πτυχιακή προτείνει unit και integration tests για data cleaning, product normalisation, API endpoints, shopping-list logic και frontend helpers."
+    },
+
+    "challenges": {
+      "eyebrow": "Engineering challenges",
+      "title": "Πού βρίσκεται η τεχνική πολυπλοκότητα",
+      "items": {
+        "0": "Διαφορετικές HTML δομές και JavaScript-loading behaviour μεταξύ supermarket websites",
+        "1": "Selectors και scraping logic που μπορούν να επηρεαστούν όταν αλλάζουν τα εξωτερικά websites",
+        "2": "Κανονικοποίηση και αντιστοίχιση προϊόντων με παρόμοιες ονομασίες αλλά διαφορετικές ποσότητες ή brands",
+        "3": "Διατήρηση ξεκάθαρου multilingual interface χωρίς να παρουσιάζονται τα product data ως αυτόματα μεταφρασμένα",
+        "4": "Ισορροπία μεταξύ data freshness και υπεύθυνης, περιορισμένης συχνότητας scraping"
+      }
+    },
+
+    "nextIterations": {
+      "eyebrow": "Επόμενες βελτιώσεις",
+      "title": "Τι θα βελτίωνα στη συνέχεια",
+      "items": {
+        "0": "Βελτίωση της ακρίβειας product matching και comparison",
+        "1": "Στοχευμένα usability tests με task-based observations",
+        "2": "Price history και threshold notifications",
+        "3": "Διερεύνηση mobile app με offline shopping-list support",
+        "4": "Συστηματικά unit και integration tests"
+      }
+    },
+
+    "thesis": {
+      "eyebrow": "Πλήρης ακαδημαϊκή εργασία",
+      "title": "Θέλετε να δείτε ολόκληρη την έρευνα και την τεχνική τεκμηρίωση;",
+      "description": "Η πλήρης πτυχιακή τεκμηριώνει τη διαδικασία έρευνας, τα requirements, τις σχεδιαστικές αποφάσεις, την υλοποίηση, την αρχιτεκτονική, το testing και την αξιολόγηση του PriceWise.",
+      "label": "BSc thesis",
+      "cardTitle": "Διαβάστε την πλήρη πτυχιακή PriceWise",
+      "cardDescription": "Δείτε το πρωτότυπο ακαδημαϊκό κείμενο απευθείας μέσα από το portfolio ή κατεβάστε το PDF.",
+      "button": "Άνοιγμα πτυχιακής"
+    },
+
+    "code": {
+      "eyebrow": "Κώδικας",
+      "title": "Θέλετε να δείτε πώς είναι δομημένο το PriceWise;",
+      "description": "Το δημόσιο repository περιλαμβάνει το frontend, το backend, το Docker configuration και το scraper workflow.",
+      "repository": "GitHub repository",
+      "contact": "Ρωτήστε με για το project"
+    }
   },
   "documentViewer": {
     "document": "Έγγραφο",
@@ -274,6 +568,37 @@
     "nextPage": "Επόμενη σελίδα",
     "page": "Σελίδα",
     "of": "από"
+  },
+  "notFound": {
+    "project": {
+      "eyebrow": "Project δεν βρέθηκε",
+      "title": "Αυτό το case study δεν είναι διαθέσιμο.",
+      "description": "Το project μπορεί να έχει μετονομαστεί, αφαιρεθεί ή το link να μην είναι σωστό.",
+      "viewProjects": "Προβολή projects",
+      "backHome": "Επιστροφή στην αρχική"
+    },
+    "page": {
+      "metaTitle": "404 — Η διαδρομή δεν βρέθηκε",
+      "metaDescription": "Η σελίδα portfolio που ζητήθηκε δεν βρέθηκε.",
+      "eyebrow": "404 · Η διαδρομή δεν βρέθηκε",
+      "title": "Αυτό το path δεν κάνει compile.",
+      "description": "Η σελίδα μπορεί να έχει μετακινηθεί ή το URL να μην είναι σωστό. Το υπόλοιπο portfolio παραμένει διαθέσιμο.",
+      "backHome": "Επιστροφή στην αρχική",
+      "viewProjects": "Προβολή projects"
+    }
+  },
+  "shared": {
+    "image": {
+      "previewUnavailable": "Η προεπισκόπηση δεν είναι διαθέσιμη",
+      "previewUnavailableLabel": "{{alt}} — η προεπισκόπηση δεν είναι διαθέσιμη"
+    },
+    "error": {
+      "eyebrow": "Σφάλμα εφαρμογής",
+      "title": "Κάτι πήγε στραβά.",
+      "description": "Παρουσιάστηκε ένα απρόσμενο σφάλμα στο portfolio. Μπορείτε να δοκιμάσετε ξανά ή να επιστρέψετε στην αρχική.",
+      "retry": "Δοκιμή ξανά",
+      "home": "Επιστροφή στην αρχική"
+    }
   },
   "footer": {
     "tagline": "Ανάπτυξη λογισμικού, ποιότητα λογισμικού και διεπαφές με επίκεντρο τον χρήστη.",

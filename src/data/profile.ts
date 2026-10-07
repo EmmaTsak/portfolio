@@ -4,7 +4,7 @@ export const profile = {
   email: 'tsakalidouemmanouela@gmail.com',
   github: 'https://github.com/EmmaTsak',
   linkedin: 'https://www.linkedin.com/in/etsakalidou/',
-  positioning: 'Software developer building reliable applications across frontend, backend and APIs — with software quality and user experience considered from the start.',
+  positioning:  'Software developer building reliable applications and engineering tooling across frontend, backend, APIs and CI workflows — with software quality considered from the start.',
 };
 
 export const experience = [
@@ -25,7 +25,30 @@ export const skillGroups = [
   { title: 'Development', items: ['TypeScript', 'JavaScript', 'Python', 'Java', 'C#', 'C', 'C++', 'PHP', 'SQL'] },
   { title: 'Frontend & Mobile', items: ['React', 'React Native', 'Jetpack Compose', 'HTML/CSS', 'Responsive interfaces'] },
   { title: 'Backend & APIs', items: ['Node.js', 'Express', 'RESTful APIs', 'FastAPI', 'JWT foundations'] },
-  { title: 'Testing & Quality', items: ['Jest', 'Playwright', 'Postman', 'API testing', 'Manual testing', 'Debugging', 'Defect investigation'] },
+  {
+    title: 'Testing & Quality',
+    items: [
+      'Jest',
+      'pytest',
+      'Postman',
+      'API testing',
+      'Manual testing',
+      'Debugging',
+      'Defect investigation',
+    ],
+  },
   { title: 'Data', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Prisma', 'Mongoose', 'Relational & NoSQL concepts'] },
-  { title: 'Tools & Design', items: ['Git', 'GitHub', 'Docker', 'Figma', 'Linux/Unix CLI', 'WordPress'] },
+  {
+    title: 'Tools & Design',
+    items: [
+      'Git',
+      'GitHub',
+      'Docker',
+      'Jenkins',
+      'Playwright',
+      'Figma',
+      'Linux/Unix CLI',
+      'WordPress',
+    ],
+  },
 ];

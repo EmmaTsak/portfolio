@@ -6,6 +6,20 @@
     "skills": "Skills",
     "contact": "Contact"
   },
+  "ui": {
+    "header": {
+      "homeLabel": "Emmanouela Tsakalidou home",
+      "openNavigation": "Open navigation",
+      "closeNavigation": "Close navigation",
+      "primaryNavigation": "Primary navigation"
+    },
+    "theme": {
+      "switchToLight": "Switch to light mode",
+      "switchToDark": "Switch to dark mode"
+    },
+    "skipToContent": "Skip to content",
+    "offline": "You appear to be offline. Local portfolio content is still available, but external links may not load."
+  },
   "names": {
     "firstName": "Emmanouela",
     "lastName": "Tsakalidou",
@@ -33,7 +47,11 @@
       "validate": "Validate",
       "validateDescription": "Testing & debugging",
       "design": "Design",
-      "designDescription": "User-centred interfaces"
+      "designDescription": "User-centred interfaces",
+      "metaTitle": "{{name}} | Portfolio",
+      "metaDescription": "Software developer building reliable applications across frontend, backend and APIs — with software quality and user experience considered from the start.",
+      "engineeringFocus": "Engineering focus",
+      "email": "Email"
     },
     "about": {
       "eyebrow": "About",
@@ -81,7 +99,8 @@
       "description": "A professional recommendation from my software-development internship at Valmore Technologies.",
       "authorRole": "Co-Owner & CTO · Valmore Technologies",
       "context": "Software Development Internship · React Native · Testing · Debugging · Troubleshooting",
-      "button": "View full recommendation"
+      "button": "View full recommendation",
+      "quote": "Her strong work ethic and willingness to support the team made her a valued member of our organization."
     },
     "education": {
       "eyebrow": "Education",
@@ -219,41 +238,134 @@
         "description": "A hands-on Jenkins CI reliability lab exploring distributed builds, agent capacity, failure classification, monitoring, secure credentials and operational troubleshooting.",
         "status": "Completed lab",
         "visualAlt": "Successful Jenkins CI pipeline showing distributed build stages and agent execution.",
-        "visualLabel": "Implemented Jenkins CI environment"
+        "visualLabel": "Implemented Jenkins CI environment",
+        "role": "DevOps / CI engineering",
+        "highlights": {
+          "0": "Dockerized Jenkins controller with persistent storage and two inbound Jenkins agents",
+          "1": "Distributed and parallel CI execution using agent labels and executors",
+          "2": "Failure classification for product, infrastructure and dependency/environment failures",
+          "3": "Pipeline reliability controls including timeout, retries, build retention and artifact retention",
+          "4": "Jenkins Credential Store integration with secure runtime credential injection",
+          "5": "Capacity experiments covering build queues, executors and multiple agents",
+          "6": "Jenkins REST API monitoring for agents, queue state, builds and failures",
+          "7": "Operational troubleshooting and incident-response documentation"
+        },
+        "architecture": {
+          "0": "Windows host → WSL2 Ubuntu → Docker",
+          "1": "Dockerized Jenkins controller with persistent jenkins_home storage",
+          "2": "Two inbound Docker-based Jenkins agents",
+          "3": "GitHub → Poll SCM → Jenkins Pipeline from SCM",
+          "4": "Parallel Ruff and pytest quality checks",
+          "5": "Operational disk and Jenkins connectivity checks",
+          "6": "Archived and fingerprinted Jenkins build artifacts",
+          "7": "Python monitoring dashboard using the Jenkins REST API"
+        }
       },
       "vinted-relisting-assistant": {
         "eyebrow": "Python · Desktop application · In development",
         "description": "A privacy-first Windows desktop application for organising second-hand marketplace listings, planning daily relisting work and managing a local inventory without automating marketplace publishing.",
         "status": "In development",
         "visualAlt": "Dark-mode dashboard of the Vinted Relisting Assistant Windows desktop application.",
-        "visualLabel": "Implemented desktop application"
+        "visualLabel": "Implemented desktop application",
+        "role": "Desktop application developer · UI/UX designer",
+        "highlights": {
+          "0": "Daily relisting queue with history, priorities and listing-status tracking",
+          "1": "Advanced search, filtering, sorting and configurable pagination",
+          "2": "Local photo management with previews and thumbnail caching",
+          "3": "Privacy-first local architecture with no marketplace credentials required"
+        },
+        "testing": {
+          "0": "Automated pytest test suite",
+          "1": "Local database and workflow validation",
+          "2": "Missing-image and fallback-state handling",
+          "3": "Standalone Windows executable packaged with PyInstaller"
+        }
       },
       "cpp-sensor-dashboard": {
         "eyebrow": "Modern C++ · HTTP API · Dashboard",
         "description": "An IoT-style sensor simulator with a multithreaded C++17 backend, JSON HTTP API and browser dashboard.",
         "visualAlt": "Architecture illustration showing a C++ backend, HTTP JSON API and web dashboard.",
-        "visualLabel": "Architecture illustration"
+        "visualLabel": "Architecture illustration",
+        "role": "Developer",
+        "highlights": {
+          "0": "Background sensor updates with std::thread",
+          "1": "Thread-safe shared state with mutex locking",
+          "2": "Config-driven sensor definitions",
+          "3": "History, min/max/average statistics and warning states"
+        },
+        "architecture": {
+          "0": "C++17 sensor manager",
+          "1": "HTTP JSON API",
+          "2": "HTML/CSS/JavaScript dashboard"
+        }
       },
       "video-games-api": {
         "eyebrow": "Backend · REST · Authentication",
         "description": "A RESTful Node.js API demonstrating authentication, reusable query features, MongoDB modelling and centralized error handling.",
         "visualAlt": "Architecture illustration showing Express REST endpoints connected to MongoDB.",
-        "visualLabel": "Architecture illustration"
+        "visualLabel": "Architecture illustration",
+        "role": "Backend developer",
+        "highlights": {
+          "0": "CRUD endpoints for game resources",
+          "1": "JWT signup/login flow and password hashing",
+          "2": "Filtering, sorting, pagination and field limiting",
+          "3": "Aggregation endpoints and centralized operational errors"
+        }
       },
       "android-contacts-app": {
         "eyebrow": "Kotlin · Jetpack Compose · MVVM",
         "description": "A native Android contacts manager with reactive Compose UI, Room persistence and a ViewModel/Repository architecture.",
         "visualAlt": "MVVM architecture illustration for the Android contacts application.",
-        "visualLabel": "Architecture illustration"
+        "visualLabel": "Architecture illustration",
+        "role": "Android developer",
+        "highlights": {
+          "0": "Add, edit and delete contacts",
+          "1": "Room database persistence",
+          "2": "Reactive state through ViewModel",
+          "3": "Compose Navigation between list and form screens"
+        }
       },
       "reposentry": {
         "eyebrow": "Python · Engineering tooling · In progress",
         "description": "A Python engineering tool being developed to analyse GitHub repository health and produce actionable reports.",
         "status": "In development",
         "visualAlt": "Concept illustration for the RepoSentry CLI and repository-analysis flow.",
-        "visualLabel": "Concept visual · project in progress"
+        "visualLabel": "Concept visual · project in progress",
+        "role": "Developer",
+        "highlights": {
+          "0": "CLI entry point with Typer",
+          "1": "Strict static typing with mypy",
+          "2": "pytest development setup",
+          "3": "Ruff linting and formatting"
+        },
+        "testing": {
+          "0": "pytest",
+          "1": "pytest-asyncio",
+          "2": "pytest-cov",
+          "3": "respx"
+        }
       }
+    },
+    "detail": {
+      "allProjects": "All projects",
+      "role": "Role:",
+      "viewRepository": "View repository",
+      "demonstratesEyebrow": "What it demonstrates",
+      "evidenceTitle": "Engineering evidence",
+      "architectureEyebrow": "Architecture / quality",
+      "structureTitle": "How it is structured",
+      "fallback": "This project focuses primarily on backend implementation and data modelling. See the repository for source-level details.",
+      "notFoundTitle": "Project not found — {{name}}",
+      "notFoundDescription": "The requested project could not be found."
     }
+  },
+  "resumePage": {
+    "metaTitle": "Resume — {{name}}",
+    "metaDescription": "Resume for {{name}}, a software developer with development, testing and API experience.",
+    "eyebrow": "Resume",
+    "title": "Experience, education and technical skills",
+    "description": "View my CV directly in the portfolio or download the original PDF.",
+    "documentTitle": "{{name}} — CV"
   },
   "recommendationPage": {
     "metaTitle": "Recommendation — {{name}}",
@@ -263,6 +375,188 @@
     "title": "Professional recommendation",
     "description": "Recommendation from {{supervisor}}, Co-Owner & CTO at Valmore Technologies, following my software-development internship.",
     "documentTitle": "Valmore Technologies — Recommendation"
+  },
+  "thesisPage": {
+    "metaTitle": "PriceWise Thesis — {{name}}",
+    "metaDescription": "Full BSc (Hons) Computing Software Development thesis documenting the research, design, implementation and evaluation of PriceWise.",
+    "back": "Back to PriceWise",
+    "eyebrow": "Bachelor thesis · Greek",
+    "title": "PriceWise — Full Thesis",
+    "description": "The complete BSc (Hons) thesis documenting the research, design, implementation and evaluation of PriceWise. The original academic report is written in Greek.",
+    "documentTitle": "PriceWise — Bachelor Thesis (Greek)"
+  },
+  "priceWisePage": {
+    "metaTitle": "PriceWise Case Study — {{name}}",
+    "metaDescription": "Research, UX process and engineering architecture behind PriceWise, a grocery price comparison bachelor thesis prototype.",
+
+    "back": "All projects",
+
+    "hero": {
+      "eyebrow": "Flagship case study · Bachelor thesis",
+      "description": "A full-stack grocery price comparison prototype designed to make it easier to compare products across Greek supermarket websites and organise a shopping list without requiring an account.",
+      "liveDemo": "Live demo",
+      "repository": "View repository",
+      "thesis": "View thesis (Greek)",
+      "visualAlt": "Implemented PriceWise compare-prices page in English, showing the navigation, hero message, search field and filters.",
+      "visualLabel": "Implemented PriceWise interface"
+    },
+
+    "research": {
+      "eyebrow": "The problem",
+      "title": "Price data exists, but not in one consistent place.",
+      "description": "Greek supermarket sites differ in structure, naming, categories and availability. Comparing them manually takes time; engineering a unified view also requires collection, normalisation, storage and matching across inconsistent sources.",
+      "participantLabel": "participants in the needs-analysis questionnaire",
+      "comparisonLabel": "selected product price comparison as a desired feature",
+      "uiLabel": "rated simple/easy-to-use UI as important or very important",
+      "accuracyLabel": "said inaccurate or stale prices could make them stop using the app"
+    },
+
+    "ux": {
+      "eyebrow": "UX process",
+      "title": "Research findings shaped the prototype.",
+      "description": "The thesis moved from questionnaire findings into requirements, personas, customer journey, Figma mockups, implementation and technical evaluation.",
+      "processLabel": "PriceWise design process",
+      "steps": {
+        "research": "Research",
+        "requirements": "Requirements",
+        "personas": "Personas",
+        "journey": "Customer journey",
+        "figma": "Figma mockups",
+        "implementation": "Implementation",
+        "evaluation": "Manual evaluation",
+        "iteration": "Iteration"
+      },
+      "personas": {
+        "giorgosLabel": "Persona 01",
+        "giorgosTitle": "Giorgos · 21 · Student",
+        "giorgosDescription": "Price-sensitive, comfortable with technology and wants fast product search, nearby supermarket filtering and an account-free list.",
+        "mariaLabel": "Persona 02",
+        "mariaTitle": "Maria · 35 · Working parent",
+        "mariaDescription": "Needs to save time, compare familiar supermarkets and build a simple list she can optionally send by email.",
+        "nikosLabel": "Persona 03",
+        "nikosTitle": "Nikos · 50 · Household shopper",
+        "nikosDescription": "Prefers clear search, readable prices and minimal navigation over feature-heavy workflows."
+      }
+    },
+
+    "implementation": {
+      "eyebrow": "Implemented application",
+      "title": "The working prototype, not just the Figma concept.",
+      "description": "These screenshots show the implemented PriceWise interface: search and filtering, comparable product results, the supermarket comparison modal, the saved shopping list and the responsive mobile layout.",
+      "homeAlt": "Implemented PriceWise home page in English with product search and category and store filters.",
+      "homeCaption": "Compare prices · implemented interface",
+      "resultsAlt": "Implemented PriceWise search results showing comparable 7Days products from multiple supermarkets.",
+      "resultsCaption": "Search results · real product data",
+      "compareAlt": "Implemented PriceWise comparison modal showing the same product from Galaxias and Sklavenitis with prices and add-to-list actions.",
+      "compareCaption": "Product comparison modal",
+      "listAlt": "Implemented PriceWise shopping list with a saved product, price, supermarket, remove action and optional email delivery panel.",
+      "listCaption": "Shopping list · desktop",
+      "mobileAlt": "Implemented PriceWise shopping list on a narrow mobile layout.",
+      "mobileCaption": "Responsive shopping list · mobile",
+      "privacyAlt": "Implemented PriceWise privacy page showing privacy information, navigation and footer.",
+      "privacyCaption": "Privacy-first product experience"
+    },
+
+    "designEvolution": {
+      "eyebrow": "Design evolution",
+      "title": "Mockups were a starting point, not a frozen specification.",
+      "description": "The thesis explicitly records implementation changes, including a product modal and visible EL/EN language switch added after the initial Figma work.",
+      "homeAlt": "Original PriceWise Figma home-page mockup.",
+      "homeCaption": "Home · original Figma mockup",
+      "searchAlt": "Original PriceWise Figma search-results mockup.",
+      "searchCaption": "Search results · original Figma mockup",
+      "listAlt": "Original PriceWise Figma shopping-list mockup.",
+      "listCaption": "Shopping list · original Figma mockup"
+    },
+
+    "architecture": {
+      "eyebrow": "Architecture",
+      "title": "Separated frontend, backend, database and collection workflows.",
+      "client": "Client",
+      "clientDetails": "Axios · react-i18next · socket.io-client",
+      "api": "API",
+      "apiDetails": "REST endpoints · Socket.IO · Nodemailer",
+      "data": "Data",
+      "dataDetails": "Products · supermarkets · categories · comparison groups",
+      "collection": "Collection",
+      "collectionDetails": "Source-specific scrapers",
+      "schedule": "Schedule",
+      "scheduleDetails": "Daily refresh rather than per-search scraping",
+      "uiRefresh": "UI refresh",
+      "uiRefreshDetails": "Refresh connected clients after data updates"
+    },
+
+    "features": {
+      "eyebrow": "Core functionality",
+      "title": "A deliberately focused prototype.",
+      "searchTitle": "Search & compare",
+      "searchDescription": "Search products and narrow results to selected supermarket chains.",
+      "listTitle": "Shopping list",
+      "listDescription": "Store the list locally without mandatory account creation; optionally email it.",
+      "collectionTitle": "Scheduled data collection",
+      "collectionDescription": "Run supermarket-specific scrapers on a controlled schedule rather than every user search.",
+      "privacyTitle": "Privacy-conscious flow",
+      "privacyDescription": "Minimise personal-data collection and keep email delivery optional and consent-based."
+    },
+
+    "quality": {
+      "eyebrow": "Quality & testing",
+      "title": "What was actually tested",
+      "description": "The thesis describes the technical evaluation as primarily manual testing. That distinction matters: Playwright was used for dynamic web scraping, not claimed as end-to-end UI test automation.",
+      "checks": {
+        "frontend": "Frontend navigation and behaviour",
+        "list": "Adding/removing items and local-list storage",
+        "email": "Email delivery and language switching",
+        "filtering": "Filtering and Socket.IO interface refresh",
+        "backend": "Backend endpoints, database connectivity and scraper behaviour",
+        "errors": "Error handling for incomplete or invalid cases"
+      },
+      "futureLabel": "Future quality work",
+      "futureTitle": "Automated Jest tests were proposed, not fabricated.",
+      "futureDescription": "The thesis identifies unit and integration tests for data cleaning, product normalisation, API endpoints, shopping-list logic and frontend helpers as a future improvement."
+    },
+
+    "challenges": {
+      "eyebrow": "Engineering challenges",
+      "title": "Where the complexity lives",
+      "items": {
+        "0": "Different supermarket HTML structures and JavaScript-loading behaviour",
+        "1": "Selectors and scraping logic that can break when external sites change",
+        "2": "Normalising and matching products with similar names but different quantities or brands",
+        "3": "Keeping the multilingual interface clear without pretending product data is automatically translated",
+        "4": "Balancing data freshness with responsible, limited scraping frequency"
+      }
+    },
+
+    "nextIterations": {
+      "eyebrow": "Next iterations",
+      "title": "What I would improve next",
+      "items": {
+        "0": "Improve product matching and comparison accuracy",
+        "1": "Run focused usability tests with task-based observations",
+        "2": "Add price history and threshold notifications",
+        "3": "Explore a mobile app with offline shopping-list support",
+        "4": "Add systematic unit and integration testing"
+      }
+    },
+
+    "thesis": {
+      "eyebrow": "Full academic report",
+      "title": "Want the complete research and technical documentation?",
+      "description": "The full thesis documents the research process, requirements, design decisions, implementation, architecture, testing and evaluation behind PriceWise.",
+      "label": "BSc thesis",
+      "cardTitle": "Read the complete PriceWise thesis",
+      "cardDescription": "View the original academic report directly in the portfolio or download the PDF.",
+      "button": "Open thesis"
+    },
+
+    "code": {
+      "eyebrow": "Explore the code",
+      "title": "Want to see how PriceWise is structured?",
+      "description": "The public repository contains the frontend, backend, Docker configuration and scraper workflow.",
+      "repository": "GitHub repository",
+      "contact": "Ask me about it"
+    }
   },
   "documentViewer": {
     "document": "Document",
@@ -274,6 +568,37 @@
     "nextPage": "Next page",
     "page": "Page",
     "of": "of"
+  },
+  "notFound": {
+    "project": {
+      "eyebrow": "Missing project",
+      "title": "That case study isn’t here.",
+      "description": "The project may have been renamed, removed or the link may be incorrect.",
+      "viewProjects": "View projects",
+      "backHome": "Back home"
+    },
+    "page": {
+      "metaTitle": "404 — Route not found",
+      "metaDescription": "The requested portfolio route could not be found.",
+      "eyebrow": "404 · Route not found",
+      "title": "This path doesn’t compile.",
+      "description": "The page may have moved or the URL may be incorrect. The rest of the portfolio is still available.",
+      "backHome": "Back home",
+      "viewProjects": "View projects"
+    }
+  },
+  "shared": {
+    "image": {
+      "previewUnavailable": "Preview unavailable",
+      "previewUnavailableLabel": "{{alt}} — preview unavailable"
+    },
+    "error": {
+      "eyebrow": "Application error",
+      "title": "Something went wrong.",
+      "description": "The portfolio hit an unexpected error. You can retry the page or return home.",
+      "retry": "Retry",
+      "home": "Return home"
+    }
   },
   "footer": {
     "tagline": "Software development, software quality and user-centred interfaces.",

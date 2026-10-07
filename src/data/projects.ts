@@ -133,7 +133,7 @@ export const projects: Project[] = [
     eyebrow: 'Modern C++ · HTTP API · Dashboard',
     description: 'An IoT-style sensor simulator with a multithreaded C++17 backend, JSON HTTP API and browser dashboard.',
     role: 'Developer',
-    featured: true,
+    featured: false,
     categories: ['Systems', 'Backend'],
     tech: ['C++17', 'CMake', 'cpp-httplib', 'nlohmann/json', 'JavaScript', 'Chart.js'],
     visual: 'assets/sensor-architecture.svg',

@@ -1,14 +1,22 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import { DocumentViewer } from '../components/DocumentViewer';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 export function ThesisPage() {
+  const { t } = useTranslation();
+
+  const name = t('names.fullName');
+
   usePageMeta({
-    title: 'PriceWise Thesis — Emmanouela Tsakalidou',
-    description:
-      'Full BSc (Hons) Computing Software Development thesis documenting the research, design, implementation and evaluation of PriceWise.',
+    title: t('thesisPage.metaTitle', {
+      name,
+    }),
+    description: t(
+      'thesisPage.metaDescription'
+    ),
     path: '/projects/pricewise/thesis',
   });
 
@@ -23,30 +31,32 @@ export function ThesisPage() {
           to="/projects/pricewise"
         >
           <ArrowLeft />
-          Back to PriceWise
+          {t('thesisPage.back')}
         </Link>
 
         <div className="resume-header">
           <div>
             <p className="eyebrow">
-            Bachelor thesis · Greek
+              {t('thesisPage.eyebrow')}
             </p>
 
             <h1>
-            PriceWise - Full Thesis
+              {t('thesisPage.title')}
             </h1>
 
             <p>
-            The complete BSc (Hons) thesis documenting the research,
-            design, implementation and evaluation of PriceWise.
-            The original academic report is written in Greek.
+              {t(
+                'thesisPage.description'
+              )}
             </p>
           </div>
         </div>
 
         <DocumentViewer
           file={thesisPath}
-          title="PriceWise - Bachelor Thesis (Greek)"
+          title={t(
+            'thesisPage.documentTitle'
+          )}
           downloadName="Emmanouela_Tsakalidou_PriceWise_Thesis.pdf"
         />
       </div>

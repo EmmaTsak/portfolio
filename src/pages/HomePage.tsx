@@ -40,9 +40,15 @@ const skillGroupTranslationKeys: Record<string, string> = {
 export function HomePage() {
   const { t } = useTranslation();
 
+  const name = t('names.fullName');
+
   usePageMeta({
-    title: 'Emmanouela Tsakalidou | Portfolio',
-    description: profile.positioning,
+    title: t('home.hero.metaTitle', {
+      name,
+    }),
+    description: t(
+      'home.hero.metaDescription'
+    ),
     path: '/',
   });
 
@@ -123,14 +129,16 @@ export function HomePage() {
 
               <a href={`mailto:${profile.email}`}>
                 <Mail />
-                Email
+                {t('home.hero.email')}
               </a>
             </div>
           </div>
 
           <div
             className="hero-panel"
-            aria-label="Engineering focus"
+           aria-label={t(
+              'home.hero.engineeringFocus'
+            )}
           >
             <div className="code-card">
               <div className="code-card__top">
@@ -449,9 +457,7 @@ export function HomePage() {
               <Quote className="recommendation-icon" />
 
               <blockquote className="recommendation-quote">
-                “Her strong work ethic and willingness to
-                support the team made her a valued member
-                of our organization.”
+                “{t('home.recommendation.quote')}”
               </blockquote>
 
               <div className="recommendation-author">

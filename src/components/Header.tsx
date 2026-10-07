@@ -72,7 +72,7 @@ export function Header() {
         <Link
           className="brand"
           to="/"
-          aria-label="Emmanouela Tsakalidou home"
+          aria-label={t('ui.header.homeLabel')}
           onClick={handleNav}
         >
           <span className="brand-mark">ET</span>
@@ -80,18 +80,28 @@ export function Header() {
 
         <button
           className="menu-toggle"
-          aria-label={open ? 'Close navigation' : 'Open navigation'}
+          aria-label={
+            open
+              ? t('ui.header.closeNavigation')
+              : t('ui.header.openNavigation')
+          }
           aria-expanded={open}
           aria-controls="primary-navigation"
-          onClick={() => setOpen((value) => !value)}
+          onClick={() =>
+            setOpen((value) => !value)
+          }
         >
           {open ? <X /> : <Menu />}
         </button>
 
         <nav
           id="primary-navigation"
-          className={`primary-nav ${open ? 'is-open' : ''}`}
-          aria-label="Primary navigation"
+          className={`primary-nav ${
+            open ? 'is-open' : ''
+          }`}
+          aria-label={t(
+            'ui.header.primaryNavigation'
+          )}
         >
           {links.map((link) => (
             <Link

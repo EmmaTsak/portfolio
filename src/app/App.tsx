@@ -11,6 +11,7 @@ import { ResumePage } from '../pages/ResumePage';
 import { NotFoundPage } from '../pages/NotFoundPage';
 import { RecommendationPage } from '../pages/RecommendationPage';
 import { ThesisPage } from '../pages/ThesisPage';
+import { SkipLink } from '../components/SkipLink';
 
 export function AppRoutes() {
   return (
@@ -57,11 +58,17 @@ export function App() {
 
   return (
     <div className="site-shell">
+      <SkipLink />
       <OfflineBanner />
       <Header />
-      <main id="main-content" tabIndex={-1}>
+
+      <main
+        id="main-content"
+        tabIndex={-1}
+      >
         <AppRoutes />
       </main>
+
       <Footer />
     </div>
   );
