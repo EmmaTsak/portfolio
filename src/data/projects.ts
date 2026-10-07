@@ -136,7 +136,7 @@ export const projects: Project[] = [
     featured: false,
     categories: ['Systems', 'Backend'],
     tech: ['C++17', 'CMake', 'cpp-httplib', 'nlohmann/json', 'JavaScript', 'Chart.js'],
-    visual: 'assets/sensor-architecture.svg',
+    visual: 'assets/cpp-sensor-dashboard.png',
     visualAlt: 'Architecture illustration showing a C++ backend, HTTP JSON API and web dashboard.',
     visualLabel: 'Architecture illustration',
     github: 'https://github.com/EmmaTsak/cpp-sensor-dashboard',
