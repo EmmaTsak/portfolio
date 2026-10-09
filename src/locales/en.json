@@ -212,7 +212,8 @@
       "openCaseStudy": "View {{name}} case study",
       "technologies": "Technologies",
       "liveDemo": "Live demo",
-      "github": "{{name}} on GitHub"
+      "github": "{{name}} on GitHub",
+      "view": "View"
     },
     "page": {
       "metaTitle": "Projects - Emmanouela Tsakalidou",

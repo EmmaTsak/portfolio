@@ -2703,7 +2703,12 @@ p { color: var(--muted); }
 @keyframes shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .001ms!important; animation-iteration-count: 1!important; transition-duration: .001ms!important; } .reveal { opacity: 1; transform: none; } }
 @media (max-width: 980px) {
-  .hero-grid, , .quality-grid, .case-hero-grid, .two-column-case { grid-template-columns: 1fr; }
+  .hero-grid,
+  .quality-grid,
+  .case-hero-grid,
+  .two-column-case {
+    grid-template-columns: 1fr;
+  }
   .hero { padding-top: 130px; }.hero-panel { max-width: 720px; }.project-grid { grid-template-columns: 1fr; }.skills-grid { grid-template-columns: repeat(2,1fr); }.research-grid, .feature-grid { grid-template-columns: repeat(2,1fr); }.process-flow { grid-template-columns: repeat(2,1fr); }.persona-grid, .mockup-gallery, .implementation-gallery { grid-template-columns: 1fr; }.architecture { grid-template-columns: 1fr; }.architecture b { transform: rotate(90deg); text-align: center; }.contact-card { grid-template-columns: 1fr; }.contact-actions { grid-template-columns: repeat(2, minmax(0,1fr)); }.timeline-item { grid-template-columns: 170px 1fr; }
   .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3353,16 +3358,6 @@ p { color: var(--muted); }
 
   .tech-arsenal__selector {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 900px) {
-  .project-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card--compact {
-    min-height: 280px;
   }
 }
 

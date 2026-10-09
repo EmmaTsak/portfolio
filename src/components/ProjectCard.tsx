@@ -137,7 +137,7 @@ export function ProjectCard({
           </span>
 
           <span className="project-card__view">
-            View
+            {t('projects.card.view')}
             <ArrowRight />
           </span>
         </div>

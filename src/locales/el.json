@@ -212,7 +212,8 @@
       "openCaseStudy": "Προβολή του case study για το {{name}}",
       "technologies": "Τεχνολογίες",
       "liveDemo": "Live demo",
-      "github": "{{name}} στο GitHub"
+      "github": "{{name}} στο GitHub",
+      "view": "Προβολή"
     },
     "page": {
       "metaTitle": "Projects — Εμμανουέλα Τσακαλίδου",
