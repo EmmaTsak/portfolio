@@ -1,22 +1,26 @@
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import type { AcademicCourse } from '../data/coursework';
+import { CourseDetailModal } from './CourseDetailModal';
+import { CourseFlipCard } from './CourseFlipCard';
 
 interface AcademicCourseCardProps {
   course: AcademicCourse;
 }
 
-const MAX_VISIBLE_TOPICS = 8;
-
 const courseTranslationKeys: Record<string, string> = {
   'Advanced Programming': 'advancedProgramming',
   'Advanced Databases': 'advancedDatabases',
-  'Operating Systems & Network Programming': 'operatingSystems',
+  'Operating Systems & Network Programming':
+    'operatingSystems',
   'Mobile Programming': 'mobileProgramming',
   'Object-Oriented Programming': 'oop',
-  'Computer Networks & Security': 'networksSecurity',
+  'Computer Networks & Security':
+    'networksSecurity',
   'Software Engineering': 'softwareEngineering',
-  'Web Application Programming': 'webProgramming',
+  'Web Application Programming':
+    'webProgramming',
   'Human-Computer Interaction': 'hci',
 };
 
@@ -24,6 +28,8 @@ export function AcademicCourseCard({
   course,
 }: AcademicCourseCardProps) {
   const { t } = useTranslation();
+
+  const [isOpen, setIsOpen] = useState(false);
 
   const translationKey =
     courseTranslationKeys[course.name];
@@ -52,72 +58,62 @@ export function AcademicCourseCard({
       })
     : undefined;
 
-  const visibleTopics = course.topics.slice(
-    0,
-    MAX_VISIBLE_TOPICS
-  );
-
-  const remainingTopics = course.topics.slice(
-    MAX_VISIBLE_TOPICS
-  );
-
   return (
-    <article className="course-card">
-      <span className="course-card__area">
-        {area}
-      </span>
-
-      <h3>{name}</h3>
-
-      <p className="course-card__description">
-        {description}
-      </p>
-
-      {academicWork && (
-        <p className="course-card__work">
-          <strong>
-            {t(
-              'home.coursework.academicWorkLabel'
-            )}
-          </strong>{' '}
-          {academicWork}
-        </p>
-      )}
-
-      <div
-        className="tag-row course-card__topics"
-        aria-label={t(
-          'home.coursework.keyTopics',
-          { name }
+    <>
+      <CourseFlipCard
+        title={name}
+        area={area}
+        description={description}
+        topics={course.topics}
+        onOpen={() => setIsOpen(true)}
+        hint={t(
+          'home.coursework.viewCourseDetails',
+          {
+            defaultValue:
+              'Click to view full course details',
+          }
         )}
-      >
-        {visibleTopics.map((topic) => (
-          <span
-            className="tag"
-            key={topic}
-          >
-            {topic}
-          </span>
-        ))}
-
-        {remainingTopics.length > 0 && (
-          <span
-            className="tag course-card__more"
-            title={remainingTopics.join(', ')}
-            aria-label={t(
-              'home.coursework.additionalTopics',
-              {
-                topics:
-                  remainingTopics.join(', '),
-              }
-            )}
-          >
-            {t('home.coursework.more', {
-              count: remainingTopics.length,
-            })}
-          </span>
+        detailsLabel={t(
+          'home.coursework.technologiesConcepts',
+          {
+            defaultValue:
+              'Technologies & concepts',
+          }
         )}
-      </div>
-    </article>
+        openLabel={t(
+          'home.coursework.viewAllDetails',
+          {
+            defaultValue:
+              'Click to view all details',
+          }
+        )}
+        moreLabel={(count) =>
+          t('home.coursework.more', {
+            count,
+            defaultValue: `+${count} more`,
+          })
+        }
+      />
+
+      <CourseDetailModal
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        title={name}
+        area={area}
+        description={description}
+        topics={course.topics}
+        academicWork={academicWork}
+        academicWorkLabel={t(
+          'home.coursework.academicWorkLabel'
+        )}
+        technologiesLabel={t(
+          'home.coursework.technologiesConcepts',
+          {
+            defaultValue:
+              'Technologies & concepts',
+          }
+        )}
+      />
+    </>
   );
 }

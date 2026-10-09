@@ -21,21 +21,13 @@ import { SectionHeading } from '../components/SectionHeading';
 
 import { academicCourses } from '../data/coursework';
 import { featuredProjects } from '../data/projects';
-import {
-  profile,
-  skillGroups,
-} from '../data/profile';
+import { profile } from '../data/profile';
 
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const skillGroupTranslationKeys: Record<string, string> = {
-  Development: 'development',
-  'Frontend & Mobile': 'frontendMobile',
-  'Backend & APIs': 'backendApis',
-  'Testing & Quality': 'testingQuality',
-  Data: 'data',
-  'Tools & Design': 'toolsDesign',
-};
+import { ImmersiveHero } from '../components/ImmersiveHero';
+import { AboutTerminal } from '../components/AboutTerminal';
+import { TechArsenal } from '../components/TechArsenal';
 
 export function HomePage() {
   const { t } = useTranslation();
@@ -52,11 +44,23 @@ export function HomePage() {
     path: '/',
   });
 
+  const featuredCourseNames = [
+    'Advanced Programming',
+    'Operating Systems & Network Programming',
+    'Advanced Databases',
+  ];
+
+  const featuredCourses = academicCourses.filter((course) =>
+    featuredCourseNames.includes(course.name)
+  );
+
   const copyEmail = async () =>
     navigator.clipboard.writeText(profile.email);
 
+
+
   return (
-    <>
+    <div className="home-page">
       <section className="hero section">
         <div className="container hero-grid">
           <div className="hero-copy">
@@ -140,6 +144,8 @@ export function HomePage() {
               'home.hero.engineeringFocus'
             )}
           >
+            <ImmersiveHero />
+
             <div className="code-card">
               <div className="code-card__top">
                 <span />
@@ -233,6 +239,8 @@ export function HomePage() {
               <p className="about-relocation">
                 {t('home.about.relocation')}
               </p>
+
+              <AboutTerminal />
             </div>
 
             <div className="fact-grid">
@@ -495,84 +503,61 @@ export function HomePage() {
           id="education"
         >
           <div className="container">
-            <SectionHeading
-              eyebrow={t('home.education.eyebrow')}
-              title={t('home.education.title')}
-            />
+            <div className="education-home__header">
+              <div>
+                <p className="eyebrow">
+                  {t('home.education.eyebrow')}
+                </p>
 
-            <div className="education-grid">
-              <article>
-                <span>
-                  {t('home.education.essex.period')}
-                </span>
+                <h2>
+                  {t('home.education.title')}
+                </h2>
 
-                <h3>
+                <h3 className="education-home__degree">
                   {t('home.education.essex.title')}
                 </h3>
 
-                <p>
-                  {t(
-                    'home.education.essex.institution'
-                  )}
+                <p className="education-home__institution">
+                  {t('home.education.essex.institution')}
                 </p>
+              </div>
 
-                <p>
-                  {t(
-                    'home.education.essex.description'
-                  )}
-                </p>
-              </article>
+              <div className="education-home__grade">
+                <strong>
+                  {t('home.education.essex.grade')}
+                </strong>
 
-              <article>
                 <span>
-                  {t('home.education.omiros.period')}
+                  {t('home.education.essex.usEquivalent')}
                 </span>
+              </div>
+            </div>
 
-                <h3>
-                  {t('home.education.omiros.title')}
-                </h3>
+            <div className="education-home__courses">
+              {featuredCourses.map((course) => (
+                <Reveal key={course.name}>
+                  <AcademicCourseCard
+                    course={course}
+                  />
+                </Reveal>
+              ))}
+            </div>
 
-                <p>
-                  {t(
-                    'home.education.omiros.institution'
-                  )}
-                </p>
-
-                <p>
-                  {t(
-                    'home.education.omiros.description'
-                  )}
-                </p>
-              </article>
+            <div className="section-cta">
+              <Link
+                className="button button--ghost"
+                to="/education"
+              >
+                {t('home.coursework.seeAll', {
+                  defaultValue:
+                    'View full education & coursework',
+                })}
+                <ArrowRight />
+              </Link>
             </div>
           </div>
         </section>
       </Reveal>
-
-      <section
-        className="section"
-        id="coursework"
-      >
-        <div className="container">
-          <SectionHeading
-            eyebrow={t('home.coursework.eyebrow')}
-            title={t('home.coursework.title')}
-            description={t(
-              'home.coursework.description'
-            )}
-          />
-
-          <div className="course-grid">
-            {academicCourses.map((course) => (
-              <Reveal key={course.name}>
-                <AcademicCourseCard
-                  course={course}
-                />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       <section
         className="section"
@@ -587,38 +572,9 @@ export function HomePage() {
             )}
           />
 
-          <div className="skills-grid">
-            {skillGroups.map((group) => {
-              const translationKey =
-                skillGroupTranslationKeys[group.title];
-
-              return (
-                <Reveal key={group.title}>
-                  <article className="skill-card">
-                    <h3>
-                      {t(
-                        `home.skills.groups.${translationKey}`,
-                        {
-                          defaultValue: group.title,
-                        }
-                      )}
-                    </h3>
-
-                    <div className="tag-row">
-                      {group.items.map((item) => (
-                        <span
-                          className="tag"
-                          key={item}
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
+          <Reveal>
+            <TechArsenal />
+          </Reveal>
         </div>
       </section>
 
@@ -692,6 +648,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

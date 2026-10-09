@@ -4,7 +4,8 @@
     "projects": "Projects",
     "experience": "Experience",
     "skills": "Skills",
-    "contact": "Contact"
+    "contact": "Contact",
+    "education": "Education"
   },
   "ui": {
     "header": {
@@ -109,7 +110,9 @@
         "period": "Sep 2024 - Jun 2026",
         "title": "BSc (Hons) Computing (Software Development)",
         "institution": "University of Essex",
-        "description": "Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints."
+        "description": "Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints.",
+        "grade": "First-Class Honours · 73% (UK)",
+        "usEquivalent": "U.S. equivalent: A range"
       },
       "omiros": {
         "period": "Sep 2023 - Jun 2024",
@@ -123,6 +126,9 @@
       "title": "Relevant technical coursework",
       "description": "Selected coursework from my BSc (Hons) Computing (Software Development), covering backend development, databases, mobile development, systems programming, networking, software engineering and user-centred design.",
       "academicWorkLabel": "Academic work:",
+      "technologiesConcepts": "Technologies & concepts",
+      "viewCourseDetails": "Click to view full course details",
+      "viewAllDetails": "Click to view all details",
       "keyTopics": "{{name}} key topics",
       "additionalTopics": "Additional topics: {{topics}}",
       "more": "+{{count}} more",
@@ -176,16 +182,16 @@
       }
     },
     "skills": {
-      "eyebrow": "Skills",
-      "title": "Evidence over proficiency bars",
-      "description": "Technologies are grouped by how I use them, not assigned arbitrary percentages.",
-      "groups": {
-        "development": "Development",
-        "frontendMobile": "Frontend & Mobile",
-        "backendApis": "Backend & APIs",
-        "testingQuality": "Testing & Quality",
-        "data": "Data",
-        "toolsDesign": "Tools & Design"
+        "eyebrow": "Skills",
+        "title": "Technical Skills",
+        "description": "Technologies and tools grouped by how I use them.",
+        "groups": {
+          "development": "Development",
+          "frontendMobile": "Frontend & Mobile",
+          "backendApis": "Backend & APIs",
+          "testingQuality": "Testing & Quality",
+          "data": "Data",
+          "toolsDesign": "Tools & Design"
       }
     },
     "contact": {
@@ -196,6 +202,10 @@
       "emailMe": "Email me",
       "copyEmail": "Copy email"
     }
+  },
+  "educationPage": {
+    "lead": "Academic background focused on software development, systems, databases, networking, testing and application engineering.",
+    "degreeResult": "Degree result"
   },
   "projects": {
     "card": {

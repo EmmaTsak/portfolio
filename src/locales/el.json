@@ -4,7 +4,8 @@
     "projects": "Projects",
     "experience": "Εμπειρία",
     "skills": "Δεξιότητες",
-    "contact": "Επικοινωνία"
+    "contact": "Επικοινωνία",
+    "education": "Εκπαίδευση"
   },
   "ui": {
     "header": {
@@ -109,7 +110,9 @@
         "period": "Σεπ 2024 - Ιουν 2026",
         "title": "BSc (Hons) Computing (Software Development)",
         "institution": "University of Essex",
-        "description": "Οι σπουδές μου περιλάμβαναν ανάπτυξη λογισμικού, APIs, βάσεις δεδομένων, testing και debugging. Στο Advanced Programming ανέπτυξα RESTful API με JWT authentication και έλεγχο μέσω Postman για filtering, sorting, pagination και προστατευμένα endpoints."
+        "description": "Οι σπουδές μου περιλάμβαναν ανάπτυξη λογισμικού, APIs, βάσεις δεδομένων, testing και debugging. Στο Advanced Programming ανέπτυξα RESTful API με JWT authentication και έλεγχο μέσω Postman για filtering, sorting, pagination και προστατευμένα endpoints.",
+        "grade": "Πτυχίο με First-Class Honours · 73% (Ηνωμένο Βασίλειο)",
+        "usEquivalent": "Αντίστοιχη αμερικανική επίδοση: εύρος A"
       },
       "omiros": {
         "period": "Σεπ 2023 - Ιουν 2024",
@@ -123,6 +126,9 @@
       "title": "Σχετικά τεχνικά μαθήματα",
       "description": "Επιλεγμένα μαθήματα από το BSc (Hons) Computing (Software Development), με αντικείμενα όπως backend development, βάσεις δεδομένων, mobile development, systems programming, δίκτυα, software engineering και user-centred design.",
       "academicWorkLabel": "Ακαδημαϊκή εργασία:",
+      "technologiesConcepts": "Τεχνολογίες & έννοιες",
+      "viewCourseDetails": "Πατήστε για πλήρη στοιχεία του μαθήματος",
+      "viewAllDetails": "Πατήστε για προβολή όλων των στοιχείων",
       "keyTopics": "Βασικά θέματα του μαθήματος {{name}}",
       "additionalTopics": "Επιπλέον θέματα: {{topics}}",
       "more": "+{{count}} ακόμα",
@@ -177,8 +183,8 @@
     },
     "skills": {
       "eyebrow": "Δεξιότητες",
-      "title": "Πραγματική εμπειρία αντί για αυθαίρετα ποσοστά",
-      "description": "Οι τεχνολογίες ομαδοποιούνται με βάση τον τρόπο που τις χρησιμοποιώ και όχι με αυθαίρετα ποσοστά επάρκειας.",
+      "title": "Τεχνικές Δεξιότητες",
+      "description": "Τεχνολογίες και εργαλεία οργανωμένα με βάση τον τρόπο που τα χρησιμοποιώ.",
       "groups": {
         "development": "Ανάπτυξη Λογισμικού",
         "frontendMobile": "Frontend & Mobile",
@@ -196,6 +202,10 @@
       "emailMe": "Στείλτε μου email",
       "copyEmail": "Αντιγραφή email"
     }
+  },
+  "educationPage": {
+    "lead": "Ακαδημαϊκό υπόβαθρο με έμφαση στην ανάπτυξη λογισμικού, τα συστήματα, τις βάσεις δεδομένων, τα δίκτυα, το testing και την ανάπτυξη εφαρμογών.",
+    "degreeResult": "Βαθμός πτυχίου"
   },
   "projects": {
     "card": {

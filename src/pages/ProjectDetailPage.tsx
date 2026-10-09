@@ -73,7 +73,10 @@ export function ProjectDetailPage() {
   }
 
   return (
-    <>
+    <div
+      id="top"
+      className="project-detail-page"
+    >
       <section className="case-hero section page-top">
         <div className="container">
           <Link
@@ -232,6 +235,26 @@ export function ProjectDetailPage() {
           </article>
         </div>
       </section>
-    </>
+      <section className="section project-detail-page__footer">
+        <div className="container project-detail-page__footer-inner">
+          <Link
+            className="button button--ghost"
+            to="/projects"
+          >
+            <ArrowLeft />
+            {t('projects.detail.allProjects')}
+          </Link>
+
+          <a
+            className="text-link"
+            href="#top"
+          >
+            {t('projects.detail.backToTop', {
+              defaultValue: 'Back to top',
+            })}
+          </a>
+        </div>
+      </section>
+     </div>
   );
 }
