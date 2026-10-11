@@ -13,7 +13,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import { SafeImage } from '../components/SafeImage';
+import { ImageLightbox } from '../components/ImageLightbox';
 import { usePageMeta } from '../hooks/usePageMeta';
 
 export function PriceWisePage() {
@@ -166,7 +166,7 @@ export function PriceWisePage() {
             </div>
 
             <div className="case-visual">
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-home.webp`}
                 alt={t(
                   'priceWisePage.hero.visualAlt'
@@ -355,7 +355,7 @@ export function PriceWisePage() {
 
           <div className="implementation-gallery">
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-home.webp`}
                 alt={t(
                   'priceWisePage.implementation.homeAlt'
@@ -370,7 +370,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-results.webp`}
                 alt={t(
                   'priceWisePage.implementation.resultsAlt'
@@ -385,7 +385,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-compare.webp`}
                 alt={t(
                   'priceWisePage.implementation.compareAlt'
@@ -400,7 +400,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-list.webp`}
                 alt={t(
                   'priceWisePage.implementation.listAlt'
@@ -415,7 +415,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure className="implementation-gallery__mobile">
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-mobile-list.webp`}
                 alt={t(
                   'priceWisePage.implementation.mobileAlt'
@@ -430,7 +430,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-app-privacy.webp`}
                 alt={t(
                   'priceWisePage.implementation.privacyAlt'
@@ -471,7 +471,7 @@ export function PriceWisePage() {
 
           <div className="mockup-gallery">
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-home.webp`}
                 alt={t(
                   'priceWisePage.designEvolution.homeAlt'
@@ -486,7 +486,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-search.webp`}
                 alt={t(
                   'priceWisePage.designEvolution.searchAlt'
@@ -501,7 +501,7 @@ export function PriceWisePage() {
             </figure>
 
             <figure>
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}assets/pricewise-list.webp`}
                 alt={t(
                   'priceWisePage.designEvolution.listAlt'

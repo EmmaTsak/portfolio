@@ -5841,6 +5841,22 @@ p { color: var(--muted); }
   object-fit: contain;
 }
 
+/* Consistent screenshot gallery sizing */
+
+.implementation-gallery .image-lightbox__trigger,
+.mockup-gallery .image-lightbox__trigger {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  background: #17131a;
+}
+
+.implementation-gallery .image-lightbox__trigger img,
+.mockup-gallery .image-lightbox__trigger img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .image-lightbox__expand {
   position: absolute;
   right: 16px;
@@ -5925,17 +5941,31 @@ p { color: var(--muted); }
 
 @media (max-width: 700px) {
   .image-lightbox {
-    padding: 12px;
+    display: block;
+    padding: 64px 12px 24px;
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+
+  .image-lightbox__dialog {
+    display: block;
+    width: 100%;
+    max-height: none;
   }
 
   .image-lightbox__dialog > img {
-    max-height: calc(100dvh - 64px);
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    height: auto;
     border-radius: 8px;
   }
 
   .image-lightbox__close {
-    top: -16px;
-    right: 0;
+    position: fixed;
+    top: 16px;
+    right: 16px;
   }
 }
 
@@ -5943,4 +5973,42 @@ p { color: var(--muted); }
   .image-lightbox__close {
     transition: none;
   }
+}
+
+.implementation-gallery__mobile
+.image-lightbox__trigger img {
+  object-fit: contain;
+}
+
+/* ========================================
+   IMAGE LIGHTBOX - ZOOM
+   ======================================== */
+
+.image-lightbox--zoomed {
+  display: block;
+  overflow: auto;
+  padding: 64px 16px 24px;
+  overscroll-behavior: contain;
+}
+
+.image-lightbox--zoomed .image-lightbox__dialog {
+  display: block;
+  width: max-content;
+  max-width: none;
+  max-height: none;
+  margin-inline: auto;
+}
+
+.image-lightbox--zoomed .image-lightbox__dialog > img {
+  width: 200vw;
+  max-width: none;
+  max-height: none;
+  height: auto;
+  object-fit: contain;
+}
+
+.image-lightbox--zoomed .image-lightbox__close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
 }

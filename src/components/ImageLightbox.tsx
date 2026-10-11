@@ -17,8 +17,10 @@ export function ImageLightbox({
   alt,
 }: ImageLightboxProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
+  const zoomRef = useRef<HTMLImageElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
@@ -34,13 +36,26 @@ export function ImageLightbox({
       if (event.key === 'Escape') {
         setIsOpen(false);
       }
-
       if (event.key === 'Tab') {
-        // The close button is the only focusable
-        // control inside this dialog.
-        event.preventDefault();
-        closeRef.current?.focus();
-      }
+        const closeButton = closeRef.current;
+        const zoomImage = zoomRef.current;
+
+        if (!closeButton || !zoomImage) return;
+
+        if (
+            event.shiftKey &&
+            document.activeElement === closeButton
+        ) {
+            event.preventDefault();
+            zoomImage.focus();
+        } else if (
+            !event.shiftKey &&
+            document.activeElement === zoomImage
+        ) {
+            event.preventDefault();
+            closeButton.focus();
+        }
+        }
     };
 
     document.addEventListener(
@@ -67,7 +82,10 @@ export function ImageLightbox({
         ref={triggerRef}
         type="button"
         className="image-lightbox__trigger"
-        onClick={() => setIsOpen(true)}
+        onClick={() => {
+            setIsZoomed(false);
+            setIsOpen(true);
+        }}
         aria-label={`Enlarge image: ${alt}`}
       >
         <img src={src} alt={alt} />
@@ -81,7 +99,7 @@ export function ImageLightbox({
       {isOpen &&
         createPortal(
           <div
-            className="image-lightbox"
+            className={`image-lightbox${isZoomed ? ' image-lightbox--zoomed' : ''}`}
             role="presentation"
             onMouseDown={(event) => {
               if (event.target === event.currentTarget) {
@@ -112,7 +130,35 @@ export function ImageLightbox({
                 <X aria-hidden="true" />
               </button>
 
-              <img src={src} alt={alt} />
+              <img
+                ref={zoomRef}
+                src={src}
+                alt={alt}
+                role="button"
+                tabIndex={0}
+                aria-label={
+                    isZoomed
+                    ? 'Zoom out of image'
+                    : 'Zoom into image'
+                }
+                onClick={() => setIsZoomed((current) => !current)}
+                onWheel={(event) => {
+                    if (event.deltaY < 0) {
+                        setIsZoomed(true);
+                    } else if (event.deltaY > 0) {
+                        setIsZoomed(false);
+                    }
+                    }}
+                onKeyDown={(event) => {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setIsZoomed((current) => !current);
+                    }
+                }}
+                style={{
+                    cursor: isZoomed ? 'zoom-out' : 'zoom-in',
+                }}
+                />
             </div>
           </div>,
           document.body
