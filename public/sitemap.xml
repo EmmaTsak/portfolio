@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>http://localhost:5173/</loc></url>
   <url><loc>http://localhost:5173/projects</loc></url>
+  <url><loc>http://localhost:5173/education</loc></url>
   <url><loc>http://localhost:5173/projects/pricewise</loc></url>
   <url><loc>http://localhost:5173/projects/pricewise/thesis</loc></url>
   <url><loc>http://localhost:5173/projects/jenkins-ci-reliability-lab</loc></url>

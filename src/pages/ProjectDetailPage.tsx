@@ -9,7 +9,7 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { projects } from '../data/projects';
-import { SafeImage } from '../components/SafeImage';
+import { ImageLightbox } from '../components/ImageLightbox';
 import { NotFoundProject } from './NotFoundPage';
 import { usePageMeta } from '../hooks/usePageMeta';
 
@@ -139,7 +139,7 @@ export function ProjectDetailPage() {
             </div>
 
             <div className="case-visual project-detail-visual">
-              <SafeImage
+              <ImageLightbox
                 src={`${import.meta.env.BASE_URL}${project.visual}`}
                 alt={visualAlt}
               />
