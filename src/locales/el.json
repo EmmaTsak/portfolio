@@ -83,6 +83,31 @@
       "releaseTitle": "Release thinking",
       "releaseDescription": "Συνέπεια, integration και αναμενόμενη συμπεριφορά"
     },
+    "workflow": {
+      "eyebrow": "Engineering workflow",
+      "title": "Από την ανάπτυξη έως το monitoring",
+      "description": "Δες πώς προσεγγίζω διαφορετικά στάδια του software engineering μέσα από πραγματικά projects.",
+      "evidence": "Παράδειγμα από project",
+      "viewProject": "Δες το case study",
+      "stages": {
+        "build": {
+          "title": "Ανάπτυξη εφαρμογών που λύνουν πραγματικά προβλήματα",
+          "description": "Ανέπτυξα το PriceWise με React, TypeScript, Node.js και PostgreSQL, συνδυάζοντας σύγκριση τιμών supermarket, προγραμματισμένη συλλογή δεδομένων και shopping list."
+        },
+        "test": {
+          "title": "Έλεγχος συμπεριφοράς πριν την παράδοση",
+          "description": "Στην πρακτική μου στη Valmore έγραφα Jest tests και διερευνούσα σφάλματα. Στο Jenkins lab υλοποίησα αυτοματοποιημένους ελέγχους pytest και Ruff σε CI pipelines."
+        },
+        "deploy": {
+          "title": "Από τον κώδικα σε λειτουργικό αποτέλεσμα",
+          "description": "Δημοσίευσα prototype του PriceWise στο Railway. Ξεχωριστά, στο Jenkins lab υλοποίησα packaging, αρχειοθέτηση και διατήρηση build artifacts."
+        },
+        "monitor": {
+          "title": "Παρακολούθηση και ανάλυση των builds",
+          "description": "Στο Jenkins reliability lab χρησιμοποιώ το REST API για παρακολούθηση αποτελεσμάτων builds, διαθεσιμότητας agents, κατάστασης της ουράς και αποτυχιών."
+        }
+      }
+    },
     "experience": {
       "eyebrow": "Εμπειρία",
       "title": "Εκεί όπου η ανάπτυξη λογισμικού συνάντησε την ποιότητα",
@@ -367,7 +392,17 @@
       "structureTitle": "Πώς είναι δομημένο",
       "fallback": "Αυτό το project επικεντρώνεται κυρίως στην υλοποίηση backend και στη μοντελοποίηση δεδομένων. Περισσότερες τεχνικές λεπτομέρειες υπάρχουν στο repository.",
       "notFoundTitle": "Το project δεν βρέθηκε — {{name}}",
-      "notFoundDescription": "Το project που ζητήθηκε δεν βρέθηκε."
+      "notFoundDescription": "Το project που ζητήθηκε δεν βρέθηκε.",
+      "pricewiseStory": {
+        "eyebrow": "Η εμπειρία της εφαρμογής",
+        "title": "Από την αναζήτηση στη λίστα αγορών.",
+        "description": "Το PriceWise σχεδιάστηκε για μια πρακτική ανάγκη: να βοηθά τους χρήστες να εξερευνούν τιμές σούπερ μάρκετ και να ετοιμάζουν λίστες αγορών χωρίς δημιουργία λογαριασμού.",
+        "search": "Αναζήτηση προϊόντων με φίλτρα ανά σούπερ μάρκετ.",
+        "compare": "Σύγκριση τιμών με δεδομένα που συλλέγονται προγραμματισμένα.",
+        "list": "Δημιουργία λίστας αγορών με προαιρετική αποστολή μέσω email.",
+        "resultsAlt": "Η σελίδα αποτελεσμάτων του PriceWise",
+        "listAlt": "Η λίστα αγορών του PriceWise σε κινητό"
+      }
     }
   },
   "resumePage": {

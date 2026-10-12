@@ -1,5 +1,7 @@
 import {
+  useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 import { SearchX } from 'lucide-react';
@@ -12,6 +14,7 @@ import {
   type ProjectCategory,
 } from '../data/projects';
 import { usePageMeta } from '../hooks/usePageMeta';
+import { FeaturedProjectSpotlight } from '../components/FeaturedProjectSpotlight';
 
 const filters: Array<'All' | ProjectCategory> = [
   'All',
@@ -62,6 +65,40 @@ export function ProjectsPage() {
     [filter]
   );
 
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const grid = gridRef.current;
+
+    if (
+      !grid ||
+      window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches
+    ) {
+      return;
+    }
+
+    const animation = grid.animate(
+      [
+        {
+          opacity: 0,
+          transform: 'translateY(8px)',
+        },
+        {
+          opacity: 1,
+          transform: 'translateY(0)',
+        },
+      ],
+      {
+        duration: 240,
+        easing: 'ease-out',
+      }
+    );
+
+    return () => animation.cancel();
+  }, [filter]);
+
   return (
     <section className="section page-top">
       <div className="container">
@@ -72,6 +109,8 @@ export function ProjectsPage() {
             'projects.page.description'
           )}
         />
+
+        <FeaturedProjectSpotlight />
 
         <div
           className="filter-bar"
@@ -108,7 +147,10 @@ export function ProjectsPage() {
         </div>
 
         {visible.length ? (
-          <div className="project-grid">
+          <div
+            ref={gridRef}
+            className="project-grid"
+          >
             {visible.map((project) => (
               <ProjectCard
                 project={project}

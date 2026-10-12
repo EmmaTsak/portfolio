@@ -7,6 +7,7 @@ import {
 } from 'react';
 
 import type { Project } from '../data/projects';
+import { SafeImage } from './SafeImage';
 
 export function ProjectCard({
   project,
@@ -23,6 +24,16 @@ export function ProjectCard({
     {
       defaultValue: project.description,
     }
+  );
+
+  const visualAlt = t(
+    `${translationBase}.visualAlt`,
+    { defaultValue: project.visualAlt }
+  );
+
+  const visualLabel = t(
+    `${translationBase}.visualLabel`,
+    { defaultValue: project.visualLabel }
   );
 
   const status = project.status
@@ -110,6 +121,16 @@ export function ProjectCard({
           }
         )}
       >
+        <div className="project-card__preview">
+          <SafeImage
+            src={`${import.meta.env.BASE_URL}${project.visual}`}
+            alt={visualAlt}
+          />
+
+          <span className="project-card__preview-label">
+            {visualLabel}
+          </span>
+        </div>
         <div className="project-card__mini-content">
           <span className="project-card__category">
             {project.categories[0]}

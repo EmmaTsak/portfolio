@@ -83,6 +83,31 @@
       "releaseTitle": "Release thinking",
       "releaseDescription": "Consistency, integration and expected behaviour"
     },
+    "workflow": {
+      "eyebrow": "Engineering workflow",
+      "title": "From building to monitoring",
+      "description": "Explore how I approach different stages of software engineering through real project work.",
+      "evidence": "Project example",
+      "viewProject": "Explore case study",
+      "stages": {
+        "build": {
+          "title": "Build applications that solve real problems",
+          "description": "I developed PriceWise using React, TypeScript, Node.js and PostgreSQL, combining supermarket price comparison with scheduled data collection and a shopping-list experience."
+        },
+        "test": {
+          "title": "Validate behaviour before delivery",
+          "description": "During my Valmore internship, I wrote Jest tests and investigated defects. In my Jenkins lab, I configured automated pytest and Ruff checks within CI pipelines."
+        },
+        "deploy": {
+          "title": "Turn working code into deliverable software",
+          "description": "I published a PriceWise prototype on Railway. Separately, my Jenkins lab demonstrates packaging, archiving and retaining build artifacts."
+        },
+        "monitor": {
+          "title": "Understand what happens after a build",
+          "description": "My Jenkins reliability lab uses REST API monitoring to inspect build results, agent availability, queue conditions and failures."
+        }
+      }
+    },
     "experience": {
       "eyebrow": "Experience",
       "title": "Where development and quality met",
@@ -367,7 +392,17 @@
       "structureTitle": "How it is structured",
       "fallback": "This project focuses primarily on backend implementation and data modelling. See the repository for source-level details.",
       "notFoundTitle": "Project not found — {{name}}",
-      "notFoundDescription": "The requested project could not be found."
+      "notFoundDescription": "The requested project could not be found.",
+      "pricewiseStory": {
+        "eyebrow": "The product experience",
+        "title": "From searching to shopping.",
+        "description": "PriceWise was designed around a practical task: helping people explore supermarket prices and prepare a shopping list without creating an account.",
+        "search": "Find products using search and supermarket filters.",
+        "compare": "Explore price comparisons backed by scheduled data collection.",
+        "list": "Build a shopping list with optional email delivery.",
+        "resultsAlt": "PriceWise product results interface",
+        "listAlt": "PriceWise mobile shopping list interface"
+      }
     }
   },
   "resumePage": {

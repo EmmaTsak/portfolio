@@ -1,4 +1,5 @@
 import {
+  ArrowDownRight,
   ArrowRight,
   CheckCircle2,
   ClipboardCheck,
@@ -13,11 +14,13 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 import { AcademicCourseCard } from '../components/AcademicCourseCard';
 import { ProjectCard } from '../components/ProjectCard';
 import { Reveal } from '../components/Reveal';
 import { SectionHeading } from '../components/SectionHeading';
+import { ExperienceExplorer } from '../components/ExperienceExplorer';
 
 import { academicCourses } from '../data/coursework';
 import { featuredProjects } from '../data/projects';
@@ -28,9 +31,15 @@ import { usePageMeta } from '../hooks/usePageMeta';
 import { ImmersiveHero } from '../components/ImmersiveHero';
 import { AboutTerminal } from '../components/AboutTerminal';
 import { TechArsenal } from '../components/TechArsenal';
+import { EngineeringWorkflow } from '../components/EngineeringWorkflow';
 
 export function HomePage() {
   const { t } = useTranslation();
+  const [activeFeaturedIndex, setActiveFeaturedIndex] =
+    useState(0);
+
+  const activeFeaturedProject =
+    featuredProjects[activeFeaturedIndex];
 
   const name = t('names.fullName');
 
@@ -221,6 +230,32 @@ export function HomePage() {
         </div>
       </section>
 
+      <div className="container hero-journey-wrap">
+        <a className="hero-journey" href="#about">
+          <span className="hero-journey__eyebrow">
+            {t('home.about.eyebrow')}
+          </span>
+
+          <span className="hero-journey__steps">
+            <span>{t('home.hero.build')}</span>
+            <span
+              className="hero-journey__connector"
+              aria-hidden="true"
+            />
+            <span>{t('home.hero.validate')}</span>
+            <span
+              className="hero-journey__connector"
+              aria-hidden="true"
+            />
+            <span>{t('home.hero.design')}</span>
+          </span>
+
+          <span className="hero-journey__arrow">
+            <ArrowDownRight aria-hidden="true" />
+          </span>
+        </a>
+      </div>
+
       <Reveal>
         <section
           className="section section--soft"
@@ -283,10 +318,24 @@ export function HomePage() {
       </Reveal>
 
       <section
-        className="section"
+        className="section featured-work-stage"
         id="projects"
       >
-        <div className="container">
+        {activeFeaturedProject && (
+          <div
+            key={activeFeaturedProject.slug}
+            className="featured-work-stage__background"
+            aria-hidden="true"
+          >
+            <img
+              src={`${import.meta.env.BASE_URL}${activeFeaturedProject.visual}`}
+              alt=""
+              loading="lazy"
+            />
+          </div>
+        )}
+
+        <div className="container featured-work-stage__content">
           <SectionHeading
             eyebrow={t(
               'home.selectedWork.eyebrow'
@@ -300,17 +349,19 @@ export function HomePage() {
           />
 
           <div className="project-grid">
-            {featuredProjects.map(
-              (project) => (
-                <Reveal key={project.slug}>
-                  <ProjectCard
-                    project={project}
-                  />
-                </Reveal>
-              )
-            )}
+            {featuredProjects.map((project, index) => (
+              <Reveal key={project.slug}>
+                <div
+                  className="featured-work-stage__card"
+                  onMouseEnter={() => {
+                    setActiveFeaturedIndex(index);
+                  }}
+                >
+                  <ProjectCard project={project} />
+                </div>
+              </Reveal>
+            ))}
           </div>
-
           <div className="section-cta">
             <Link
               className="button button--ghost"
@@ -393,6 +444,20 @@ export function HomePage() {
         </section>
       </Reveal>
 
+      <Reveal>
+        <section className="section" id="workflow">
+          <div className="container">
+            <SectionHeading
+              eyebrow={t('home.workflow.eyebrow')}
+              title={t('home.workflow.title')}
+              description={t('home.workflow.description')}
+            />
+
+            <EngineeringWorkflow />
+          </div>
+        </section>
+      </Reveal>
+
       <section
         className="section"
         id="experience"
@@ -403,43 +468,9 @@ export function HomePage() {
             title={t('home.experience.title')}
           />
 
-          <div className="timeline">
-            <Reveal>
-              <article className="timeline-item">
-                <div className="timeline-period">
-                  {t('home.experience.period')}
-                </div>
-
-                <div>
-                  <h3>
-                    {t('home.experience.role')}
-                  </h3>
-
-                  <p className="timeline-company">
-                    {t('home.experience.company')}
-                  </p>
-
-                  <ul>
-                    <li>
-                      {t('home.experience.point1')}
-                    </li>
-
-                    <li>
-                      {t('home.experience.point2')}
-                    </li>
-
-                    <li>
-                      {t('home.experience.point3')}
-                    </li>
-
-                    <li>
-                      {t('home.experience.point4')}
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </Reveal>
-          </div>
+          <Reveal>
+            <ExperienceExplorer />
+          </Reveal>
         </div>
       </section>
 
