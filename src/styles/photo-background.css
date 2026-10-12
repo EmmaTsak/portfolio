@@ -1,0 +1,324 @@
+/* PHOTO BACKGROUND UNIFIED V1
+   A single fixed copy of the supplied photograph behind every route.
+   This file is loaded after global.css; no old React components are replaced.
+*/
+:root {
+  --purple: #a178df;
+  --purple-strong: #dcb0ff;
+  --lavender: #be93fd;
+  --charcoal: #845ec2;
+  --line: rgba(190, 147, 253, 0.26);
+}
+
+html { background-color: #160f26; }
+body {
+  min-height: 100vh;
+  background-color: #160f26 !important;
+  background-image:
+    linear-gradient(115deg, rgba(17, 11, 30, 0.86) 0%, rgba(35, 19, 54, 0.76) 50%, rgba(31, 20, 57, 0.72) 100%),
+    url('../assets/particle-lines-background.jpg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* The image belongs to the page, not to a repeating section. */
+.site-shell,
+.site-shell main,
+.site-shell main .home-page,
+.site-shell main .project-detail-page,
+.site-shell main section,
+.site-shell main section.section,
+.site-shell main .section--soft,
+.site-shell main .featured-work-stage,
+.home-page :is(#projects, #workflow, #experience, #recommendation, #education, #skills, #contact),
+.home-page .hero.hero--focus,
+.home-page .hero.section,
+.home-page .hero,
+.home-page .home-strengths {
+  background: transparent !important;
+  background-image: none !important;
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+  border-block: 0 !important;
+}
+.site-footer {
+  background: transparent !important;
+  border-top: 0 !important;
+}
+
+/* Retire both old effects: square/cube grid and hand-drawn SVG overlays. */
+.home-page .hero-grid::before,
+.home-page .hero-grid::after,
+.home-page .hero-grid--focus::before,
+.home-page .hero-grid--focus::after,
+.home-page .hero.hero--focus::before,
+.home-page .hero.hero--focus::after,
+.home-page #projects::before,
+.home-page #skills::before {
+  content: none !important;
+  display: none !important;
+  background-image: none !important;
+  animation: none !important;
+}
+.featured-work-stage__background { display: none !important; }
+
+/* A continuous visual rhythm: spacing replaces section-wide divider lines. */
+.home-page .section:not(.hero) {
+  padding-top: clamp(44px, 5.5vw, 82px) !important;
+  padding-bottom: clamp(44px, 5.5vw, 82px) !important;
+}
+.home-page #experience { padding-bottom: clamp(20px, 3vw, 42px) !important; }
+.home-page #recommendation { padding-top: clamp(20px, 3vw, 42px) !important; }
+.home-page #contact { scroll-margin-top: 105px; }
+.eyebrow,
+.home-page .section-heading .eyebrow { color: var(--purple-strong) !important; }
+
+/* IMPORTANT: the previous update left the hero as a flex row with the strengths
+   beside the content, squeezing the name off-screen. Make it a block first. */
+.home-page .hero.section.hero--focus {
+  display: block !important;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 0 !important;
+  padding: clamp(115px, 10vw, 160px) 0 clamp(35px, 4vw, 58px) !important;
+}
+.home-page .hero.hero--focus .hero-grid.hero-grid--focus {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr) !important;
+  align-items: center !important;
+  gap: clamp(24px, 4vw, 62px) !important;
+  width: min(var(--max), calc(100% - 40px)) !important;
+  max-width: var(--max) !important;
+  margin-inline: auto !important;
+  min-height: 0 !important;
+}
+.home-page .hero.hero--focus .hero-copy.hero-copy--focus {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: 640px !important;
+}
+.home-page .hero.hero--focus .hero-panel.hero-panel--focus {
+  display: block !important;
+  position: relative !important;
+  inset: auto !important;
+  width: min(100%, 455px) !important;
+  height: clamp(310px, 31vw, 440px) !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin-inline: auto !important;
+  padding: 0 !important;
+  opacity: .88 !important;
+  filter: none !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  z-index: 1 !important;
+}
+.home-page .hero.hero--focus .hero-panel.hero-panel--focus .hero-scene {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.home-page .hero.hero--focus .hero-focus__availability {
+  font-size: clamp(.99rem, 1.1vw, 1.13rem) !important;
+  line-height: 1.55 !important;
+  letter-spacing: .02em !important;
+}
+.home-page .hero.hero--focus .hero-focus__name {
+  font-size: clamp(1.12rem, 1.3vw, 1.32rem) !important;
+  line-height: 1.4 !important;
+}
+.home-page .hero.hero--focus .hero-copy .hero-focus__title {
+  font-size: clamp(3.5rem, 6vw, 6.5rem) !important;
+  line-height: .98 !important;
+  overflow-wrap: normal;
+}
+.home-page .hero.hero--focus .hero-focus__lead {
+  font-size: clamp(1.08rem, 1.35vw, 1.23rem) !important;
+  line-height: 1.65 !important;
+}
+
+/* The strengths belong to the SAME hero, but must follow its two-column row. */
+.home-page .hero.hero--focus > .home-strengths--inline,
+.home-page .hero.hero--focus .home-strengths--inline {
+  display: block !important;
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(var(--max), calc(100% - 40px)) !important;
+  max-width: var(--max) !important;
+  margin: clamp(28px, 4vw, 48px) auto 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+.home-page .hero.hero--focus .home-strengths--inline .container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+.home-page .hero.hero--focus .home-strengths--inline .home-strengths__grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: clamp(22px, 3vw, 54px) !important;
+}
+.home-page .hero.hero--focus .home-strengths--inline .home-strengths__item {
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  background: transparent !important;
+}
+.home-page .hero.hero--focus .home-strengths--inline .home-strengths__item h2 {
+  font-size: clamp(1.05rem, 1.4vw, 1.23rem) !important;
+  line-height: 1.35 !important;
+}
+.home-page .hero.hero--focus .home-strengths--inline .home-strengths__item p {
+  font-size: clamp(.92rem, 1.05vw, 1.04rem) !important;
+  line-height: 1.58 !important;
+}
+
+/* Keep the hero readable on laptop/tablet, with the sphere blurred behind it. */
+@media (max-width: 980px) {
+  .home-page .hero.hero--focus .hero-grid.hero-grid--focus {
+    display: block !important;
+    position: relative !important;
+  }
+  .home-page .hero.hero--focus .hero-copy.hero-copy--focus {
+    max-width: 690px !important;
+    position: relative !important;
+    z-index: 3 !important;
+  }
+  .home-page .hero.hero--focus .hero-panel.hero-panel--focus {
+    display: block !important;
+    position: absolute !important;
+    inset: -10% -24% -10% 27% !important;
+    width: auto !important;
+    height: auto !important;
+    opacity: .15 !important;
+    filter: blur(24px) !important;
+    z-index: 0 !important;
+    margin: 0 !important;
+  }
+  .home-page .hero.hero--focus .hero-copy .hero-focus__title {
+    font-size: clamp(2.85rem, 8.6vw, 5.5rem) !important;
+  }
+  .home-page .hero.hero--focus .home-strengths--inline .home-strengths__grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .home-page .hero.hero--focus .home-strengths--inline .home-strengths__item {
+    padding: 0 !important;
+    border: 0 !important;
+  }
+}
+@media (max-width: 600px) {
+  .home-page .hero.section.hero--focus { padding: 98px 0 40px !important; }
+  .home-page .hero.hero--focus .hero-grid.hero-grid--focus,
+  .home-page .hero.hero--focus .home-strengths--inline {
+    width: min(var(--max), calc(100% - 28px)) !important;
+  }
+  .home-page .hero.hero--focus .hero-copy .hero-focus__title {
+    font-size: clamp(2.7rem, 11.1vw, 4rem) !important;
+  }
+  .home-page .hero.hero--focus .hero-focus__availability {
+    font-size: .95rem !important;
+  }
+  .home-page .hero.hero--focus .hero-focus__name {
+    font-size: 1.12rem !important;
+  }
+  .home-page .hero.hero--focus .hero-panel.hero-panel--focus {
+    inset: -6% -20% 0 5% !important;
+    opacity: .09 !important;
+    filter: blur(27px) !important;
+  }
+}
+
+/* Light mode - the same background photograph and ONLY white/lilac surfaces.
+   No grey gradients or slate-colored section bands. */
+:root[data-theme='light'] {
+  --purple: #845ec2;
+  --purple-strong: #845ec2;
+  --charcoal: #a178df;
+  --lavender: #a178df;
+  --ink: #fffaff;
+  --ink-2: #ffffff;
+  --ink-3: #f5eaff;
+  --paper: #2b163d;
+  --paper-2: #402453;
+  --text: #2b193b;
+  --muted: #674e79;
+  --line: rgba(132, 94, 194, .22);
+}
+:root[data-theme='light'] body {
+  background-color: #fffaff !important;
+  background-image:
+    linear-gradient(112deg, rgba(255, 251, 255, .78), rgba(250, 204, 255, .57) 55%, rgba(255, 250, 255, .38)),
+    url('../assets/particle-lines-background.jpg') !important;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+:root[data-theme='light'] .site-header {
+  background: rgba(255,250,255,.92) !important;
+  border-bottom-color: rgba(132,94,194,.19) !important;
+}
+:root[data-theme='light'] .site-footer,
+:root[data-theme='light'] .site-shell main section,
+:root[data-theme='light'] .site-shell main .section--soft {
+  background: transparent !important;
+  background-image: none !important;
+  border-block: 0 !important;
+}
+:root[data-theme='light'] .site-shell main :is(
+  .recommendation-card,
+  .experience-explorer__profile,
+  .experience-explorer__panel,
+  .experience-explorer__option,
+  .engineering-workflow,
+  .engineering-workflow__stage,
+  .engineering-workflow__evidence,
+  .course-flip-card__face,
+  .education-home__grade,
+  .tech-tile,
+  .project-card--mini,
+  .featured-spotlight,
+  .featured-spotlight__visual,
+  .stat-card,
+  .architecture > div,
+  .feature-grid article,
+  .persona-grid article,
+  .process-flow div,
+  .contact-card,
+  .state-card,
+  .project-detail-page .detail-grid > article,
+  .pricewise-browser,
+  .case-visual,
+  .filter-bar button
+) {
+  background-image: none !important;
+  background-color: rgba(255,250,255,.82) !important;
+  border-color: rgba(132,94,194,.22);
+}
+:root[data-theme='light'] .site-shell main .home-strengths--inline,
+:root[data-theme='light'] .site-shell main .home-strengths--inline * {
+  background: transparent !important;
+  background-image: none !important;
+}
+:root[data-theme='light'] .button--primary,
+:root[data-theme='light'] .brand-mark {
+  background: #845ec2 !important;
+  color: #fff !important;
+}
+:root[data-theme='light'] .site-shell main .eyebrow,
+:root[data-theme='light'] .home-page .section-heading .eyebrow {
+  color: #845ec2 !important;
+}

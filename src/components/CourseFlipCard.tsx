@@ -19,9 +19,9 @@ export function CourseFlipCard({
   description,
   topics,
   onOpen,
-  hint = 'Click to view full course details',
+  hint = 'View More',
   detailsLabel = 'Technologies & concepts',
-  openLabel = 'Click to view all details',
+  openLabel = 'View More',
   moreLabel = (count) => `+${count} more`,
 }: CourseFlipCardProps) {
   const previewTopics = topics.slice(

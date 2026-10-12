@@ -10,7 +10,6 @@ import { ProjectDetailPage } from '../pages/ProjectDetailPage';
 import { EducationPage } from '../pages/EducationPage';
 import { ResumePage } from '../pages/ResumePage';
 import { NotFoundPage } from '../pages/NotFoundPage';
-import { RecommendationPage } from '../pages/RecommendationPage';
 import { ThesisPage } from '../pages/ThesisPage';
 import { SkipLink } from '../components/SkipLink';
 
@@ -24,7 +23,6 @@ export function AppRoutes() {
       <Route path="/projects/pricewise/thesis" element={<ThesisPage />} />
       <Route path="/projects/:slug" element={<ProjectDetailPage />} />
       <Route path="/resume" element={<ResumePage />} />
-      <Route path="/recommendation" element={<RecommendationPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

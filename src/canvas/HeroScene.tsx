@@ -32,7 +32,7 @@ function FloatingShape() {
       >
         <meshStandardMaterial
           color="#4d4352"
-          emissive="#b06eda"
+          emissive="#be93fd"
           emissiveIntensity={0.28}
           roughness={0.42}
           metalness={0.3}
@@ -62,7 +62,7 @@ export function HeroScene() {
         <pointLight
           position={[3, 3, 4]}
           intensity={12}
-          color="#b06eda"
+          color="#a178df"
         />
 
         <FloatingShape />

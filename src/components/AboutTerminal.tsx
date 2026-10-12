@@ -23,7 +23,7 @@ const lines: TerminalLine[] = [
     type: 'command',
   },
   {
-    text: 'Software Developer',
+    text: 'Software Engineer',
     type: 'output',
   },
   {

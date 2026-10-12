@@ -69,8 +69,7 @@ export function AcademicCourseCard({
         hint={t(
           'home.coursework.viewCourseDetails',
           {
-            defaultValue:
-              'Click to view full course details',
+            defaultValue: 'View More',
           }
         )}
         detailsLabel={t(
@@ -83,8 +82,7 @@ export function AcademicCourseCard({
         openLabel={t(
           'home.coursework.viewAllDetails',
           {
-            defaultValue:
-              'Click to view all details',
+            defaultValue: 'View More',
           }
         )}
         moreLabel={(count) =>

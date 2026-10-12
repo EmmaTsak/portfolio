@@ -29,14 +29,14 @@ export function Header() {
       to: '/#projects',
     },
     {
-      id: 'Education',
-      label: t('nav.education'),
-      to: '/education',
-    },
-    {
       id: 'Experience',
       label: t('nav.experience'),
       to: '/#experience',
+    },
+    {
+      id: 'Education',
+      label: t('nav.education'),
+      to: '/#education',
     },
     {
       id: 'Skills',
@@ -106,7 +106,7 @@ export function Header() {
           id: string;
           element: HTMLElement;
         } => Boolean(section.element)
-      );
+      ).sort((a, b) => a.element.offsetTop - b.element.offsetTop);
 
       const position = window.scrollY + 180;
 
@@ -215,7 +215,10 @@ export function Header() {
           aria-label={t(
             'ui.header.homeLabel'
           )}
-          onClick={handleNav}
+          onClick={() => {
+            handleNav();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
         >
           <span className="brand-mark">
             ET

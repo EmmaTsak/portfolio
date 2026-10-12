@@ -29,7 +29,7 @@ import {
     SiWordpress,
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa6';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { skillGroups } from '../data/profile';
 
@@ -109,6 +109,40 @@ export function TechArsenal() {
   const [activeGroup, setActiveGroup] = useState(
     skillGroups[0].title
   );
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const [canRotate, setCanRotate] = useState(false);
+
+  useEffect(() => {
+    const query = window.matchMedia(
+      '(min-width: 901px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)'
+    );
+    const update = () => setCanRotate(query.matches);
+    update();
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+
+  useEffect(() => {
+    if (!rootRef.current) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setVisible(entry.isIntersecting);
+    }, { threshold: 0.25 });
+    observer.observe(rootRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!canRotate || !visible || paused) return;
+    const id = window.setInterval(() => {
+      setActiveGroup((current) => {
+        const index = skillGroups.findIndex((g) => g.title === current);
+        return skillGroups[(index + 1) % skillGroups.length].title;
+      });
+    }, 3000);
+    return () => window.clearInterval(id);
+  }, [canRotate, visible, paused]);
 
   const selectedGroup =
     skillGroups.find(
@@ -121,7 +155,12 @@ export function TechArsenal() {
     ];
 
   return (
-    <div className="tech-arsenal tech-arsenal--combat">
+    <div
+      ref={rootRef}
+      className={`tech-arsenal tech-arsenal--combat ${paused ? 'is-paused' : ''}`}
+      onFocusCapture={() => setPaused(true)}
+      onPointerDown={() => setPaused(true)}
+    >
       <div className="tech-arsenal__hud">
         <div>
           <span className="tech-arsenal__status">
@@ -154,6 +193,18 @@ export function TechArsenal() {
         </span>
       </div>
 
+      {canRotate && (
+        <div className="tech-arsenal__tour" aria-live="off">
+          <div className="tech-arsenal__tour-text">
+            <strong>{t(`home.skills.groups.${translationKey}`, { defaultValue: selectedGroup.title })}</strong>
+          </div>
+
+          <div className="tech-arsenal__tour-track" aria-hidden="true">
+            <span key={activeGroup} className={paused ? 'is-paused' : ''} />
+          </div>
+        </div>
+      )}
+
       <div
         className="tech-arsenal__selector"
         role="tablist"
@@ -175,9 +226,10 @@ export function TechArsenal() {
               className={`tech-arsenal__selector-button ${
                 isActive ? 'is-active' : ''
               }`}
-              onClick={() =>
-                setActiveGroup(group.title)
-              }
+              onClick={() => {
+                setPaused(true);
+                setActiveGroup(group.title);
+              }}
             >
               <span className="tech-arsenal__selector-number">
                 {String(index + 1).padStart(

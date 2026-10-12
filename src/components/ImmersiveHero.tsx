@@ -16,43 +16,19 @@ export function ImmersiveHero() {
     useState(true);
 
   useEffect(() => {
-    const mobileQuery = window.matchMedia(
-      '(max-width: 760px)'
-    );
-
     const reducedMotionQuery = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     );
 
     const updatePreference = () => {
-      setUseStaticFallback(
-        mobileQuery.matches ||
-          reducedMotionQuery.matches
-      );
+      setUseStaticFallback(reducedMotionQuery.matches);
     };
 
     updatePreference();
-
-    mobileQuery.addEventListener(
-      'change',
-      updatePreference
-    );
-
-    reducedMotionQuery.addEventListener(
-      'change',
-      updatePreference
-    );
+    reducedMotionQuery.addEventListener('change', updatePreference);
 
     return () => {
-      mobileQuery.removeEventListener(
-        'change',
-        updatePreference
-      );
-
-      reducedMotionQuery.removeEventListener(
-        'change',
-        updatePreference
-      );
+      reducedMotionQuery.removeEventListener('change', updatePreference);
     };
   }, []);
 

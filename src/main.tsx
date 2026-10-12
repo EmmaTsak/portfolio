@@ -5,7 +5,10 @@ import { App } from './app/App';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import './i18n';
 import './styles/global.css';
+import './styles/photo-background.css';
+import './styles/portfolio-flow.css';
 
+import './styles/portfolio-theme-fix.css';
 const redirect = sessionStorage.getItem('spa-redirect');
 if (redirect) {
   sessionStorage.removeItem('spa-redirect');

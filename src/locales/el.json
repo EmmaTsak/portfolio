@@ -35,13 +35,13 @@
   },
   "home": {
     "hero": {
-      "availability": "Ανοιχτή σε ευκαιρίες ανάπτυξης λογισμικού και διασφάλισης ποιότητας",
-      "role": "Software Developer",
-      "positioning": "Αναπτύσσω αξιόπιστες εφαρμογές σε frontend, backend και APIs, με έμφαση στην ποιότητα του λογισμικού και την εμπειρία του χρήστη από την αρχή.",
+      "availability": "OPEN TO SOFTWARE ENGINEERING ROLES · EUROPE · Greek & English",
+      "role": "Software Engineer",
+      "positioning": "Αναπτύσσω πρακτικές full-stack εφαρμογές και βελτιώνω τον τρόπο ελέγχου και παράδοσής τους.",
       "softwareDevelopment": "Ανάπτυξη Λογισμικού",
       "qualityEngineering": "Ποιότητα Λογισμικού",
       "uiux": "UI/UX",
-      "viewWork": "Δείτε τη δουλειά μου",
+      "viewWork": "Δες τα Projects",
       "viewCv": "Βιογραφικό",
       "build": "Ανάπτυξη",
       "buildDescription": "Frontend, backend & APIs",
@@ -50,14 +50,24 @@
       "design": "Σχεδιασμός",
       "designDescription": "Διεπαφές με επίκεντρο τον χρήστη",
       "metaTitle": "{{name}} | Portfolio",
-      "metaDescription": "Software developer που αναπτύσσει αξιόπιστες εφαρμογές σε frontend, backend και APIs, με έμφαση στην ποιότητα λογισμικού και την εμπειρία χρήστη από την αρχή.",
+      "metaDescription": "Software Engineer με εμπειρία σε full-stack εφαρμογές, testing και CI workflows.",
       "engineeringFocus": "Τεχνική κατεύθυνση",
-      "email": "Email"
+      "email": "Email",
+      "headlineFirst": "Software",
+      "headlineSecond": "Engineer",
+      "workflowLabel": "Ροή ανάπτυξης λογισμικού",
+      "workflow": {
+        "build": "Ανάπτυξη",
+        "test": "Έλεγχος",
+        "deploy": "Διάθεση",
+        "monitor": "Παρακολούθηση"
+      },
+      "orbitCaption": "DESIGN / ENGINEER / IMPROVE"
     },
     "about": {
-      "eyebrow": "Σχετικά με εμένα",
-      "title": "Ανάπτυξη λογισμικού με έμφαση στην ποιότητα και τη χρηστικότητα",
-      "description": "Η εμπειρία μου περιλαμβάνει ανάπτυξη εφαρμογών, testing, debugging και σχεδιασμό διεπαφών. Προτιμώ projects όπου οι τεχνικές αποφάσεις βασίζονται στις ανάγκες των χρηστών και η συμπεριφορά του λογισμικού μπορεί να επαληθευτεί.",
+      "eyebrow": "ΔΥΝΑΤΑ ΣΗΜΕΙΑ",
+      "title": "Σχετικά με εμένα",
+      "description": "Μου αρέσει να μετατρέπω πραγματικές ανάγκες σε ξεκάθαρες διεπαφές και να λύνω προβλήματα μέσα από προσεκτικό debugging.",
       "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
       "fullStackTitle": "Full-stack βάση",
       "fullStackDescription": "React, Node.js, APIs, σχεσιακές και NoSQL βάσεις δεδομένων.",
@@ -67,15 +77,15 @@
       "uxDescription": "Figma, έρευνα, personas, user journeys και responsive σχεδιασμός."
     },
     "selectedWork": {
-      "eyebrow": "Επιλεγμένα projects",
-      "title": "Projects που δείχνουν τον τρόπο που αναπτύσσω λογισμικό",
-      "description": "Μια επιλεγμένη συλλογή projects με τεχνικό βάθος, διαφορετικές τεχνολογίες και άμεση συνάφεια με ρόλους software engineering.",
-      "seeAll": "Όλα τα projects"
+      "eyebrow": "ΕΡΓΑ",
+      "title": "Projects",
+      "description": "",
+      "seeAll": "Περισσότερα"
     },
     "quality": {
-      "eyebrow": "Ποιότητα λογισμικού",
-      "title": "Το testing δεν είναι κάτι που αφήνω για το τέλος.",
-      "description": "Κατά τη διάρκεια της πρακτικής μου έγραφα και εκτελούσα Jest tests, αναπαρήγαγα σφάλματα, έκανα debugging και υποστήριζα τη διαδικασία προετοιμασίας για releases. Στο PriceWise, η αξιολόγηση της πτυχιακής βασίστηκε κυρίως σε χειροκίνητο testing, ενώ τα αυτοματοποιημένα Jest tests καταγράφηκαν ξεκάθαρα ως μελλοντική βελτίωση και όχι ως ήδη ολοκληρωμένη εργασία.",
+      "eyebrow": "",
+      "title": "Testing & Ποιότητα",
+      "description": "Jest, manual testing, debugging και αξιόπιστα releases.",
       "testingTitle": "Testing",
       "testingDescription": "Jest, API validation, χειροκίνητες ροές και έλεγχοι συμπεριφοράς",
       "investigationTitle": "Διερεύνηση",
@@ -84,11 +94,11 @@
       "releaseDescription": "Συνέπεια, integration και αναμενόμενη συμπεριφορά"
     },
     "workflow": {
-      "eyebrow": "Engineering workflow",
-      "title": "Από την ανάπτυξη έως το monitoring",
-      "description": "Δες πώς προσεγγίζω διαφορετικά στάδια του software engineering μέσα από πραγματικά projects.",
+      "eyebrow": "ΤΡΟΠΟΣ ΕΡΓΑΣΙΑΣ",
+      "title": "Ανάπτυξη · Έλεγχος · Deploy · Monitoring",
+      "description": "Η τεχνική μου προσέγγιση μέσα από πραγματικά projects.",
       "evidence": "Παράδειγμα από project",
-      "viewProject": "Δες το case study",
+      "viewProject": "Περισσότερα",
       "stages": {
         "build": {
           "title": "Ανάπτυξη εφαρμογών που λύνουν πραγματικά προβλήματα",
@@ -109,10 +119,10 @@
       }
     },
     "experience": {
-      "eyebrow": "Εμπειρία",
-      "title": "Εκεί όπου η ανάπτυξη λογισμικού συνάντησε την ποιότητα",
-      "period": "Φεβ 2025 — Σεπ 2025",
-      "role": "Πρακτική Άσκηση — Software Developer",
+      "eyebrow": "ΚΑΡΙΕΡΑ",
+      "title": "Εμπειρία",
+      "period": "Φεβ 2025 - Σεπ 2025",
+      "role": "Πρακτική Άσκηση - Software Developer",
       "company": "Valmore · Αθήνα",
       "point1": "Ανάπτυξη, testing και συντήρηση λειτουργιών εφαρμογών στο πλαίσιο agile κύκλων ανάπτυξης.",
       "point2": "Δημιουργία και εκτέλεση Jest tests για τον εντοπισμό σφαλμάτων νωρίτερα στη διαδικασία ανάπτυξης.",
@@ -120,17 +130,17 @@
       "point4": "Ανάπτυξη επαναχρησιμοποιήσιμων React Native components και έλεγχος συμπεριφοράς, συνέπειας και σωστής ενσωμάτωσης λειτουργιών."
     },
     "recommendation": {
-      "eyebrow": "Συστατική επιστολή",
-      "title": "Πώς ήταν η συνεργασία μαζί μου",
-      "description": "Επαγγελματική σύσταση από την πρακτική μου στην ανάπτυξη λογισμικού στη Valmore Technologies.",
+      "eyebrow": "ΣΧΟΛΙΟ ΤΟΥ CTO",
+      "title": "Από τον CTO μου",
+      "description": "",
       "authorRole": "Συνιδιοκτήτης & CTO · Valmore Technologies",
       "context": "Software Development Internship · React Native · Testing · Debugging · Troubleshooting",
       "button": "Προβολή πλήρους συστατικής επιστολής",
       "quote": "Η ισχυρή εργασιακή της ηθική και η προθυμία της να υποστηρίζει την ομάδα την έκαναν πολύτιμο μέλος του οργανισμού μας."
     },
     "education": {
-      "eyebrow": "Εκπαίδευση",
-      "title": "Βάσεις στην ανάπτυξη λογισμικού, εφαρμοσμένες σε πραγματικά projects",
+      "eyebrow": "ΣΠΟΥΔΕΣ",
+      "title": "Εκπαίδευση",
       "essex": {
         "period": "Σεπ 2024 - Ιουν 2026",
         "title": "BSc (Hons) Computing (Software Development)",
@@ -152,8 +162,8 @@
       "description": "Επιλεγμένα μαθήματα από το BSc (Hons) Computing (Software Development), με αντικείμενα όπως backend development, βάσεις δεδομένων, mobile development, systems programming, δίκτυα, software engineering και user-centred design.",
       "academicWorkLabel": "Ακαδημαϊκή εργασία:",
       "technologiesConcepts": "Τεχνολογίες & έννοιες",
-      "viewCourseDetails": "Πατήστε για πλήρη στοιχεία του μαθήματος",
-      "viewAllDetails": "Πατήστε για προβολή όλων των στοιχείων",
+      "viewCourseDetails": "Περισσότερα",
+      "viewAllDetails": "Περισσότερα",
       "keyTopics": "Βασικά θέματα του μαθήματος {{name}}",
       "additionalTopics": "Επιπλέον θέματα: {{topics}}",
       "more": "+{{count}} ακόμα",
@@ -204,12 +214,13 @@
           "area": "UX",
           "description": "Μελέτη του user-centred software design και των αρχών που χρησιμοποιούνται για τη δημιουργία εύχρηστων, προσβάσιμων και κατανοητών ψηφιακών διεπαφών."
         }
-      }
+      },
+      "seeAll": "Περισσότερα"
     },
     "skills": {
-      "eyebrow": "Δεξιότητες",
-      "title": "Τεχνικές Δεξιότητες",
-      "description": "Τεχνολογίες και εργαλεία οργανωμένα με βάση τον τρόπο που τα χρησιμοποιώ.",
+      "eyebrow": "ΤΕΧΝΟΛΟΓΙΕΣ",
+      "title": "Δεξιότητες",
+      "description": "Τα εργαλεία και οι τεχνολογίες μου ανά κατηγορία.",
       "groups": {
         "development": "Ανάπτυξη Λογισμικού",
         "frontendMobile": "Frontend & Mobile",
@@ -217,12 +228,15 @@
         "testingQuality": "Testing & Ποιότητα",
         "data": "Δεδομένα",
         "toolsDesign": "Εργαλεία & Σχεδιασμός"
-      }
+      },
+      "preview": "ΑΥΤΟΜΑΤΗ ΠΡΟΒΟΛΗ - 2 ΔΕΥΤ.",
+      "pause": "Παύση",
+      "resume": "Συνέχεια"
     },
     "contact": {
-      "eyebrow": "Επικοινωνία",
-      "title": "Αναζητάτε developer που ενδιαφέρεται πραγματικά για το πώς συμπεριφέρεται το λογισμικό;",
-      "description": "Με ενδιαφέρουν θέσεις ανάπτυξης λογισμικού, με το quality engineering και το UI/UX ως συμπληρωματικά δυνατά σημεία.",
+      "eyebrow": "ΕΠΙΚΟΙΝΩΝΙΑ",
+      "title": "Επικοινωνία",
+      "description": "Διαθέσιμη για θέσεις Software Engineering.",
       "portraitAlt": "Φωτογραφία της Εμμανουέλας Τσακαλίδου, software developer, με φόντο το γραφείο της.",
       "emailMe": "Στείλτε μου email",
       "copyEmail": "Αντιγραφή email"
@@ -238,14 +252,14 @@
       "technologies": "Τεχνολογίες",
       "liveDemo": "Live demo",
       "github": "{{name}} στο GitHub",
-      "view": "Προβολή"
+      "view": "Περισσότερα"
     },
     "page": {
-      "metaTitle": "Projects — Εμμανουέλα Τσακαλίδου",
+      "metaTitle": "Projects - Εμμανουέλα Τσακαλίδου",
       "metaDescription": "Επιλεγμένα software-development projects σε full stack, backend, mobile, C++, testing και UI/UX.",
       "eyebrow": "Projects",
-      "title": "Επιλεγμένα software engineering projects",
-      "description": "Φιλτράρετε τα projects ανάλογα με το είδος τεχνικής εμπειρίας που θέλετε να δείτε. Δίνεται προτεραιότητα σε πιο ολοκληρωμένα και ουσιαστικά projects αντί να εμφανίζεται κάθε repository.",
+      "title": "Projects",
+      "description": "Αναζήτηση ανά τεχνολογία ή είδος project.",
       "filterLabel": "Φιλτράρισμα projects",
       "filters": {
         "all": "Όλα",
@@ -391,7 +405,7 @@
       "architectureEyebrow": "Αρχιτεκτονική / ποιότητα",
       "structureTitle": "Πώς είναι δομημένο",
       "fallback": "Αυτό το project επικεντρώνεται κυρίως στην υλοποίηση backend και στη μοντελοποίηση δεδομένων. Περισσότερες τεχνικές λεπτομέρειες υπάρχουν στο repository.",
-      "notFoundTitle": "Το project δεν βρέθηκε — {{name}}",
+      "notFoundTitle": "Το project δεν βρέθηκε - {{name}}",
       "notFoundDescription": "Το project που ζητήθηκε δεν βρέθηκε.",
       "pricewiseStory": {
         "eyebrow": "Η εμπειρία της εφαρμογής",
@@ -402,41 +416,41 @@
         "list": "Δημιουργία λίστας αγορών με προαιρετική αποστολή μέσω email.",
         "resultsAlt": "Η σελίδα αποτελεσμάτων του PriceWise",
         "listAlt": "Η λίστα αγορών του PriceWise σε κινητό"
-      }
+      },
+      "tryLivePrototype": "Live Demo",
+      "backToTop": "Επιστροφή στην κορυφή"
     }
   },
   "resumePage": {
-    "metaTitle": "Βιογραφικό — {{name}}",
-    "metaDescription": "Βιογραφικό της {{name}}, software developer με εμπειρία σε development, testing και APIs.",
+    "metaTitle": "Βιογραφικό - {{name}}",
+    "metaDescription": "Βιογραφικό της {{name}}, Software Engineer.",
     "eyebrow": "Βιογραφικό",
     "title": "Εμπειρία, εκπαίδευση και τεχνικές δεξιότητες",
     "description": "Δείτε το βιογραφικό μου απευθείας μέσα από το portfolio ή κατεβάστε το πρωτότυπο PDF.",
-    "documentTitle": "{{name}} — CV"
+    "documentTitle": "{{name}} - CV"
   },
   "recommendationPage": {
-    "metaTitle": "Συστατική επιστολή — {{name}}",
+    "metaTitle": "Συστατική επιστολή - {{name}}",
     "metaDescription": "Επαγγελματική συστατική επιστολή από την πρακτική άσκηση της {{name}} στη Valmore Technologies.",
     "back": "Επιστροφή στο portfolio",
     "eyebrow": "Συστατική επιστολή",
     "title": "Επαγγελματική συστατική επιστολή",
     "description": "Συστατική επιστολή από τον {{supervisor}}, Συνιδιοκτήτη & CTO της Valmore Technologies, μετά την πρακτική μου στην ανάπτυξη λογισμικού.",
-    "documentTitle": "Valmore Technologies — Συστατική επιστολή"
+    "documentTitle": "Valmore Technologies - Συστατική επιστολή"
   },
   "thesisPage": {
-    "metaTitle": "Πτυχιακή PriceWise — {{name}}",
+    "metaTitle": "Πτυχιακή PriceWise - {{name}}",
     "metaDescription": "Η πλήρης πτυχιακή εργασία BSc (Hons) Computing Software Development που τεκμηριώνει την έρευνα, τον σχεδιασμό, την υλοποίηση και την αξιολόγηση του PriceWise.",
     "back": "Επιστροφή στο PriceWise",
     "eyebrow": "Πτυχιακή εργασία · Ελληνικά",
-    "title": "PriceWise — Πλήρης Πτυχιακή Εργασία",
+    "title": "PriceWise - Πλήρης Πτυχιακή Εργασία",
     "description": "Η πλήρης πτυχιακή εργασία BSc (Hons), με τεκμηρίωση της έρευνας, του σχεδιασμού, της υλοποίησης και της αξιολόγησης του PriceWise. Το πρωτότυπο ακαδημαϊκό κείμενο είναι γραμμένο στα Ελληνικά.",
-    "documentTitle": "PriceWise — Πτυχιακή Εργασία"
+    "documentTitle": "PriceWise - Πτυχιακή Εργασία"
   },
   "priceWisePage": {
-    "metaTitle": "PriceWise Case Study — {{name}}",
+    "metaTitle": "PriceWise Case Study - {{name}}",
     "metaDescription": "Η έρευνα, η διαδικασία UX και η τεχνική αρχιτεκτονική πίσω από το PriceWise, ένα prototype σύγκρισης τιμών supermarket στο πλαίσιο πτυχιακής εργασίας.",
-
     "back": "Όλα τα projects",
-
     "hero": {
       "eyebrow": "Flagship case study · Πτυχιακή εργασία",
       "description": "Ένα full-stack prototype σύγκρισης τιμών προϊόντων, σχεδιασμένο για ευκολότερη σύγκριση μεταξύ ελληνικών supermarket και οργάνωση shopping list χωρίς να απαιτείται λογαριασμός.",
@@ -446,7 +460,6 @@
       "visualAlt": "Υλοποιημένη σελίδα σύγκρισης τιμών του PriceWise με navigation, search field και φίλτρα.",
       "visualLabel": "Υλοποιημένο PriceWise interface"
     },
-
     "research": {
       "eyebrow": "Το πρόβλημα",
       "title": "Τα δεδομένα τιμών υπάρχουν, αλλά όχι σε ένα ενιαίο και συνεπές σημείο.",
@@ -456,7 +469,6 @@
       "uiLabel": "αξιολόγησαν το απλό και εύχρηστο UI ως σημαντικό ή πολύ σημαντικό",
       "accuracyLabel": "δήλωσαν ότι ανακριβείς ή παλιές τιμές θα μπορούσαν να τους κάνουν να σταματήσουν να χρησιμοποιούν την εφαρμογή"
     },
-
     "ux": {
       "eyebrow": "UX process",
       "title": "Τα ευρήματα της έρευνας διαμόρφωσαν το prototype.",
@@ -484,7 +496,6 @@
         "nikosDescription": "Προτιμά ξεκάθαρη αναζήτηση, ευανάγνωστες τιμές και απλό navigation αντί για πολύπλοκες ροές με πολλές λειτουργίες."
       }
     },
-
     "implementation": {
       "eyebrow": "Υλοποιημένη εφαρμογή",
       "title": "Ένα λειτουργικό prototype και όχι μόνο ένα Figma concept.",
@@ -502,7 +513,6 @@
       "privacyAlt": "Υλοποιημένη privacy page του PriceWise με πληροφορίες απορρήτου, navigation και footer.",
       "privacyCaption": "Privacy-first εμπειρία χρήστη"
     },
-
     "designEvolution": {
       "eyebrow": "Εξέλιξη σχεδιασμού",
       "title": "Τα mockups ήταν η αφετηρία και όχι μια αμετάβλητη προδιαγραφή.",
@@ -514,7 +524,6 @@
       "listAlt": "Αρχικό Figma mockup της shopping list του PriceWise.",
       "listCaption": "Shopping list · αρχικό Figma mockup"
     },
-
     "architecture": {
       "eyebrow": "Αρχιτεκτονική",
       "title": "Διαχωρισμός frontend, backend, database και data-collection workflows.",
@@ -531,7 +540,6 @@
       "uiRefresh": "UI refresh",
       "uiRefreshDetails": "Refresh των συνδεδεμένων clients μετά από ενημέρωση δεδομένων"
     },
-
     "features": {
       "eyebrow": "Βασικές λειτουργίες",
       "title": "Ένα σκόπιμα εστιασμένο prototype.",
@@ -544,7 +552,6 @@
       "privacyTitle": "Privacy-conscious flow",
       "privacyDescription": "Ελαχιστοποίηση συλλογής προσωπικών δεδομένων και προαιρετική αποστολή email με συναίνεση του χρήστη."
     },
-
     "quality": {
       "eyebrow": "Ποιότητα & testing",
       "title": "Τι ελέγχθηκε πραγματικά",
@@ -561,7 +568,6 @@
       "futureTitle": "Τα automated Jest tests προτάθηκαν ως μελλοντική βελτίωση και δεν παρουσιάζονται ως ήδη υλοποιημένα.",
       "futureDescription": "Η πτυχιακή προτείνει unit και integration tests για data cleaning, product normalisation, API endpoints, shopping-list logic και frontend helpers."
     },
-
     "challenges": {
       "eyebrow": "Engineering challenges",
       "title": "Πού βρίσκεται η τεχνική πολυπλοκότητα",
@@ -573,7 +579,6 @@
         "4": "Ισορροπία μεταξύ data freshness και υπεύθυνης, περιορισμένης συχνότητας scraping"
       }
     },
-
     "nextIterations": {
       "eyebrow": "Επόμενες βελτιώσεις",
       "title": "Τι θα βελτίωνα στη συνέχεια",
@@ -585,7 +590,6 @@
         "4": "Συστηματικά unit και integration tests"
       }
     },
-
     "thesis": {
       "eyebrow": "Πλήρης ακαδημαϊκή εργασία",
       "title": "Θέλετε να δείτε ολόκληρη την έρευνα και την τεχνική τεκμηρίωση;",
@@ -595,13 +599,56 @@
       "cardDescription": "Δείτε το πρωτότυπο ακαδημαϊκό κείμενο απευθείας μέσα από το portfolio ή κατεβάστε το PDF.",
       "button": "Άνοιγμα πτυχιακής"
     },
-
     "code": {
       "eyebrow": "Κώδικας",
       "title": "Θέλετε να δείτε πώς είναι δομημένο το PriceWise;",
       "description": "Το δημόσιο repository περιλαμβάνει το frontend, το backend, το Docker configuration και το scraper workflow.",
       "repository": "GitHub repository",
       "contact": "Ρωτήστε με για το project"
+    },
+    "scan": {
+      "eyebrow": "Πτυχιακή · Full-stack Εφαρμογή",
+      "summary": "Σύγκριση τιμών από ελληνικά σούπερ μάρκετ και λίστα αγορών χωρίς λογαριασμό.",
+      "participants": "συμμετέχοντες στην έρευνα",
+      "comparison": "επέλεξαν τη σύγκριση τιμών",
+      "demo": "Live Demo",
+      "thesis": "Πτυχιακή",
+      "homeAlt": "Αρχική σελίδα της εφαρμογής PriceWise",
+      "screensTitle": "Η Εφαρμογή",
+      "screensIntro": "Αναζήτηση, σύγκριση και λίστα αγορών με λίγα βήματα.",
+      "resultsAlt": "Αποτελέσματα αναζήτησης PriceWise",
+      "compareAlt": "Σύγκριση τιμών σούπερ μάρκετ PriceWise",
+      "mobileAlt": "Λίστα αγορών PriceWise σε κινητό",
+      "resultsLabel": "Αναζήτηση",
+      "compareLabel": "Σύγκριση",
+      "mobileLabel": "Λίστα αγορών",
+      "architectureTitle": "Πώς Λειτουργεί",
+      "architectureIntro": "Η συλλογή δεδομένων είναι ξεχωριστή από την αναζήτηση του χρήστη.",
+      "collectionTitle": "Ροή δεδομένων",
+      "collection": {
+        "sources": "Σούπερ μάρκετ",
+        "scrapers": "Scrapers",
+        "grouping": "Καθαρισμός & ομάδες",
+        "database": "PostgreSQL",
+        "interface": "API + React"
+      },
+      "refreshTitle": "Ανανέωση δεδομένων",
+      "refresh": {
+        "cron": "node-cron",
+        "collection": "Συλλογή",
+        "cache": "Καθαρισμός cache",
+        "socket": "Socket.IO",
+        "refresh": "Ανανέωση UI"
+      },
+      "refreshNote": "Οι τιμές συλλέγονται προγραμματισμένα. Το Socket.IO ενημερώνει την εφαρμογή μετά την ανανέωση.",
+      "decisionEyebrow": "Τεχνική απόφαση",
+      "decisionTitle": "Γρήγορη Αναζήτηση",
+      "decision": "Οι χρήστες αναζητούν αποθηκευμένες τιμές χωρίς αναμονή για live scraping. Οι αλλαγές στους ιστοτόπους απαιτούν συντήρηση των scrapers.",
+      "testingEyebrow": "Έλεγχοι",
+      "testingTitle": "Manual Testing",
+      "testing": "Έλεγξα αναζήτηση, φίλτρα, λίστα αγορών, APIs, σφάλματα scraping και εναλλαγή γλώσσας. Τα automated tests είναι μελλοντική βελτίωση.",
+      "pageNavigation": "Πλοήγηση στο project",
+      "backToTop": "Πίσω στην κορυφή"
     }
   },
   "documentViewer": {
@@ -624,7 +671,7 @@
       "backHome": "Επιστροφή στην αρχική"
     },
     "page": {
-      "metaTitle": "404 — Η διαδρομή δεν βρέθηκε",
+      "metaTitle": "404 - Η διαδρομή δεν βρέθηκε",
       "metaDescription": "Η σελίδα portfolio που ζητήθηκε δεν βρέθηκε.",
       "eyebrow": "404 · Η διαδρομή δεν βρέθηκε",
       "title": "Αυτό το path δεν κάνει compile.",
@@ -636,7 +683,7 @@
   "shared": {
     "image": {
       "previewUnavailable": "Η προεπισκόπηση δεν είναι διαθέσιμη",
-      "previewUnavailableLabel": "{{alt}} — η προεπισκόπηση δεν είναι διαθέσιμη"
+      "previewUnavailableLabel": "{{alt}} - η προεπισκόπηση δεν είναι διαθέσιμη"
     },
     "error": {
       "eyebrow": "Σφάλμα εφαρμογής",

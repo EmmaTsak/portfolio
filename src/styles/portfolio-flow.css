@@ -1,0 +1,145 @@
+/* ORIGINAL FLOW BACKGROUND - 2026-10-13
+   Original particle/flow illustration inspired by the supplied image.
+   The reference photograph is no longer rendered. A single fixed visual
+   canvas spans ALL routes; section boundaries are created by spacing.
+*/
+:root {
+  --purple: #a178df;
+  --purple-strong: #dcb0ff;
+  --lavender: #be93fd;
+  --charcoal: #845ec2;
+  --line: rgba(190,147,253,.23);
+  --flow-background:
+    url('../assets/flow-dark.svg'),
+    radial-gradient(ellipse at 82% 20%, rgba(132,94,194,.18), transparent 47%),
+    radial-gradient(ellipse at 18% 90%, rgba(250,204,255,.075), transparent 47%),
+    linear-gradient(130deg, #130e20 0%, #241532 55%, #1a1128 100%);
+}
+:root[data-theme='light'] {
+  --purple: #845ec2;
+  --purple-strong: #845ec2;
+  --lavender: #a178df;
+  --charcoal: #845ec2;
+  --ink: #fdf9ff;
+  --ink-2: #fff;
+  --ink-3: #f5ebff;
+  --text: #29183d;
+  --muted: #614976;
+  --line: rgba(132,94,194,.19);
+  --flow-background:
+    url('../assets/flow-light.svg'),
+    radial-gradient(ellipse at 82% 16%, rgba(220,176,255,.4), transparent 48%),
+    radial-gradient(ellipse at 14% 83%, rgba(190,147,253,.18), transparent 43%),
+    radial-gradient(ellipse at 73% 82%, rgba(250,204,255,.19), transparent 45%),
+    linear-gradient(125deg, #fffaff 0%, #f7efff 48%, #fdf8ff 100%);
+}
+
+/* Fixed viewport backdrop: one uninterrupted design even on phones. */
+html, body { background: var(--ink) !important; background-image: none !important; }
+:root[data-theme='light'] body { background: var(--ink) !important; background-image: none !important; }
+#root { position: relative; isolation: isolate; min-height: 100vh; }
+#root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: var(--flow-background);
+  background-position: center, center, center, center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.site-shell,
+.site-shell main,
+.site-shell main .home-page,
+.site-shell main .project-detail-page,
+.site-shell main section.section,
+.site-shell main .section--soft,
+.site-shell main .featured-work-stage,
+.site-footer {
+  background: transparent !important;
+  background-image: none !important;
+  border-block: 0 !important;
+}
+/* Hide previous square/cube and repeated hand-drawn background patterns. */
+.home-page .hero-grid::before,
+.home-page .hero-grid::after,
+.home-page .hero-grid--focus::before,
+.home-page .hero-grid--focus::after,
+.home-page .hero.hero--focus::before,
+.home-page .hero.hero--focus::after,
+.home-page #projects::before,
+.home-page #skills::before,
+.featured-work-stage__background {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+/* Keep the central text and project images legible on top of the background. */
+.site-shell main, .site-footer { position: relative; }
+
+/* Clean light mode: white and lilac surfaces only, no slate/grey overlays. */
+:root[data-theme='light'] .site-header {
+  background: rgba(255,250,255,.92) !important;
+  border-bottom-color: rgba(132,94,194,.14) !important;
+}
+:root[data-theme='light'] .site-shell main :is(
+  .recommendation-card,
+  .experience-explorer__profile,
+  .experience-explorer__panel,
+  .experience-explorer__option,
+  .engineering-workflow,
+  .engineering-workflow__stage,
+  .engineering-workflow__evidence,
+  .course-flip-card__face,
+  .education-home__grade,
+  .tech-tile,
+  .project-card--mini,
+  .featured-spotlight,
+  .featured-spotlight__visual,
+  .stat-card,
+  .contact-card,
+  .case-visual,
+  .state-card,
+  .project-detail-page .detail-grid > article,
+  .filter-bar button
+) {
+  background: rgba(255,252,255,.87) !important;
+  background-image: none !important;
+  border-color: rgba(132,94,194,.20) !important;
+  box-shadow: none;
+}
+:root[data-theme='light'] .site-shell main .hero-scene--fallback {
+  background: radial-gradient(circle at 55% 50%, rgba(190,147,253,.20), transparent 54%) !important;
+}
+:root[data-theme='light'] .site-shell main .home-strengths--inline,
+:root[data-theme='light'] .site-shell main .home-strengths--inline * {
+  background: transparent !important;
+  background-image: none !important;
+}
+:root[data-theme='light'] .button--primary,
+:root[data-theme='light'] .brand-mark {
+  background: #845ec2 !important;
+  color: white !important;
+}
+:root[data-theme='light'] .site-footer { color: var(--text); }
+
+/* Tour remains automatic until a category is hovered, focused or selected.
+   No pause/play button - progress and active label remain visible. */
+.tech-arsenal__tour-control { display: none !important; }
+.tech-arsenal__tour { align-items: baseline; }
+
+@media (max-width: 760px) {
+  #root::before { background-position: 62% center, center, center, center; }
+  /* The reference flow stays behind compact sections - never enlarges cards. */
+  .home-page .recommendation-card,
+  .home-page .experience-explorer__profile,
+  .home-page .experience-explorer__panel,
+  .home-page .engineering-workflow__evidence,
+  .home-page .contact-card {
+    box-shadow: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #root::before { background-attachment: initial; }
+}

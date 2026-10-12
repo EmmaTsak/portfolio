@@ -1,10 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import {
-  type MouseEvent,
-  useRef,
-} from 'react';
 
 import type { Project } from '../data/projects';
 import { SafeImage } from './SafeImage';
@@ -42,74 +38,9 @@ export function ProjectCard({
       })
     : undefined;
 
-  const cardRef =
-  useRef<HTMLElement>(null);
-
-  const handleMouseMove = (
-    event: MouseEvent<HTMLElement>
-  ) => {
-    const card = cardRef.current;
-
-    if (!card) return;
-
-    const rect =
-      card.getBoundingClientRect();
-
-    const x =
-      event.clientX - rect.left;
-
-    const y =
-      event.clientY - rect.top;
-
-    const rotateX =
-      ((y / rect.height) - 0.5) * -3;
-
-    const rotateY =
-      ((x / rect.width) - 0.5) * 3;
-
-    card.style.setProperty(
-      '--mouse-x',
-      `${x}px`
-    );
-
-    card.style.setProperty(
-      '--mouse-y',
-      `${y}px`
-    );
-
-    card.style.setProperty(
-      '--rotate-x',
-      `${rotateX}deg`
-    );
-
-    card.style.setProperty(
-      '--rotate-y',
-      `${rotateY}deg`
-    );
-  };
-
-  const handleMouseLeave = () => {
-    const card = cardRef.current;
-
-    if (!card) return;
-
-    card.style.setProperty(
-      '--rotate-x',
-      '0deg'
-    );
-
-    card.style.setProperty(
-      '--rotate-y',
-      '0deg'
-    );
-  };
-
   return (
     <article
-      ref={cardRef}
-      className="project-card project-card--mini project-card--interactive"
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
+          className="project-card project-card--mini project-card--interactive"
     >
       <Link
         className="project-card__mini-link"

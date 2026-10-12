@@ -1,15 +1,15 @@
 export const profile = {
   name: 'Emmanouela Tsakalidou',
-  title: 'Software Developer',
+  title: 'Software Engineer',
   email: 'tsakalidouemmanouela@gmail.com',
   github: 'https://github.com/EmmaTsak',
   linkedin: 'https://www.linkedin.com/in/etsakalidou/',
-  positioning:  'Software developer building reliable applications and engineering tooling across frontend, backend, APIs and CI workflows — with software quality considered from the start.',
+  positioning:  'Software engineer building reliable applications and engineering tooling across frontend, backend, APIs and CI workflows - with software quality considered from the start.',
 };
 
 export const experience = [
   {
-    period: 'Feb 2025 — Sep 2025',
+    period: 'Feb 2025 - Sep 2025',
     role: 'Software Developer Intern',
     company: 'Valmore · Athens',
     points: [

@@ -1,0 +1,305 @@
+/* FINAL THEME SURFACES - 2026-10-13
+   Purpose: one continuous background for every route in BOTH themes.
+   Loaded AFTER global.css, photo-background.css and portfolio-flow.css.
+   Keep page-layout rules in their existing files; no component resizing here.
+*/
+:root {
+  --purple: #a178df;
+  --purple-strong: #dcb0ff;
+  --lavender: #be93fd;
+  --line: rgba(190,147,253,.24);
+}
+:root[data-theme='light'] {
+  --purple: #845ec2;
+  --purple-strong: #845ec2;
+  --lavender: #845ec2;
+  --charcoal: #a178df;
+  --ink: #fcf8ff;
+  --ink-2: #fffaff;
+  --ink-3: #f1e4ff;
+  --paper: #21132f;
+  --paper-2: #2d1742;
+  --text: #281336;
+  --muted: #604672;
+  --line: rgba(132,94,194,.24);
+  --shadow: 0 14px 40px rgba(132,94,194,.12);
+}
+
+/* The former #root::before had a negative stacking layer, which could
+   disappear behind light-mode page surfaces. Paint onto body instead. */
+#root::before { content: none !important; display: none !important; }
+#root { background: transparent !important; isolation: auto !important; }
+html, body { min-height: 100%; }
+html body {
+  background-color: #180f26 !important;
+  background-image:
+    url('../assets/site-flow-dark.svg'),
+    linear-gradient(125deg, #130d20 0%, #241432 52%, #1b102a 100%) !important;
+  background-position: center center, center center !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-size: cover, cover !important;
+  background-attachment: fixed, fixed !important;
+}
+:root[data-theme='light'] body {
+  background-color: #fcf8ff !important;
+  background-image:
+    url('../assets/site-flow-light.svg'),
+    linear-gradient(125deg, #fffcff 0%, #f2e5ff 53%, #fbefff 100%) !important;
+  background-position: center center, center center !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-size: cover, cover !important;
+  background-attachment: fixed, fixed !important;
+}
+/* Every route shares the body canvas; avoid opaque grey bands and dividers. */
+.site-shell, .site-shell main, .site-shell main .home-page,
+.site-shell main .project-detail-page, .site-shell main section.section,
+.site-shell main .section--soft, .site-shell main .featured-work-stage,
+.site-shell .site-footer {
+  background: transparent !important;
+  background-image: none !important;
+  border-block-color: transparent !important;
+}
+.home-page .hero-grid::before, .home-page .hero-grid::after,
+.home-page .hero-grid--focus::before, .home-page .hero-grid--focus::after,
+.featured-work-stage__background {
+  display: none !important;
+  content: none !important;
+}
+/* Remove ALL charcoal/grey surface gradients in light mode. Use only
+   warm white and the requested lilac family for elevated UI surfaces. */
+:root[data-theme='light'] .site-shell main :is(
+  .hero, .quality-section, .education-page__hero,
+  .project-detail-hero, .case-hero, .case-section,
+  .page-top, .featured-work-stage, .education-home,
+  .recommendation-section, .skills-section
+) { background: transparent !important; background-image: none !important; }
+:root[data-theme='light'] .site-shell main :is(
+  .recommendation-card, .experience-explorer__profile,
+  .experience-explorer__panel, .experience-explorer__option,
+  .engineering-workflow, .engineering-workflow__stage,
+  .engineering-workflow__evidence, .course-flip-card__face,
+  .course-card, .education-home__grade, .education-grid article,
+  .tech-tile, .tech-arsenal__panel, .project-card--mini,
+  .featured-spotlight, .featured-spotlight__visual,
+  .stat-card, .research-card, .callout-card, .feature-card,
+  .feature-grid article, .architecture > div,
+  .persona-grid article, .process-flow > div,
+  .contact-card, .state-card,
+  .detail-grid > article, .filter-bar button,
+  .pricewise-browser, .case-visual, .education-page__stats > div,
+  .project-row, .project-card--compact, .course-modal,
+  .course-detail-modal, .code-card, .about-terminal
+) {
+  background: rgba(255,251,255,.89) !important;
+  background-image: none !important;
+  border-color: rgba(132,94,194,.23) !important;
+  box-shadow: 0 10px 35px rgba(132,94,194,.065);
+}
+:root[data-theme='light'] .site-header,
+:root[data-theme='light'] .primary-nav.is-open {
+  background: rgba(255,250,255,.95) !important;
+  background-image: none !important;
+  border-color: rgba(132,94,194,.20) !important;
+}
+:root[data-theme='light'] .site-footer,
+:root[data-theme='light'] .footer-grid,
+:root[data-theme='light'] .footer-bottom {
+  background: transparent !important;
+  background-image: none !important;
+  border-color: rgba(132,94,194,.18) !important;
+}
+:root[data-theme='light'] .site-shell main .contact-card::before,
+:root[data-theme='light'] .site-shell main .code-card::before,
+:root[data-theme='light'] .site-shell main .code-card::after,
+:root[data-theme='light'] .site-shell main .experience-explorer__profile::before,
+:root[data-theme='light'] .site-shell main .education-home__grade::before {
+  background-image: none !important;
+}
+:root[data-theme='light'] .home-strengths--inline,
+:root[data-theme='light'] .home-strengths--inline * {
+  background: transparent !important;
+  background-image: none !important;
+}
+:root[data-theme='light'] .site-shell main .hero-panel::before {
+  background: radial-gradient(circle, rgba(190,147,253,.19), transparent 68%) !important;
+}
+:root[data-theme='light'] .site-shell main .hero-scene--fallback {
+  background: radial-gradient(circle, rgba(190,147,253,.22), transparent 58%) !important;
+}
+:root[data-theme='light'] .site-shell main :is(.tag, .project-card__category,
+  .tech-arsenal__selector-button, .text-link, .eyebrow) {
+  color: #684098;
+}
+:root[data-theme='light'] .site-shell main .tag {
+  background: rgba(220,176,255,.25) !important;
+  background-image: none !important;
+  border-color: rgba(132,94,194,.33) !important;
+}
+:root[data-theme='light'] .button--primary,
+:root[data-theme='light'] .brand-mark {
+  background: #845ec2 !important;
+  background-image: none !important;
+  color: #fff !important;
+}
+:root[data-theme='light'] :is(.button--ghost, .filter-bar button) {
+  background: rgba(220,176,255,.20) !important;
+  background-image: none !important;
+  color: #43255d;
+}
+/* Project tech chips: a genuine readability improvement on laptop and phone. */
+.project-detail-page .project-detail-copy .tag,
+.project-detail-page .tag-row .tag {
+  font-size: .86rem !important;
+  line-height: 1.4 !important;
+  font-weight: 750 !important;
+  padding: .48rem .72rem !important;
+  border-radius: 9px !important;
+  overflow-wrap: anywhere;
+}
+.project-detail-page .project-detail-copy .tag-row { gap: 9px !important; }
+@media (max-width: 700px) {
+  .project-detail-page .project-detail-copy .tag,
+  .project-detail-page .tag-row .tag {
+    font-size: .83rem !important;
+    padding: .45rem .62rem !important;
+  }
+}
+/* Light-mode image shells must stay visible rather than gaining white covers. */
+:root[data-theme='light'] .site-shell main :is(
+  .project-card__preview, .project-detail-visual .image-shell,
+  .image-lightbox__trigger, .implementation-gallery figure
+) { background-image: none !important; }
+@media (max-width: 760px) {
+  html body, :root[data-theme='light'] body {
+    background-position: 63% center, center center !important;
+  }
+}
+
+
+/* ET LIGHT CANVAS - VISIBLE FLOW / SOFT LILAC - 2026-10-13 */
+/* Older high-specificity rules were painting white/lilac solid backgrounds
+   on #projects, #workflow, #experience, #recommendation, #education and
+   #skills. Clear those panels so the SAME continuous vector is visible. */
+:root[data-theme='light'] {
+  --ink: #eadbf7;
+  --ink-2: #f2e3fb;
+  --ink-3: #e4cbf5;
+  --purple: #845ec2;
+  --purple-strong: #845ec2;
+  --lavender: #a178df;
+  --charcoal: #be93fd;
+  --text: #291837;
+  --muted: #624773;
+  --line: rgba(132, 94, 194, .26);
+}
+
+:root[data-theme='light'] body {
+  background-color: #eadbf7 !important;
+  background-image:
+    url('../assets/site-flow-light.svg'),
+    linear-gradient(122deg, #eadbf7 0%, #e1cef4 48%, #ebd7f7 100%) !important;
+  background-size: cover, cover !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center center, center center !important;
+  background-attachment: fixed, fixed !important;
+}
+
+/* Stronger selectors than the old :root[data-theme='light'] .home-page #ID
+   rules. No flat colored section panels, including hero and the footer. */
+:root[data-theme='light'] body .site-shell,
+:root[data-theme='light'] body .site-shell main,
+:root[data-theme='light'] body .site-shell main .home-page,
+:root[data-theme='light'] body .site-shell main .home-page > .section,
+:root[data-theme='light'] body .site-shell main .home-page section.section,
+:root[data-theme='light'] body .site-shell main .home-page .hero.hero--focus,
+:root[data-theme='light'] body .site-shell main .home-page :is(
+  #projects, #workflow, #experience, #recommendation,
+  #education, #skills, #contact
+),
+:root[data-theme='light'] body .site-shell main .section--soft,
+:root[data-theme='light'] body .site-shell main .case-hero,
+:root[data-theme='light'] body .site-shell main .page-top,
+:root[data-theme='light'] body .site-shell .site-footer {
+  background: transparent !important;
+  background-image: none !important;
+  border-top-color: transparent !important;
+  border-bottom-color: transparent !important;
+}
+
+/* Remove stray section-specific washes and preserve only the continuous
+   body illustration. These pseudo-elements are decorative, never content. */
+:root[data-theme='light'] body .site-shell main .home-page :is(
+  #projects, #skills
+)::before,
+:root[data-theme='light'] body .site-shell main .home-page .hero.hero--focus::before {
+  background: none !important;
+  background-image: none !important;
+  display: none !important;
+}
+
+/* Lilac translucent surfaces instead of white / cool gray blocks. */
+:root[data-theme='light'] body .site-shell main :is(
+  .recommendation-card, .experience-explorer__profile,
+  .experience-explorer__panel, .experience-explorer__option,
+  .engineering-workflow, .engineering-workflow__stage,
+  .engineering-workflow__evidence, .course-flip-card__face,
+  .course-card, .education-home__grade, .education-grid article,
+  .tech-tile, .project-card--mini, .featured-spotlight,
+  .contact-card, .stat-card, .feature-grid article,
+  .detail-grid > article, .case-visual, .project-row,
+  .education-page__stats > div, .callout-card
+) {
+  background: rgba(245, 229, 253, .76) !important;
+  background-image: none !important;
+  border-color: rgba(132, 94, 194, .30) !important;
+  box-shadow: 0 9px 26px rgba(97, 55, 145, .055) !important;
+}
+
+/* Skills: category tabs and technology tiles use lavender, not gray.
+   The active selection is deliberately more pronounced. */
+:root[data-theme='light'] body .site-shell main .home-page #skills
+  .tech-arsenal__selector-button {
+  background: rgba(220, 176, 255, .24) !important;
+  background-image: none !important;
+  color: #4b286d !important;
+  border: 1px solid rgba(132, 94, 194, .34) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+:root[data-theme='light'] body .site-shell main .home-page #skills
+  .tech-arsenal__selector-button:is(:hover, :focus-visible) {
+  background: rgba(190, 147, 253, .38) !important;
+}
+:root[data-theme='light'] body .site-shell main .home-page #skills
+  .tech-arsenal__selector-button.is-active {
+  background: rgba(161, 120, 223, .46) !important;
+  border-color: #845ec2 !important;
+  color: #32184b !important;
+  box-shadow: inset 0 0 0 1px #845ec2 !important;
+}
+:root[data-theme='light'] body .site-shell main .home-page #skills
+  .tech-tile {
+  background: rgba(243, 221, 253, .78) !important;
+  border-color: rgba(132, 94, 194, .28) !important;
+}
+:root[data-theme='light'] body .site-shell main .home-page #skills
+  .tech-tile__icon {
+  background: rgba(190, 147, 253, .23) !important;
+  color: #6940a4 !important;
+}
+
+:root[data-theme='light'] body .site-header,
+:root[data-theme='light'] body .primary-nav.is-open {
+  background: rgba(238, 222, 249, .92) !important;
+  border-bottom-color: rgba(132, 94, 194, .26) !important;
+}
+:root[data-theme='light'] body .site-shell .site-footer {
+  color: #291837 !important;
+}
+
+@media (max-width: 760px) {
+  :root[data-theme='light'] body {
+    background-attachment: scroll, scroll !important;
+    background-position: 62% center, center !important;
+  }
+}

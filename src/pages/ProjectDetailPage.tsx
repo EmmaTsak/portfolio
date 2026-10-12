@@ -54,7 +54,7 @@ export function ProjectDetailPage() {
 
   usePageMeta({
     title: project
-      ? `${project.name} — ${t(
+      ? `${project.name} - ${t(
           'names.fullName'
         )}`
       : t(
@@ -254,7 +254,7 @@ export function ProjectDetailPage() {
             </h2>
 
             <ul className="bullet-list">
-              {project.highlights.map(
+              {project.highlights.slice(0, 4).map(
                 (highlight, index) => (
                   <li key={highlight}>
                     {t(
@@ -285,7 +285,7 @@ export function ProjectDetailPage() {
 
             {project.architecture ? (
               <ul className="bullet-list">
-                {project.architecture.map(
+                {project.architecture.slice(0, 4).map(
                   (item, index) => (
                     <li key={item}>
                       {t(
@@ -301,7 +301,7 @@ export function ProjectDetailPage() {
               </ul>
             ) : project.testing ? (
               <ul className="bullet-list">
-                {project.testing.map(
+                {project.testing.slice(0, 4).map(
                   (item, index) => (
                     <li key={item}>
                       {t(
