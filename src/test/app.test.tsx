@@ -12,7 +12,7 @@ beforeEach(async () => {
   await i18n.changeLanguage('en');
 });
 
-it('renders the software developer identity on the homepage', () => {
+it('renders the Software Engineer identity on the homepage', () => {
   render(
     <MemoryRouter initialEntries={['/']}>
       <AppRoutes />
@@ -20,14 +20,12 @@ it('renders the software developer identity on the homepage', () => {
   );
 
   expect(
-    screen.getByRole('heading', {
-      name: /Emmanouela Tsakalidou/i,
-    })
-  ).toBeInTheDocument();
+    screen.getByRole('heading', { level: 1 })
+  ).toHaveTextContent(/Software\s*Engineer/i);
 
   expect(
-    screen.getAllByText('Software Developer').length
-  ).toBeGreaterThan(0);
+    screen.getByText('Emmanouela Tsakalidou')
+  ).toBeInTheDocument();
 });
 
 it('filters projects by backend category', async () => {
@@ -58,11 +56,9 @@ it('filters projects by backend category', async () => {
   ).not.toBeInTheDocument();
 });
 
-it('renders the PriceWise route', () => {
+it('renders the PriceWise case study', () => {
   render(
-    <MemoryRouter
-      initialEntries={['/projects/pricewise']}
-    >
+    <MemoryRouter initialEntries={['/projects/pricewise']}>
       <AppRoutes />
     </MemoryRouter>
   );
@@ -70,11 +66,12 @@ it('renders the PriceWise route', () => {
   expect(
     screen.getByRole('heading', {
       name: 'PriceWise',
+      level: 1,
     })
   ).toBeInTheDocument();
 
   expect(
-    screen.getByText(/primarily manual testing/i)
+    screen.getByRole('link', { name: /GitHub/i })
   ).toBeInTheDocument();
 });
 
