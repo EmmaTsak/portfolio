@@ -149,7 +149,7 @@ export const projects: Project[] = [
     eyebrow: 'Backend · REST · Authentication',
     description: 'A RESTful Node.js API demonstrating authentication, reusable query features, MongoDB modelling and centralized error handling.',
     role: 'Backend developer',
-    featured: true,
+    featured: false,
     categories: ['Backend'],
     tech: ['Node.js', 'Express', 'MongoDB', 'Mongoose', 'JWT', 'bcryptjs'],
     visual: 'assets/api-architecture.svg',

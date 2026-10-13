@@ -11,6 +11,7 @@ export function Footer() {
           <Link
             className="brand footer-brand"
             to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             <span className="brand-mark">
               ET
