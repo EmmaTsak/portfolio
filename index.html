@@ -1,24 +1,57 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#17131a" />
-    <meta name="description" content="Emmanouela Tsakalidou — Software Developer with a quality-engineering mindset and UI/UX awareness." />
+
+    <!-- Browser theme -->
+    <meta name="theme-color" content="#21132f" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Emmanouela Tsakalidou | Software Engineer. Explore my projects in full-stack development, software testing, CI/CD and automation."
+    />
+
+    <!-- Open Graph - LinkedIn and other platforms -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Emmanouela Tsakalidou — Software Developer" />
-    <meta property="og:description" content="Full-stack development, APIs, software quality and user-centred interfaces." />
-    <meta property="og:image" content="./assets/og-preview.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
-    <title>Emmanouela Tsakalidou | Portfolio</title>
+    <meta
+      property="og:title"
+      content="Emmanouela Tsakalidou | Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="My software engineering portfolio featuring full-stack applications, testing, CI/CD and other projects."
+    />
+    <meta
+      property="og:url"
+      content="https://emmatsak.github.io/portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://emmatsak.github.io/portfolio/assets/og-preview.png"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="%BASE_URL%favicon.svg?v=4"
+      type="image/svg+xml"
+    />
+
+    <!-- Page title -->
+    <title>Emmanouela Tsakalidou | Software Engineer</title>
+
+    <!-- Structured data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Emmanouela Tsakalidou",
-        "jobTitle": "Software Developer",
+        "jobTitle": "Software Engineer",
         "email": "mailto:tsakalidouemmanouela@gmail.com",
+        "url": "https://emmatsak.github.io/portfolio/",
         "sameAs": [
           "https://github.com/EmmaTsak",
           "https://www.linkedin.com/in/etsakalidou/"
@@ -26,6 +59,7 @@
       }
     </script>
   </head>
+
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
