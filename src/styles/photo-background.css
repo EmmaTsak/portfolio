@@ -72,6 +72,16 @@ body {
 .home-page #experience { padding-bottom: clamp(20px, 3vw, 42px) !important; }
 .home-page #recommendation { padding-top: clamp(20px, 3vw, 42px) !important; }
 .home-page #contact { scroll-margin-top: 105px; }
+.home-page :is(
+  #projects,
+  #workflow,
+  #experience,
+  #recommendation,
+  #education,
+  #skills
+) {
+  scroll-margin-top: 90px;
+}
 .eyebrow,
 .home-page .section-heading .eyebrow { color: var(--purple-strong) !important; }
 
