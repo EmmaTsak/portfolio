@@ -104,10 +104,10 @@ const name = t('names.fullName');
             <ImmersiveHero />
           </div>
         </div>
+      </section>
 
-      <div className="home-strengths home-strengths--inline">
-        <div className="container">
-          <div className="home-strengths__grid">
+      <section className="home-strengths">
+        <div className="container home-strengths__grid">
           {([
             ['01', 'fullStackTitle', 'fullStackDescription'],
             ['02', 'qualityTitle', 'qualityDescription'],
@@ -121,12 +121,8 @@ const name = t('names.fullName');
               </div>
             </div>
           ))}
-          </div>
         </div>
-      </div>
       </section>
-
-
 
 
       <section
@@ -176,10 +172,27 @@ const name = t('names.fullName');
           </div>
         </section>
       </Reveal>
+      
+            <section
+        className="section"
+        id="skills"
+      >
+        <div className="container">
+          <SectionHeading
+            eyebrow={t('home.skills.eyebrow')}
+            title={t('home.skills.title')}
+            description={t(
+              'home.skills.description'
+            )}
+          />
 
+          <Reveal>
+            <TechArsenal />
+          </Reveal>
+        </div>
+      </section>
 
-
-<section
+      <section
         className="section"
         id="experience"
       >
@@ -303,25 +316,6 @@ const name = t('names.fullName');
           </div>
         </section>
       </Reveal>
-
-      <section
-        className="section"
-        id="skills"
-      >
-        <div className="container">
-          <SectionHeading
-            eyebrow={t('home.skills.eyebrow')}
-            title={t('home.skills.title')}
-            description={t(
-              'home.skills.description'
-            )}
-          />
-
-          <Reveal>
-            <TechArsenal />
-          </Reveal>
-        </div>
-      </section>
 
       <section
         className="section"

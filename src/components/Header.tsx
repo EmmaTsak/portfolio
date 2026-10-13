@@ -18,37 +18,37 @@ export function Header() {
   const { t } = useTranslation();
 
   const links = [
-    {
-      id: 'Home',
-      label: t('nav.home'),
-      to: '/',
-    },
-    {
-      id: 'Projects',
-      label: t('nav.projects'),
-      to: '/#projects',
-    },
-    {
-      id: 'Experience',
-      label: t('nav.experience'),
-      to: '/#experience',
-    },
-    {
-      id: 'Education',
-      label: t('nav.education'),
-      to: '/#education',
-    },
-    {
-      id: 'Skills',
-      label: t('nav.skills'),
-      to: '/#skills',
-    },
-    {
-      id: 'Contact',
-      label: t('nav.contact'),
-      to: '/#contact',
-    },
-  ];
+  {
+    id: 'Home',
+    label: t('nav.home'),
+    to: '/',
+  },
+  {
+    id: 'Projects',
+    label: t('nav.projects'),
+    to: '/#projects',
+  },
+  {
+    id: 'Skills',
+    label: t('nav.skills'),
+    to: '/#skills',
+  },
+  {
+    id: 'Experience',
+    label: t('nav.experience'),
+    to: '/#experience',
+  },
+  {
+    id: 'Education',
+    label: t('nav.education'),
+    to: '/#education',
+  },
+  {
+    id: 'Contact',
+    label: t('nav.contact'),
+    to: '/#contact',
+  },
+];
 
   const handleNav = () => setOpen(false);
 
