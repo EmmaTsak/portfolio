@@ -1,15 +1,9 @@
 import {
   ArrowRight,
-  CheckCircle2,
-  ClipboardCheck,
-  FileText,
   Github,
   Linkedin,
   Mail,
-  Palette,
   Quote,
-  ShieldCheck,
-  TerminalSquare,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -18,29 +12,21 @@ import { AcademicCourseCard } from '../components/AcademicCourseCard';
 import { ProjectCard } from '../components/ProjectCard';
 import { Reveal } from '../components/Reveal';
 import { SectionHeading } from '../components/SectionHeading';
+import { ExperienceExplorer } from '../components/ExperienceExplorer';
 
 import { academicCourses } from '../data/coursework';
 import { featuredProjects } from '../data/projects';
-import {
-  profile,
-  skillGroups,
-} from '../data/profile';
+import { profile } from '../data/profile';
 
 import { usePageMeta } from '../hooks/usePageMeta';
 
-const skillGroupTranslationKeys: Record<string, string> = {
-  Development: 'development',
-  'Frontend & Mobile': 'frontendMobile',
-  'Backend & APIs': 'backendApis',
-  'Testing & Quality': 'testingQuality',
-  Data: 'data',
-  'Tools & Design': 'toolsDesign',
-};
+import { ImmersiveHero } from '../components/ImmersiveHero';
+import { TechArsenal } from '../components/TechArsenal';
+import { EngineeringWorkflow } from '../components/EngineeringWorkflow';
 
 export function HomePage() {
   const { t } = useTranslation();
-
-  const name = t('names.fullName');
+const name = t('names.fullName');
 
   usePageMeta({
     title: t('home.hero.metaTitle', {
@@ -52,233 +38,98 @@ export function HomePage() {
     path: '/',
   });
 
+  const featuredCourseNames = [
+    'Advanced Programming',
+    'Operating Systems & Network Programming',
+    'Advanced Databases',
+  ];
+
+  const featuredCourses = academicCourses.filter((course) =>
+    featuredCourseNames.includes(course.name)
+  );
+
   const copyEmail = async () =>
     navigator.clipboard.writeText(profile.email);
 
+
+
   return (
-    <>
-      <section className="hero section">
-        <div className="container hero-grid">
-          <div className="hero-copy">
-            <p className="availability">
-              <span />
+    <div className="home-page">
+      <section className="hero section hero--focus">
+        <div className="container hero-grid hero-grid--focus">
+          <div className="hero-copy hero-copy--focus">
+            <p className="hero-focus__availability">
+              <span aria-hidden="true" />
               {t('home.hero.availability')}
             </p>
 
-            <p className="eyebrow">
-              {t('home.hero.role')}
+            <p className="hero-focus__name">
+              {t('names.fullName')}
             </p>
 
-            <h1>
-              {t('names.firstName')}
-              <br />
-              <span>{t('names.lastName')}</span>
+            <h1 className="hero-focus__title">
+              {t('home.hero.headlineFirst')}
+              <span>{t('home.hero.headlineSecond')}</span>
             </h1>
 
-            <p className="hero-lead">
+            <p className="hero-focus__lead">
               {t('home.hero.positioning')}
             </p>
 
-            <div className="discipline-line">
-              <strong>
-                {t('home.hero.softwareDevelopment')}
-              </strong>
 
-              <span>
-                {t('home.hero.qualityEngineering')}
-              </span>
-
-              <span>{t('home.hero.uiux')}</span>
-            </div>
-
-            <div className="button-row">
-              <a
-                className="button button--primary"
-                href="#projects"
-              >
+            <div className="button-row hero-focus__actions">
+              <a className="button button--primary" href="#projects">
                 {t('home.hero.viewWork')}
-                <ArrowRight />
+                <ArrowRight aria-hidden="true" />
               </a>
-
-              <Link
-                className="button button--ghost"
-                to="/resume"
-              >
+              <Link className="button button--ghost" to="/resume">
                 {t('home.hero.viewCv')}
               </Link>
             </div>
 
-            <div className="hero-socials">
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Github />
-                GitHub
+            <div className="hero-socials hero-focus__socials">
+              <a href={profile.github} target="_blank" rel="noreferrer">
+                <Github aria-hidden="true" /> GitHub
               </a>
-
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <Linkedin />
-                LinkedIn
+              <a href={profile.linkedin} target="_blank" rel="noreferrer">
+                <Linkedin aria-hidden="true" /> LinkedIn
               </a>
-
               <a href={`mailto:${profile.email}`}>
-                <Mail />
-                {t('home.hero.email')}
+                <Mail aria-hidden="true" /> {t('home.hero.email')}
               </a>
             </div>
           </div>
 
-          <div
-            className="hero-panel"
-           aria-label={t(
-              'home.hero.engineeringFocus'
-            )}
-          >
-            <div className="code-card">
-              <div className="code-card__top">
-                <span />
-                <span />
-                <span />
-              </div>
-
-              <code>
-                <span className="code-line">
-                  <span className="code-muted">
-                    const
-                  </span>{' '}
-                  developer = {'{'}
-                </span>
-
-                <span className="code-line code-line--indent">
-                  <span>focus:</span>{' '}
-                  <em>'reliable software'</em>,
-                </span>
-
-                <span className="code-line code-line--indent">
-                  <span>strengths:</span> [
-                  <em>'full stack'</em>,{' '}
-                  <em>'testing'</em>,{' '}
-                  <em>'UX'</em>],
-                </span>
-
-                <span className="code-line code-line--indent">
-                  <span>mindset:</span>{' '}
-                  <em>
-                    'build → validate → improve'
-                  </em>
-                </span>
-
-                <span className="code-line">
-                  {'}'};
-                </span>
-              </code>
-            </div>
-
-            <div className="hero-mini-grid">
-              <div>
-                <TerminalSquare />
-                <strong>
-                  {t('home.hero.build')}
-                </strong>
-                <span>
-                  {t('home.hero.buildDescription')}
-                </span>
-              </div>
-
-              <div>
-                <ShieldCheck />
-                <strong>
-                  {t('home.hero.validate')}
-                </strong>
-                <span>
-                  {t('home.hero.validateDescription')}
-                </span>
-              </div>
-
-              <div>
-                <Palette />
-                <strong>
-                  {t('home.hero.design')}
-                </strong>
-                <span>
-                  {t('home.hero.designDescription')}
-                </span>
-              </div>
-            </div>
+          <div className="hero-panel hero-panel--focus" aria-hidden="true">
+            <ImmersiveHero />
           </div>
         </div>
       </section>
 
-      <Reveal>
-        <section
-          className="section section--soft"
-          id="about"
-        >
-          <div className="container split-intro">
-            <div className="about-intro">
-              <SectionHeading
-                eyebrow={t('home.about.eyebrow')}
-                title={t('home.about.title')}
-                description={t(
-                  'home.about.description'
-                )}
-              />
-
-              <p className="about-relocation">
-                {t('home.about.relocation')}
-              </p>
-            </div>
-
-            <div className="fact-grid">
+      <section className="home-strengths">
+        <div className="container home-strengths__grid">
+          {([
+            ['01', 'fullStackTitle', 'fullStackDescription'],
+            ['02', 'qualityTitle', 'qualityDescription'],
+            ['03', 'uxTitle', 'uxDescription'],
+          ] as const).map(([number, title, description]) => (
+            <div className="home-strengths__item" key={number}>
+              <span className="home-strengths__number">{number}</span>
               <div>
-                <span>01</span>
-                <strong>
-                  {t('home.about.fullStackTitle')}
-                </strong>
-                <p>
-                  {t(
-                    'home.about.fullStackDescription'
-                  )}
-                </p>
-              </div>
-
-              <div>
-                <span>02</span>
-                <strong>
-                  {t('home.about.qualityTitle')}
-                </strong>
-                <p>
-                  {t(
-                    'home.about.qualityDescription'
-                  )}
-                </p>
-              </div>
-
-              <div>
-                <span>03</span>
-                <strong>
-                  {t('home.about.uxTitle')}
-                </strong>
-                <p>
-                  {t('home.about.uxDescription')}
-                </p>
+                <h2>{t(`home.about.${title}`)}</h2>
+                <p>{t(`home.about.${description}`)}</p>
               </div>
             </div>
-          </div>
-        </section>
-      </Reveal>
+          ))}
+        </div>
+      </section>
+
 
       <section
-        className="section"
+        className="section featured-work-stage"
         id="projects"
       >
-        <div className="container">
+        <div className="container featured-work-stage__content">
           <SectionHeading
             eyebrow={t(
               'home.selectedWork.eyebrow'
@@ -292,17 +143,12 @@ export function HomePage() {
           />
 
           <div className="project-grid">
-            {featuredProjects.map(
-              (project) => (
-                <Reveal key={project.slug}>
-                  <ProjectCard
-                    project={project}
-                  />
-                </Reveal>
-              )
-            )}
+            {featuredProjects.map((project) => (
+              <Reveal key={project.slug}>
+                <ProjectCard project={project} />
+              </Reveal>
+            ))}
           </div>
-
           <div className="section-cta">
             <Link
               className="button button--ghost"
@@ -314,76 +160,37 @@ export function HomePage() {
           </div>
         </div>
       </section>
-
       <Reveal>
-        <section className="section quality-section">
-          <div className="container quality-grid">
-            <div>
-              <p className="eyebrow">
-                {t('home.quality.eyebrow')}
-              </p>
-
-              <h2>
-                {t('home.quality.title')}
-              </h2>
-
-              <p>
-                {t('home.quality.description')}
-              </p>
-            </div>
-
-            <div className="quality-list">
-              <div>
-                <ClipboardCheck />
-
-                <span>
-                  <strong>
-                    {t(
-                      'home.quality.testingTitle'
-                    )}
-                  </strong>
-
-                  {t(
-                    'home.quality.testingDescription'
-                  )}
-                </span>
-              </div>
-
-              <div>
-                <ShieldCheck />
-
-                <span>
-                  <strong>
-                    {t(
-                      'home.quality.investigationTitle'
-                    )}
-                  </strong>
-
-                  {t(
-                    'home.quality.investigationDescription'
-                  )}
-                </span>
-              </div>
-
-              <div>
-                <CheckCircle2 />
-
-                <span>
-                  <strong>
-                    {t(
-                      'home.quality.releaseTitle'
-                    )}
-                  </strong>
-
-                  {t(
-                    'home.quality.releaseDescription'
-                  )}
-                </span>
-              </div>
-            </div>
+        <section className="section" id="workflow">
+          <div className="container">
+            <SectionHeading
+              eyebrow={t('home.workflow.eyebrow')}
+              title={t('home.workflow.title')}
+              description={t('home.workflow.description')}
+            />
+            <EngineeringWorkflow />
           </div>
         </section>
       </Reveal>
+      
+            <section
+        className="section"
+        id="skills"
+      >
+        <div className="container">
+          <SectionHeading
+            eyebrow={t('home.skills.eyebrow')}
+            title={t('home.skills.title')}
+            description={t(
+              'home.skills.description'
+            )}
+          />
+
+          <Reveal>
+            <TechArsenal />
+          </Reveal>
+        </div>
+      </section>
 
       <section
         className="section"
@@ -395,43 +202,9 @@ export function HomePage() {
             title={t('home.experience.title')}
           />
 
-          <div className="timeline">
-            <Reveal>
-              <article className="timeline-item">
-                <div className="timeline-period">
-                  {t('home.experience.period')}
-                </div>
-
-                <div>
-                  <h3>
-                    {t('home.experience.role')}
-                  </h3>
-
-                  <p className="timeline-company">
-                    {t('home.experience.company')}
-                  </p>
-
-                  <ul>
-                    <li>
-                      {t('home.experience.point1')}
-                    </li>
-
-                    <li>
-                      {t('home.experience.point2')}
-                    </li>
-
-                    <li>
-                      {t('home.experience.point3')}
-                    </li>
-
-                    <li>
-                      {t('home.experience.point4')}
-                    </li>
-                  </ul>
-                </div>
-              </article>
-            </Reveal>
-          </div>
+          <Reveal>
+            <ExperienceExplorer />
+          </Reveal>
         </div>
       </section>
 
@@ -476,14 +249,7 @@ export function HomePage() {
                 {t('home.recommendation.context')}
               </p>
 
-              <Link
-                className="button button--ghost"
-                to="/recommendation"
-              >
-                <FileText />
 
-                {t('home.recommendation.button')}
-              </Link>
             </article>
           </div>
         </section>
@@ -495,132 +261,61 @@ export function HomePage() {
           id="education"
         >
           <div className="container">
-            <SectionHeading
-              eyebrow={t('home.education.eyebrow')}
-              title={t('home.education.title')}
-            />
+            <div className="education-home__header">
+              <div>
+                <p className="eyebrow">
+                  {t('home.education.eyebrow')}
+                </p>
 
-            <div className="education-grid">
-              <article>
-                <span>
-                  {t('home.education.essex.period')}
-                </span>
+                <h2>
+                  {t('home.education.title')}
+                </h2>
 
-                <h3>
+                <h3 className="education-home__degree">
                   {t('home.education.essex.title')}
                 </h3>
 
-                <p>
-                  {t(
-                    'home.education.essex.institution'
-                  )}
+                <p className="education-home__institution">
+                  {t('home.education.essex.institution')}
                 </p>
+              </div>
 
-                <p>
-                  {t(
-                    'home.education.essex.description'
-                  )}
-                </p>
-              </article>
+              <div className="education-home__grade">
+                <strong>
+                  {t('home.education.essex.grade')}
+                </strong>
 
-              <article>
                 <span>
-                  {t('home.education.omiros.period')}
+                  {t('home.education.essex.usEquivalent')}
                 </span>
+              </div>
+            </div>
 
-                <h3>
-                  {t('home.education.omiros.title')}
-                </h3>
+            <div className="education-home__courses">
+              {featuredCourses.map((course) => (
+                <Reveal key={course.name}>
+                  <AcademicCourseCard
+                    course={course}
+                  />
+                </Reveal>
+              ))}
+            </div>
 
-                <p>
-                  {t(
-                    'home.education.omiros.institution'
-                  )}
-                </p>
-
-                <p>
-                  {t(
-                    'home.education.omiros.description'
-                  )}
-                </p>
-              </article>
+            <div className="section-cta">
+              <Link
+                className="button button--ghost"
+                to="/education"
+              >
+                {t('home.coursework.seeAll', {
+                  defaultValue:
+                    'View full education & coursework',
+                })}
+                <ArrowRight />
+              </Link>
             </div>
           </div>
         </section>
       </Reveal>
-
-      <section
-        className="section"
-        id="coursework"
-      >
-        <div className="container">
-          <SectionHeading
-            eyebrow={t('home.coursework.eyebrow')}
-            title={t('home.coursework.title')}
-            description={t(
-              'home.coursework.description'
-            )}
-          />
-
-          <div className="course-grid">
-            {academicCourses.map((course) => (
-              <Reveal key={course.name}>
-                <AcademicCourseCard
-                  course={course}
-                />
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="section"
-        id="skills"
-      >
-        <div className="container">
-          <SectionHeading
-            eyebrow={t('home.skills.eyebrow')}
-            title={t('home.skills.title')}
-            description={t(
-              'home.skills.description'
-            )}
-          />
-
-          <div className="skills-grid">
-            {skillGroups.map((group) => {
-              const translationKey =
-                skillGroupTranslationKeys[group.title];
-
-              return (
-                <Reveal key={group.title}>
-                  <article className="skill-card">
-                    <h3>
-                      {t(
-                        `home.skills.groups.${translationKey}`,
-                        {
-                          defaultValue: group.title,
-                        }
-                      )}
-                    </h3>
-
-                    <div className="tag-row">
-                      {group.items.map((item) => (
-                        <span
-                          className="tag"
-                          key={item}
-                        >
-                          {item}
-                        </span>
-                      ))}
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       <section
         className="section"
@@ -692,6 +387,6 @@ export function HomePage() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

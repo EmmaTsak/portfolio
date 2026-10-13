@@ -4,7 +4,8 @@
     "projects": "Projects",
     "experience": "Experience",
     "skills": "Skills",
-    "contact": "Contact"
+    "contact": "Contact",
+    "education": "Education"
   },
   "ui": {
     "header": {
@@ -34,13 +35,13 @@
   },
   "home": {
     "hero": {
-      "availability": "Open to software development and quality-engineering opportunities",
-      "role": "Software Developer",
-      "positioning": "Software developer building reliable applications across frontend, backend and APIs — with software quality and user experience considered from the start.",
+      "availability": "Open to software engineering roles · Europe · Greek & English",
+      "role": "Software Engineer",
+      "positioning": "I create practical full-stack software and improve how it is tested and delivered.",
       "softwareDevelopment": "Software Development",
       "qualityEngineering": "Quality Engineering",
       "uiux": "UI/UX",
-      "viewWork": "View my work",
+      "viewWork": "View Projects",
       "viewCv": "View CV",
       "build": "Build",
       "buildDescription": "Frontend, backend & APIs",
@@ -49,14 +50,24 @@
       "design": "Design",
       "designDescription": "User-centred interfaces",
       "metaTitle": "{{name}} | Portfolio",
-      "metaDescription": "Software developer building reliable applications across frontend, backend and APIs — with software quality and user experience considered from the start.",
+      "metaDescription": "Software Engineer building full-stack applications, testing tools and CI workflows.",
       "engineeringFocus": "Engineering focus",
-      "email": "Email"
+      "email": "Email",
+      "headlineFirst": "Software",
+      "headlineSecond": "Engineer",
+      "workflowLabel": "Engineering workflow",
+      "workflow": {
+        "build": "Build",
+        "test": "Test",
+        "deploy": "Deploy",
+        "monitor": "Monitor"
+      },
+      "orbitCaption": "DESIGN / ENGINEER / IMPROVE"
     },
     "about": {
-      "eyebrow": "About",
-      "title": "Engineering with quality and usability in the loop",
-      "description": "My experience spans application development, testing, debugging and interface work. I like projects where implementation decisions can be traced back to user needs and verified behaviour.",
+      "eyebrow": "CORE STRENGTHS",
+      "title": "About Me",
+      "description": "Curious about the details, I enjoy turning user needs into clear interfaces and solving problems through thoughtful debugging.",
       "relocation": "Open to relocation across Europe · Greek & English",
       "fullStackTitle": "Full-stack foundation",
       "fullStackDescription": "React, Node.js, APIs, relational and NoSQL databases.",
@@ -66,15 +77,15 @@
       "uxDescription": "Figma, research, personas, journeys and responsive interface decisions."
     },
     "selectedWork": {
-      "eyebrow": "Selected work",
-      "title": "Projects that show how I build",
-      "description": "A focused selection chosen for technical depth, range and relevance to software-engineering roles.",
-      "seeAll": "See all projects"
+      "eyebrow": "FEATURED PROJECTS",
+      "title": "Selected Work",
+      "description": "",
+      "seeAll": "View More"
     },
     "quality": {
-      "eyebrow": "Quality engineering",
-      "title": "I don’t treat testing as an afterthought.",
-      "description": "My internship work included writing and executing Jest tests, reproducing defects, debugging and supporting release readiness. In PriceWise, the thesis evaluation was primarily manual testing, with automated Jest tests explicitly documented as future work rather than claimed as completed.",
+      "eyebrow": "",
+      "title": "Testing & Quality",
+      "description": "Jest, manual testing, debugging, and reliable releases.",
       "testingTitle": "Testing",
       "testingDescription": "Jest, API validation, manual flows, behaviour checks",
       "investigationTitle": "Investigation",
@@ -82,10 +93,35 @@
       "releaseTitle": "Release thinking",
       "releaseDescription": "Consistency, integration and expected behaviour"
     },
+    "workflow": {
+      "eyebrow": "HOW I WORK",
+      "title": "Build · Test · Deploy · Monitor",
+      "description": "Explore my engineering workflow through real projects.",
+      "evidence": "Project example",
+      "viewProject": "View More",
+      "stages": {
+        "build": {
+          "title": "Build applications that solve real problems",
+          "description": "I developed PriceWise using React, TypeScript, Node.js and PostgreSQL, combining supermarket price comparison with scheduled data collection and a shopping-list experience."
+        },
+        "test": {
+          "title": "Validate behaviour before delivery",
+          "description": "During my Valmore internship, I wrote Jest tests and investigated defects. In my Jenkins lab, I configured automated pytest and Ruff checks within CI pipelines."
+        },
+        "deploy": {
+          "title": "Turn working code into deliverable software",
+          "description": "I published a PriceWise prototype on Railway. Separately, my Jenkins lab demonstrates packaging, archiving and retaining build artifacts."
+        },
+        "monitor": {
+          "title": "Understand what happens after a build",
+          "description": "My Jenkins reliability lab uses REST API monitoring to inspect build results, agent availability, queue conditions and failures."
+        }
+      }
+    },
     "experience": {
-      "eyebrow": "Experience",
-      "title": "Where development and quality met",
-      "period": "Feb 2025 — Sep 2025",
+      "eyebrow": "CAREER",
+      "title": "Experience",
+      "period": "Feb 2025 - Sep 2025",
       "role": "Software Developer Intern",
       "company": "Valmore · Athens",
       "point1": "Developed, tested and maintained application features within agile development cycles.",
@@ -94,22 +130,24 @@
       "point4": "Built reusable React Native components and validated behaviour, consistency and feature integration."
     },
     "recommendation": {
-      "eyebrow": "Recommendation",
-      "title": "What it was like to work with me",
-      "description": "A professional recommendation from my software-development internship at Valmore Technologies.",
+      "eyebrow": "",
+      "title": "Feedback",
+      "description": "",
       "authorRole": "Co-Owner & CTO · Valmore Technologies",
       "context": "Software Development Internship · React Native · Testing · Debugging · Troubleshooting",
       "button": "View full recommendation",
       "quote": "Her strong work ethic and willingness to support the team made her a valued member of our organization."
     },
     "education": {
-      "eyebrow": "Education",
-      "title": "Software-development foundations, applied in projects",
+      "eyebrow": "ACADEMIC BACKGROUND",
+      "title": "Education",
       "essex": {
         "period": "Sep 2024 - Jun 2026",
         "title": "BSc (Hons) Computing (Software Development)",
         "institution": "University of Essex",
-        "description": "Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints."
+        "description": "Coursework covered software development, APIs, databases, testing and debugging. Advanced Programming included a RESTful API with JWT authentication and Postman validation of filtering, sorting, pagination and protected endpoints.",
+        "grade": "First-Class Honours · 73% (UK)",
+        "usEquivalent": "U.S. equivalent: A range"
       },
       "omiros": {
         "period": "Sep 2023 - Jun 2024",
@@ -123,6 +161,9 @@
       "title": "Relevant technical coursework",
       "description": "Selected coursework from my BSc (Hons) Computing (Software Development), covering backend development, databases, mobile development, systems programming, networking, software engineering and user-centred design.",
       "academicWorkLabel": "Academic work:",
+      "technologiesConcepts": "Technologies & concepts",
+      "viewCourseDetails": "View More",
+      "viewAllDetails": "View More",
       "keyTopics": "{{name}} key topics",
       "additionalTopics": "Additional topics: {{topics}}",
       "more": "+{{count}} more",
@@ -173,12 +214,13 @@
           "area": "UX",
           "description": "Studied user-centred software design and the principles used to create usable, accessible and intuitive digital interfaces."
         }
-      }
+      },
+      "seeAll": "View More"
     },
     "skills": {
-      "eyebrow": "Skills",
-      "title": "Evidence over proficiency bars",
-      "description": "Technologies are grouped by how I use them, not assigned arbitrary percentages.",
+      "eyebrow": "TECH TOOLKIT",
+      "title": "Skills",
+      "description": "My tools, grouped by how I use them.",
       "groups": {
         "development": "Development",
         "frontendMobile": "Frontend & Mobile",
@@ -186,30 +228,38 @@
         "testingQuality": "Testing & Quality",
         "data": "Data",
         "toolsDesign": "Tools & Design"
-      }
+      },
+      "preview": "AUTO PREVIEW - 2 SEC",
+      "pause": "Pause",
+      "resume": "Play again"
     },
     "contact": {
-      "eyebrow": "Contact",
-      "title": "Looking for a developer who cares how the software behaves?",
-      "description": "I’m interested in software-development roles, with quality engineering and UI/UX as complementary strengths.",
+      "eyebrow": "LET'S CONNECT",
+      "title": "Contact",
+      "description": "Open to Software Engineering opportunities.",
       "portraitAlt": "Portrait of Emmanouela Tsakalidou",
       "emailMe": "Email me",
       "copyEmail": "Copy email"
     }
+  },
+  "educationPage": {
+    "lead": "Academic background focused on software development, systems, databases, networking, testing and application engineering.",
+    "degreeResult": "Degree result"
   },
   "projects": {
     "card": {
       "openCaseStudy": "View {{name}} case study",
       "technologies": "Technologies",
       "liveDemo": "Live demo",
-      "github": "{{name}} on GitHub"
+      "github": "{{name}} on GitHub",
+      "view": "View More"
     },
     "page": {
       "metaTitle": "Projects - Emmanouela Tsakalidou",
       "metaDescription": "Selected software-development projects across full stack, backend, mobile, C++, testing and UI/UX.",
       "eyebrow": "Projects",
-      "title": "Selected engineering work",
-      "description": "Filter by the kind of evidence you want to see. Stronger, more complete projects are prioritised over showing every repository.",
+      "title": "Projects",
+      "description": "Browse by technology or project type.",
       "filterLabel": "Filter projects",
       "filters": {
         "all": "All",
@@ -355,42 +405,52 @@
       "architectureEyebrow": "Architecture / quality",
       "structureTitle": "How it is structured",
       "fallback": "This project focuses primarily on backend implementation and data modelling. See the repository for source-level details.",
-      "notFoundTitle": "Project not found — {{name}}",
-      "notFoundDescription": "The requested project could not be found."
+      "notFoundTitle": "Project not found - {{name}}",
+      "notFoundDescription": "The requested project could not be found.",
+      "pricewiseStory": {
+        "eyebrow": "The product experience",
+        "title": "From searching to shopping.",
+        "description": "PriceWise was designed around a practical task: helping people explore supermarket prices and prepare a shopping list without creating an account.",
+        "search": "Find products using search and supermarket filters.",
+        "compare": "Explore price comparisons backed by scheduled data collection.",
+        "list": "Build a shopping list with optional email delivery.",
+        "resultsAlt": "PriceWise product results interface",
+        "listAlt": "PriceWise mobile shopping list interface"
+      },
+      "tryLivePrototype": "Live Demo",
+      "backToTop": "Back to Top"
     }
   },
   "resumePage": {
-    "metaTitle": "Resume — {{name}}",
-    "metaDescription": "Resume for {{name}}, a software developer with development, testing and API experience.",
+    "metaTitle": "Resume - {{name}}",
+    "metaDescription": "Resume for {{name}}, Software Engineer.",
     "eyebrow": "Resume",
     "title": "Experience, education and technical skills",
     "description": "View my CV directly in the portfolio or download the original PDF.",
-    "documentTitle": "{{name}} — CV"
+    "documentTitle": "{{name}} - CV"
   },
   "recommendationPage": {
-    "metaTitle": "Recommendation — {{name}}",
+    "metaTitle": "Recommendation - {{name}}",
     "metaDescription": "Professional recommendation from {{name}}’s software-development internship at Valmore Technologies.",
     "back": "Back to portfolio",
     "eyebrow": "Recommendation",
     "title": "Professional recommendation",
     "description": "Recommendation from {{supervisor}}, Co-Owner & CTO at Valmore Technologies, following my software-development internship.",
-    "documentTitle": "Valmore Technologies — Recommendation"
+    "documentTitle": "Valmore Technologies - Recommendation"
   },
   "thesisPage": {
-    "metaTitle": "PriceWise Thesis — {{name}}",
+    "metaTitle": "PriceWise Thesis - {{name}}",
     "metaDescription": "Full BSc (Hons) Computing Software Development thesis documenting the research, design, implementation and evaluation of PriceWise.",
     "back": "Back to PriceWise",
     "eyebrow": "Bachelor thesis · Greek",
-    "title": "PriceWise — Full Thesis",
+    "title": "PriceWise - Full Thesis",
     "description": "The complete BSc (Hons) thesis documenting the research, design, implementation and evaluation of PriceWise. The original academic report is written in Greek.",
-    "documentTitle": "PriceWise — Bachelor Thesis (Greek)"
+    "documentTitle": "PriceWise - Bachelor Thesis (Greek)"
   },
   "priceWisePage": {
-    "metaTitle": "PriceWise Case Study — {{name}}",
+    "metaTitle": "PriceWise Case Study - {{name}}",
     "metaDescription": "Research, UX process and engineering architecture behind PriceWise, a grocery price comparison bachelor thesis prototype.",
-
     "back": "All projects",
-
     "hero": {
       "eyebrow": "Flagship case study · Bachelor thesis",
       "description": "A full-stack grocery price comparison prototype designed to make it easier to compare products across Greek supermarket websites and organise a shopping list without requiring an account.",
@@ -400,7 +460,6 @@
       "visualAlt": "Implemented PriceWise compare-prices page in English, showing the navigation, hero message, search field and filters.",
       "visualLabel": "Implemented PriceWise interface"
     },
-
     "research": {
       "eyebrow": "The problem",
       "title": "Price data exists, but not in one consistent place.",
@@ -410,7 +469,6 @@
       "uiLabel": "rated simple/easy-to-use UI as important or very important",
       "accuracyLabel": "said inaccurate or stale prices could make them stop using the app"
     },
-
     "ux": {
       "eyebrow": "UX process",
       "title": "Research findings shaped the prototype.",
@@ -438,7 +496,6 @@
         "nikosDescription": "Prefers clear search, readable prices and minimal navigation over feature-heavy workflows."
       }
     },
-
     "implementation": {
       "eyebrow": "Implemented application",
       "title": "The working prototype, not just the Figma concept.",
@@ -456,7 +513,6 @@
       "privacyAlt": "Implemented PriceWise privacy page showing privacy information, navigation and footer.",
       "privacyCaption": "Privacy-first product experience"
     },
-
     "designEvolution": {
       "eyebrow": "Design evolution",
       "title": "Mockups were a starting point, not a frozen specification.",
@@ -468,7 +524,6 @@
       "listAlt": "Original PriceWise Figma shopping-list mockup.",
       "listCaption": "Shopping list · original Figma mockup"
     },
-
     "architecture": {
       "eyebrow": "Architecture",
       "title": "Separated frontend, backend, database and collection workflows.",
@@ -485,7 +540,6 @@
       "uiRefresh": "UI refresh",
       "uiRefreshDetails": "Refresh connected clients after data updates"
     },
-
     "features": {
       "eyebrow": "Core functionality",
       "title": "A deliberately focused prototype.",
@@ -498,7 +552,6 @@
       "privacyTitle": "Privacy-conscious flow",
       "privacyDescription": "Minimise personal-data collection and keep email delivery optional and consent-based."
     },
-
     "quality": {
       "eyebrow": "Quality & testing",
       "title": "What was actually tested",
@@ -515,7 +568,6 @@
       "futureTitle": "Automated Jest tests were proposed, not fabricated.",
       "futureDescription": "The thesis identifies unit and integration tests for data cleaning, product normalisation, API endpoints, shopping-list logic and frontend helpers as a future improvement."
     },
-
     "challenges": {
       "eyebrow": "Engineering challenges",
       "title": "Where the complexity lives",
@@ -527,7 +579,6 @@
         "4": "Balancing data freshness with responsible, limited scraping frequency"
       }
     },
-
     "nextIterations": {
       "eyebrow": "Next iterations",
       "title": "What I would improve next",
@@ -539,7 +590,6 @@
         "4": "Add systematic unit and integration testing"
       }
     },
-
     "thesis": {
       "eyebrow": "Full academic report",
       "title": "Want the complete research and technical documentation?",
@@ -549,13 +599,56 @@
       "cardDescription": "View the original academic report directly in the portfolio or download the PDF.",
       "button": "Open thesis"
     },
-
     "code": {
       "eyebrow": "Explore the code",
       "title": "Want to see how PriceWise is structured?",
       "description": "The public repository contains the frontend, backend, Docker configuration and scraper workflow.",
       "repository": "GitHub repository",
       "contact": "Ask me about it"
+    },
+    "scan": {
+      "eyebrow": "BSc Thesis · Full-stack Application",
+      "summary": "Compare grocery prices across Greek supermarkets and build a shopping list - no account required.",
+      "participants": "survey participants",
+      "comparison": "wanted price comparison",
+      "demo": "Live Demo",
+      "thesis": "Thesis",
+      "homeAlt": "PriceWise web application homepage",
+      "screensTitle": "The Product",
+      "screensIntro": "Search, compare, and save products in a few steps.",
+      "resultsAlt": "PriceWise product search results",
+      "compareAlt": "PriceWise supermarket price comparison",
+      "mobileAlt": "PriceWise mobile shopping list",
+      "resultsLabel": "Find products",
+      "compareLabel": "Compare prices",
+      "mobileLabel": "Shopping list",
+      "architectureTitle": "How It Works",
+      "architectureIntro": "Collection runs separately from the user search experience.",
+      "collectionTitle": "Data pipeline",
+      "collection": {
+        "sources": "Supermarket sites",
+        "scrapers": "Scrapers",
+        "grouping": "Clean & group",
+        "database": "PostgreSQL",
+        "interface": "API + React"
+      },
+      "refreshTitle": "Refresh pipeline",
+      "refresh": {
+        "cron": "node-cron",
+        "collection": "Collect data",
+        "cache": "Clear cache",
+        "socket": "Socket.IO",
+        "refresh": "Refresh UI"
+      },
+      "refreshNote": "Prices are collected on a schedule; Socket.IO notifies the app after updates.",
+      "decisionEyebrow": "Key decision",
+      "decisionTitle": "Fast Search",
+      "decision": "Users search saved data instead of waiting for live scraping. External site changes still require scraper maintenance.",
+      "testingEyebrow": "Validation",
+      "testingTitle": "Tested Manually",
+      "testing": "Checked search, filters, shopping lists, API responses, scraping errors, and language switching. Automated tests are future work.",
+      "pageNavigation": "Project navigation",
+      "backToTop": "Back to Top"
     }
   },
   "documentViewer": {
@@ -578,7 +671,7 @@
       "backHome": "Back home"
     },
     "page": {
-      "metaTitle": "404 — Route not found",
+      "metaTitle": "404 - Route not found",
       "metaDescription": "The requested portfolio route could not be found.",
       "eyebrow": "404 · Route not found",
       "title": "This path doesn’t compile.",
@@ -590,7 +683,7 @@
   "shared": {
     "image": {
       "previewUnavailable": "Preview unavailable",
-      "previewUnavailableLabel": "{{alt}} — preview unavailable"
+      "previewUnavailableLabel": "{{alt}} - preview unavailable"
     },
     "error": {
       "eyebrow": "Application error",
