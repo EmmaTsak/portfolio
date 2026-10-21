@@ -43,7 +43,7 @@ export function PriceWisePage() {
               </div>
               <div className="button-row">
                 <a className="button button--primary"
-                  href="https://pricewise-web-production.up.railway.app"
+                  href="https://pricewise-51-178-182-201.sslip.io/"
                   target="_blank" rel="noreferrer">
                   {s('demo')} <ArrowUpRight size={17} />
                 </a>
