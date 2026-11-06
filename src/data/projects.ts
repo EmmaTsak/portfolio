@@ -40,6 +40,59 @@ export const projects: Project[] = [
     testing: ['Manual frontend flow testing', 'API endpoint checks', 'Scraper behaviour and error handling', 'Socket.IO refresh behaviour'],
   },
   {
+    slug: 'pipelineforge',
+    name: 'PipelineForge',
+    eyebrow: 'DevOps · CI/CD · Container Engineering',
+    description:
+      'A local-first DevOps project combining a Java Spring Boot monitoring API with automated Jenkins pipelines, distributed build agents, Docker containerization, runtime smoke testing and failure-recovery exercises.',
+    role: 'DevOps engineering · Backend development',
+    status: 'In development',
+    featured: true,
+
+    categories: [
+      'Automation',
+      'Systems',
+      'QA / Testing',
+    ],
+
+    tech: [
+      'Jenkins',
+      'Docker',
+      'Java 21',
+      'Spring Boot',
+      'Gradle',
+      'JUnit',
+      'Linux',
+      'WSL2',
+      'Bash',
+      'GitHub',
+    ],
+
+    visual: 'assets/pipelineforge-ci-success.png',
+    visualAlt:
+      'Successful PipelineForge Jenkins build with compilation, unit tests and artifact packaging.',
+    visualLabel: 'Real Jenkins CI build',
+
+    github: 'https://github.com/EmmaTsak/pipelineforge',
+
+    highlights: [
+      'Built a Java Spring Boot REST API for simulated communication-site monitoring and registration',
+      'Automated compilation, JUnit tests and JAR packaging through Jenkins Pipeline as Code',
+      'Built versioned Docker images using a dedicated Linux Docker build agent',
+      'Implemented container smoke tests checking HTTP health and site endpoints',
+      'Investigated deliberate CI and runtime configuration failures and verified recovery',
+    ],
+
+    architecture: [
+      'GitHub source control and feature-branch pull requests',
+      'Jenkins Pipeline from SCM with distributed Linux build agents',
+      'Gradle and JUnit quality gates before packaging',
+      'Multi-stage Docker image build with commit-based version tags',
+      'Bash smoke tests validating live Spring Boot container endpoints',
+      'Local-only development environment using Windows, WSL2 and Docker Desktop',
+    ],
+  },
+  {
     slug: 'jenkins-ci-reliability-lab',
     name: 'Jenkins CI Reliability Lab',
     eyebrow: 'DevOps · Jenkins · CI reliability',

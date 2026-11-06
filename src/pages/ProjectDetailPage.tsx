@@ -10,6 +10,8 @@ import {
 import { useTranslation } from 'react-i18next';
 
 import { projects } from '../data/projects';
+import { PipelineForgeGallery } from
+  '../components/PipelineForgeGallery';
 import { ImageLightbox } from '../components/ImageLightbox';
 import { NotFoundProject } from './NotFoundPage';
 import { usePageMeta } from '../hooks/usePageMeta';
@@ -74,6 +76,8 @@ export function ProjectDetailPage() {
   }
 
   const isPriceWise = project.slug === 'pricewise';
+
+  const isPipelineForge = project.slug === 'pipelineforge';
 
   return (
     <div
@@ -237,6 +241,7 @@ export function ProjectDetailPage() {
         </section>
       )}
 
+      {isPipelineForge && <PipelineForgeGallery />}
 
       <section className="section">
         <div className="container detail-grid">
