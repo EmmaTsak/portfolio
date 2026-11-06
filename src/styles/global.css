@@ -8850,3 +8850,65 @@ p { color: var(--muted); }
     min-height: 200px;
   }
 }
+
+/* Project engineering emphasis */
+
+.project-card__meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.project-card__meta-row
+  .project-card__category {
+  margin-bottom: 0;
+}
+
+.project-card__status {
+  color: var(--muted);
+  font: 700 0.66rem
+    ui-monospace, monospace;
+  letter-spacing: 0.04em;
+}
+
+.project-card__mini-footer
+  > span:first-child {
+  max-width: 70%;
+  color: var(--muted);
+  font-size: 0.68rem;
+}
+
+.featured-spotlight__evidence {
+  display: grid;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.featured-spotlight__evidence > div {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.featured-spotlight__evidence svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: var(--purple-strong);
+}
+
+@media (max-width: 600px) {
+  .project-card__meta-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .project-card__mini-footer
+    > span:first-child {
+    max-width: 60%;
+  }
+}

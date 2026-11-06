@@ -24,12 +24,16 @@ export function ProjectCard({
 
   const visualAlt = t(
     `${translationBase}.visualAlt`,
-    { defaultValue: project.visualAlt }
+    {
+      defaultValue: project.visualAlt,
+    }
   );
 
   const visualLabel = t(
     `${translationBase}.visualLabel`,
-    { defaultValue: project.visualLabel }
+    {
+      defaultValue: project.visualLabel,
+    }
   );
 
   const status = project.status
@@ -39,9 +43,7 @@ export function ProjectCard({
     : undefined;
 
   return (
-    <article
-          className="project-card project-card--mini project-card--interactive"
-    >
+    <article className="project-card project-card--mini project-card--interactive">
       <Link
         className="project-card__mini-link"
         to={`/projects/${project.slug}`}
@@ -62,10 +64,19 @@ export function ProjectCard({
             {visualLabel}
           </span>
         </div>
+
         <div className="project-card__mini-content">
-          <span className="project-card__category">
-            {project.categories[0]}
-          </span>
+          <div className="project-card__meta-row">
+            <span className="project-card__category">
+              {project.categories[0]}
+            </span>
+
+            {status && (
+              <span className="project-card__status">
+                {status}
+              </span>
+            )}
+          </div>
 
           <h3>{project.name}</h3>
 
@@ -73,7 +84,7 @@ export function ProjectCard({
 
           <div className="project-card__mini-tech">
             {project.tech
-              .slice(0, 4)
+              .slice(0, 5)
               .map((technology) => (
                 <span key={technology}>
                   {technology}
@@ -83,10 +94,7 @@ export function ProjectCard({
         </div>
 
         <div className="project-card__mini-footer">
-          <span>
-            {status ??
-              project.categories[0]}
-          </span>
+          <span>{project.role}</span>
 
           <span className="project-card__view">
             {t('projects.card.view')}
