@@ -114,7 +114,10 @@ const name = t('names.fullName');
             ['03', 'qualityTitle', 'qualityDescription'],
           ] as const).map(([number, title, description]) => (
             <div className="home-strengths__item" key={number}>
-              <span className="home-strengths__number">{number}</span>
+              <span className="home-strengths__number">
+                {number}
+              </span>
+
               <div>
                 <h2>{t(`home.about.${title}`)}</h2>
                 <p>{t(`home.about.${description}`)}</p>
