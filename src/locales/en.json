@@ -65,18 +65,19 @@
       "orbitCaption": "BUILD / TEST / AUTOMATE / IMPROVE"
     },
     "about": {
-      "about": {
-        "eyebrow": "CORE STRENGTHS",
-        "title": "Engineering Focus",
-        "description": "I enjoy building software and improving the workflows used to test, package, troubleshoot and deliver it reliably.",
-        "relocation": "Open to relocation across Europe · Greek & English",
-        "devopsTitle": "DevOps & CI/CD",
-        "devopsDescription": "Jenkins pipelines, Docker, Linux, Git workflows and automated delivery.",
-        "softwareTitle": "Software Engineering",
-        "softwareDescription": "Backend and full-stack development with Java, Python, TypeScript, Node.js and REST APIs.",
-        "qualityTitle": "Reliability & Quality",
-        "qualityDescription": "Automated testing, smoke tests, debugging, CI quality gates and failure investigation."
-      }
+      "eyebrow": "CORE STRENGTHS",
+      "title": "Engineering Focus",
+      "description": "I enjoy building software and improving the systems used to test, package and deliver it reliably.",
+      "relocation": "Open to relocation across Europe · Greek & English",
+
+      "devopsTitle": "DevOps & CI/CD",
+      "devopsDescription": "Jenkins, Docker, Linux and automated CI/CD workflows.",
+
+      "softwareTitle": "Software Engineering",
+      "softwareDescription": "Backend and full-stack development with Java, Python, TypeScript and Node.js.",
+
+      "qualityTitle": "Reliability & Quality",
+      "qualityDescription": "Automated testing, debugging, smoke tests and failure investigation."
     },
     "selectedWork": {
       "eyebrow": "FEATURED PROJECTS",

@@ -65,17 +65,20 @@
       "orbitCaption": "BUILD / TEST / AUTOMATE / IMPROVE"
     },
     "about": {
-      "eyebrow": "ΤΕΧΝΙΚΗ ΚΑΤΕΥΘΥΝΣΗ",
-        "title": "Engineering Focus",
-        "description": "Μου αρέσει να αναπτύσσω λογισμικό και να βελτιώνω τις διαδικασίες testing, packaging, troubleshooting και reliable delivery.",
-        "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
-        "devopsTitle": "DevOps & CI/CD",
-        "devopsDescription": "Jenkins pipelines, Docker, Linux, Git workflows και automated delivery.",
-        "softwareTitle": "Software Engineering",
-        "softwareDescription": "Backend και full-stack ανάπτυξη με Java, Python, TypeScript, Node.js και REST APIs.",
-        "qualityTitle": "Reliability & Quality",
-        "qualityDescription": "Automated testing, smoke tests, debugging, CI quality gates και διερεύνηση σφαλμάτων."
-      },
+      "eyebrow": "ΔΥΝΑΤΑ ΣΗΜΕΙΑ",
+      "title": "Engineering Focus",
+      "description": "Ανάπτυξη λογισμικού και βελτίωση των διαδικασιών testing και delivery.",
+      "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
+
+      "devopsTitle": "DevOps & CI/CD",
+      "devopsDescription": "Jenkins, Docker, Linux και αυτοματοποιημένα CI/CD workflows.",
+
+      "softwareTitle": "Software Engineering",
+      "softwareDescription": "Backend και full-stack ανάπτυξη με Java, Python, TypeScript και Node.js.",
+
+      "qualityTitle": "Reliability & Quality",
+      "qualityDescription": "Automated testing, debugging, smoke tests και διερεύνηση failures."
+    },
     "selectedWork": {
       "eyebrow": "PROJECTS",
       "title": "Projects",

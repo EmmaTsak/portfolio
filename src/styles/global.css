@@ -8930,3 +8930,294 @@ html {
 .home-page section[id] {
   scroll-margin-top: 96px;
 }
+
+/* Compact homepage engineering strengths */
+.home-page .home-strengths {
+  padding: 20px 0;
+}
+
+.home-page .home-strengths__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.home-page .home-strengths__grid .home-strengths__item {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+
+  gap: 10px;
+
+  padding: 18px 20px;
+
+  border: 1px solid var(--line);
+  border-radius: 16px;
+
+  background: rgba(77, 67, 82, 0.08);
+}
+
+.home-page .home-strengths__item + .home-strengths__item {
+  border-left: 1px solid var(--line);
+  padding-left: 20px;
+}
+
+.home-page .home-strengths__number {
+  padding-top: 2px;
+
+  font-size: .73rem;
+  font-weight: 800;
+
+  color: var(--purple-strong);
+}
+
+.home-page .home-strengths__item h2 {
+  margin: 0 0 6px;
+
+  font-size: 1.05rem;
+  line-height: 1.2;
+}
+
+.home-page .home-strengths__item p {
+  margin: 0;
+
+  font-size: .82rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .home-page .home-strengths__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .home-strengths__grid .home-strengths__item {
+    padding: 16px 18px;
+  }
+}
+
+/* Keep workflow evidence card the same size for all 4 stages */
+.home-page .engineering-workflow__panel {
+  align-items: start;
+}
+
+.home-page .engineering-workflow__evidence {
+  align-self: start;
+  width: 100%;
+  height: 310px;
+  min-height: 310px;
+}
+
+/* ========================================
+   COMPACT ENGINEERING WORKFLOW
+   ======================================== */
+
+/* Top Build / Test / Deploy / Monitor cards */
+.home-page .engineering-workflow__stage {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-areas:
+    "number number"
+    "icon title";
+
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 7px;
+
+  min-height: 100px;
+  padding: 14px 16px;
+}
+
+.home-page .engineering-workflow__number {
+  grid-area: number;
+}
+
+.home-page .engineering-workflow__stage svg {
+  grid-area: icon;
+  width: 23px;
+  height: 23px;
+}
+
+.home-page .engineering-workflow__stage strong {
+  grid-area: title;
+
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+
+/* Make the bottom content more compact */
+.home-page .engineering-workflow__panel {
+  align-items: start;
+  gap: 20px;
+}
+
+.home-page .engineering-workflow__copy {
+  padding: 18px 20px;
+}
+
+.home-page .engineering-workflow__copy h3 {
+  margin: 12px 0 10px;
+  font-size: clamp(1.7rem, 2.7vw, 2.25rem);
+}
+
+.home-page .engineering-workflow__tech {
+  margin-top: 16px;
+}
+
+
+/* Right project card - same compact size on every stage */
+.home-page .engineering-workflow__evidence {
+  align-self: start;
+
+  width: 100%;
+  height: 230px;
+  min-height: 230px;
+
+  padding: 20px;
+
+  gap: 10px;
+}
+
+.home-page .engineering-workflow__evidence-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+}
+
+.home-page .engineering-workflow__evidence-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.home-page .engineering-workflow__evidence-label {
+  margin-top: auto;
+}
+
+/* Mobile workflow stages: one compact row */
+@media (max-width: 600px) {
+  .home-page .engineering-workflow__stages {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .home-page .engineering-workflow__stage {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 58px;
+    padding: 9px 6px;
+    gap: 6px;
+
+    border-radius: 12px;
+  }
+
+  .home-page .engineering-workflow__stage svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .home-page .engineering-workflow__stage strong {
+    font-size: 0.78rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .home-page .engineering-workflow__number {
+    display: none;
+  }
+
+  .home-page .engineering-workflow__progress {
+    margin: 10px 0 14px;
+  }
+}
+
+/* Workflow stage: number + icon + title on one line */
+.home-page .engineering-workflow__stage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 10px;
+  min-height: 72px;
+  padding: 14px 16px;
+}
+
+.home-page .engineering-workflow__number {
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.home-page .engineering-workflow__stage svg {
+  flex-shrink: 0;
+}
+
+.home-page .engineering-workflow__stage strong {
+  margin: 0;
+}
+
+/* Mobile workflow: remove empty space */
+@media (max-width: 700px) {
+  .home-page .engineering-workflow__panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .home-page .engineering-workflow__copy {
+    padding: 14px 0 4px;
+  }
+
+  .home-page .engineering-workflow__tech {
+    margin-top: 14px;
+  }
+
+  /* Cancel desktop fixed evidence height */
+  .home-page .engineering-workflow__evidence {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+
+    margin: 0;
+    padding: 14px 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "label link"
+      "project link";
+
+    align-items: center;
+    column-gap: 14px;
+    row-gap: 3px;
+
+    border: 0;
+    border-top: 1px solid var(--line);
+    border-radius: 0;
+    background: transparent;
+  }
+
+  .home-page .engineering-workflow__evidence-icon {
+    display: none;
+  }
+
+  .home-page .engineering-workflow__evidence-label {
+    grid-area: label;
+    margin: 0;
+    font-size: 0.7rem;
+  }
+
+  .home-page .engineering-workflow__evidence > strong {
+    grid-area: project;
+    font-size: 1rem;
+  }
+
+  .home-page .engineering-workflow__link {
+    grid-area: link;
+    white-space: nowrap;
+  }
+}

@@ -162,7 +162,7 @@ export const projects: Project[] = [
       'A privacy-first Windows desktop application for organising second-hand marketplace listings, planning daily relisting work and managing a local inventory without automating marketplace publishing.',
     role: 'Desktop application developer · UI/UX designer',
     status: 'In development',
-    featured: true,
+    featured: false,
     categories: ['Automation', 'QA / Testing', 'UI/UX'],
     tech: [
       'Python',
