@@ -1,4 +1,12 @@
-export type ProjectCategory = 'Full Stack' | 'Backend' | 'Mobile' | 'Systems' | 'Automation' | 'QA / Testing' | 'UI/UX';
+export type ProjectCategory =
+  | 'DevOps / CI/CD'
+  | 'Full Stack'
+  | 'Backend'
+  | 'Mobile'
+  | 'Systems'
+  | 'Automation'
+  | 'QA / Testing'
+  | 'UI/UX';
 
 export interface Project {
   slug: string;
@@ -50,6 +58,7 @@ export const projects: Project[] = [
     featured: true,
 
     categories: [
+      'DevOps / CI/CD',
       'Automation',
       'Systems',
       'QA / Testing',
@@ -102,6 +111,7 @@ export const projects: Project[] = [
     status: 'Completed lab',
     featured: true,
     categories: [
+      'DevOps / CI/CD',
       'Automation',
       'Systems',
       'QA / Testing',
@@ -152,7 +162,7 @@ export const projects: Project[] = [
       'A privacy-first Windows desktop application for organising second-hand marketplace listings, planning daily relisting work and managing a local inventory without automating marketplace publishing.',
     role: 'Desktop application developer · UI/UX designer',
     status: 'In development',
-    featured: true,
+    featured: false,
     categories: ['Automation', 'QA / Testing', 'UI/UX'],
     tech: [
       'Python',
@@ -245,4 +255,21 @@ export const projects: Project[] = [
   },
 ];
 
-export const featuredProjects = projects.filter((project) => project.featured);
+const featuredProjectOrder = [
+  'pipelineforge',
+  'pricewise',
+  'jenkins-ci-reliability-lab',
+  'vinted-relisting-assistant',
+];
+
+export const featuredProjects = featuredProjectOrder
+  .map((slug) =>
+    projects.find(
+      (project) =>
+        project.slug === slug && project.featured
+    )
+  )
+  .filter(
+    (project): project is Project =>
+      project !== undefined
+  );

@@ -1,11 +1,240 @@
-.pipelineforge-evidence__intro {
-  max-width: 780px;
-  margin: 0 0 2rem;
+.pipelineforge-case-study {
+  position: relative;
 }
+
+.pipelineforge-section-heading {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.pipelineforge-section-heading h2 {
+  margin-bottom: 0.8rem;
+}
+
+.pipelineforge-section-heading p:last-child {
+  margin-bottom: 0;
+}
+
+/* Architecture */
+
+.pipelineforge-architecture {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+  align-items: stretch;
+  gap: 0.65rem;
+}
+
+.pipelineforge-architecture__step {
+  display: contents;
+}
+
+.pipelineforge-architecture__node {
+  min-width: 0;
+  padding: 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--ink-2);
+}
+
+.pipelineforge-architecture__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--purple-strong);
+  background: var(--ink-3);
+}
+
+.pipelineforge-architecture__node strong {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.pipelineforge-architecture__node p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.pipelineforge-architecture__arrow {
+  align-self: center;
+  color: var(--purple-strong);
+  opacity: 0.7;
+}
+
+/* Pipeline */
+
+.pipelineforge-pipeline__grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(0, 1fr)
+  );
+  gap: 1rem;
+}
+
+.pipelineforge-pipeline__stage {
+  position: relative;
+  min-width: 0;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--ink-2);
+}
+
+.pipelineforge-pipeline__stage::before {
+  position: absolute;
+  top: 0;
+  right: 1.25rem;
+  left: 1.25rem;
+  height: 2px;
+  content: '';
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--purple),
+    transparent
+  );
+  opacity: 0.7;
+}
+
+.pipelineforge-pipeline__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+  color: var(--purple-strong);
+}
+
+.pipelineforge-pipeline__number {
+  font-family: monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.pipelineforge-pipeline__stage h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1rem;
+}
+
+.pipelineforge-pipeline__stage p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+/* Reliability */
+
+.pipelineforge-reliability__flow {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr)
+    auto
+    minmax(0, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.pipelineforge-reliability__step {
+  display: contents;
+}
+
+.pipelineforge-reliability__card {
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--ink-2);
+}
+
+.pipelineforge-reliability__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  color: var(--purple-strong);
+}
+
+.pipelineforge-reliability__header span {
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.pipelineforge-reliability__card h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+.pipelineforge-reliability__card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.pipelineforge-reliability__arrow {
+  align-self: center;
+  color: var(--purple-strong);
+  opacity: 0.75;
+}
+
+.pipelineforge-reliability__result {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: 850px;
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--ink-3);
+}
+
+.pipelineforge-reliability__result > svg {
+  flex: 0 0 auto;
+  margin-top: 0.1rem;
+  color: var(--purple-strong);
+}
+
+.pipelineforge-reliability__result strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.pipelineforge-reliability__result p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* Evidence */
 
 .pipelineforge-evidence__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(
+    2,
+    minmax(0, 1fr)
+  );
   gap: 1.25rem;
 }
 
@@ -18,7 +247,16 @@
   background: var(--ink-2);
 }
 
-.pipelineforge-evidence__image .image-lightbox__trigger {
+.pipelineforge-evidence__card:first-child {
+  grid-column: 1 / -1;
+}
+
+.pipelineforge-evidence__image {
+  border-bottom: 1px solid var(--line);
+}
+
+.pipelineforge-evidence__image
+  .image-lightbox__trigger {
   display: block;
   width: 100%;
   padding: 0;
@@ -28,29 +266,98 @@
   cursor: zoom-in;
 }
 
-.pipelineforge-evidence__image .image-lightbox__trigger img {
+.pipelineforge-evidence__image
+  .image-lightbox__trigger
+  img {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: contain;
 }
 
+.pipelineforge-evidence__card:first-child
+  .pipelineforge-evidence__image
+  .image-lightbox__trigger
+  img {
+  aspect-ratio: 21 / 9;
+}
+
 .pipelineforge-evidence__caption {
-  padding: 1rem 1.25rem 1.25rem;
+  padding: 1.1rem 1.3rem 1.35rem;
 }
 
 .pipelineforge-evidence__caption strong {
   display: block;
+  margin-bottom: 0.45rem;
   color: var(--text);
 }
 
 .pipelineforge-evidence__caption p {
-  margin: .4rem 0 0;
-  font-size: .93rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+
+@media (max-width: 1050px) {
+  .pipelineforge-architecture {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+  .pipelineforge-architecture__step {
+    display: block;
+  }
+
+  .pipelineforge-architecture__arrow {
+    display: none;
+  }
+
+  .pipelineforge-pipeline__grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(0, 1fr)
+    );
+  }
+
+  .pipelineforge-reliability__flow {
+    grid-template-columns: 1fr;
+  }
+
+  .pipelineforge-reliability__step {
+    display: block;
+  }
+
+  .pipelineforge-reliability__arrow {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
+  .pipelineforge-architecture,
+  .pipelineforge-pipeline__grid,
   .pipelineforge-evidence__grid {
     grid-template-columns: 1fr;
+  }
+
+  .pipelineforge-evidence__card:first-child {
+    grid-column: auto;
+  }
+
+  .pipelineforge-evidence__card:first-child
+    .pipelineforge-evidence__image
+    .image-lightbox__trigger
+    img {
+    aspect-ratio: 16 / 9;
+  }
+
+  .pipelineforge-architecture__node,
+  .pipelineforge-pipeline__stage,
+  .pipelineforge-reliability__card {
+    padding: 1.15rem;
   }
 }

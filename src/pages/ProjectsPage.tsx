@@ -18,12 +18,13 @@ import { FeaturedProjectSpotlight } from '../components/FeaturedProjectSpotlight
 
 const filters: Array<'All' | ProjectCategory> = [
   'All',
+  'DevOps / CI/CD',
   'Full Stack',
   'Backend',
-  'Mobile',
   'Systems',
   'Automation',
   'QA / Testing',
+  'Mobile',
   'UI/UX',
 ];
 
@@ -32,12 +33,13 @@ const filterTranslationKeys: Record<
   string
 > = {
   All: 'all',
+  'DevOps / CI/CD': 'devopsCicd',
   'Full Stack': 'fullStack',
   Backend: 'backend',
-  Mobile: 'mobile',
   Systems: 'systems',
   Automation: 'automation',
   'QA / Testing': 'qaTesting',
+  Mobile: 'mobile',
   'UI/UX': 'uiux',
 };
 

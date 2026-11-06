@@ -35,9 +35,9 @@
   },
   "home": {
     "hero": {
-      "availability": "OPEN TO SOFTWARE ENGINEERING ROLES · EUROPE · Greek & English",
+      "availability": "OPEN TO SOFTWARE ENGINEERING & DEVOPS ROLES · EUROPE · Greek & English",
       "role": "Software Engineer",
-      "positioning": "Αναπτύσσω πρακτικές full-stack εφαρμογές και βελτιώνω τον τρόπο ελέγχου και παράδοσής τους.",
+      "positioning": "Αναπτύσσω λογισμικό και τα engineering workflows που το ελέγχουν, το πακετάρουν και το παραδίδουν με αξιοπιστία.",
       "softwareDevelopment": "Ανάπτυξη Λογισμικού",
       "qualityEngineering": "Ποιότητα Λογισμικού",
       "uiux": "UI/UX",
@@ -50,7 +50,7 @@
       "design": "Σχεδιασμός",
       "designDescription": "Διεπαφές με επίκεντρο τον χρήστη",
       "metaTitle": "{{name}} | Portfolio",
-      "metaDescription": "Software Engineer με εμπειρία σε full-stack εφαρμογές, testing και CI workflows.",
+      "metaDescription": "Software Engineer με έμφαση σε DevOps, CI/CD, backend συστήματα, automation και αξιόπιστη παράδοση λογισμικού.",
       "engineeringFocus": "Τεχνική κατεύθυνση",
       "email": "Email",
       "headlineFirst": "Software",
@@ -62,24 +62,27 @@
         "deploy": "Διάθεση",
         "monitor": "Παρακολούθηση"
       },
-      "orbitCaption": "DESIGN / ENGINEER / IMPROVE"
+      "orbitCaption": "BUILD / TEST / AUTOMATE / IMPROVE"
     },
     "about": {
       "eyebrow": "ΔΥΝΑΤΑ ΣΗΜΕΙΑ",
-      "title": "Σχετικά με εμένα",
-      "description": "Μου αρέσει να μετατρέπω πραγματικές ανάγκες σε ξεκάθαρες διεπαφές και να λύνω προβλήματα μέσα από προσεκτικό debugging.",
+      "title": "Engineering Focus",
+      "description": "Ανάπτυξη λογισμικού και βελτίωση των διαδικασιών testing και delivery.",
       "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
-      "fullStackTitle": "Full-stack βάση",
-      "fullStackDescription": "React, Node.js, APIs, σχεσιακές και NoSQL βάσεις δεδομένων.",
-      "qualityTitle": "Έμφαση στην ποιότητα",
-      "qualityDescription": "Jest, χειροκίνητοι έλεγχοι, API testing, debugging και διερεύνηση σφαλμάτων.",
-      "uxTitle": "Γνώση UI/UX",
-      "uxDescription": "Figma, έρευνα, personas, user journeys και responsive σχεδιασμός."
+
+      "devopsTitle": "DevOps & CI/CD",
+      "devopsDescription": "Jenkins, Docker, Linux και αυτοματοποιημένα CI/CD workflows.",
+
+      "softwareTitle": "Software Engineering",
+      "softwareDescription": "Backend και full-stack ανάπτυξη με Java, Python, TypeScript και Node.js.",
+
+      "qualityTitle": "Reliability & Quality",
+      "qualityDescription": "Automated testing, debugging, smoke tests και διερεύνηση failures."
     },
     "selectedWork": {
-      "eyebrow": "ΕΡΓΑ",
+      "eyebrow": "PROJECTS",
       "title": "Projects",
-      "description": "",
+      "description": "Software engineering projects σε DevOps, CI/CD, backend development, systems, automation και testing.",
       "seeAll": "Περισσότερα"
     },
     "quality": {
@@ -94,27 +97,27 @@
       "releaseDescription": "Συνέπεια, integration και αναμενόμενη συμπεριφορά"
     },
     "workflow": {
-      "eyebrow": "ΤΡΟΠΟΣ ΕΡΓΑΣΙΑΣ",
-      "title": "Ανάπτυξη · Έλεγχος · Deploy · Monitoring",
-      "description": "Η τεχνική μου προσέγγιση μέσα από πραγματικά projects.",
+      "eyebrow": "ENGINEERING WORKFLOW",
+      "title": "Build · Test · Package · Monitor",
+      "description": "Η προσέγγισή μου στο software delivery μέσα από πραγματικά development και DevOps projects.",
       "evidence": "Παράδειγμα από project",
-      "viewProject": "Περισσότερα",
+      "viewProject": "Προβολή Project",
       "stages": {
         "build": {
-          "title": "Ανάπτυξη εφαρμογών που λύνουν πραγματικά προβλήματα",
-          "description": "Ανέπτυξα το PriceWise με React, TypeScript, Node.js και PostgreSQL, συνδυάζοντας σύγκριση τιμών supermarket, προγραμματισμένη συλλογή δεδομένων και shopping list."
+          "title": "Ανάπτυξη λογισμικού που λύνει πραγματικά προβλήματα",
+          "description": "Το PriceWise παρουσιάζει full-stack ανάπτυξη με React, TypeScript, Node.js, PostgreSQL και scheduled data-collection workflows."
         },
         "test": {
-          "title": "Έλεγχος συμπεριφοράς πριν την παράδοση",
-          "description": "Στην πρακτική μου στη Valmore έγραφα Jest tests και διερευνούσα σφάλματα. Στο Jenkins lab υλοποίησα αυτοματοποιημένους ελέγχους pytest και Ruff σε CI pipelines."
+          "title": "Αυτοματοποιημένος έλεγχος πριν την παράδοση",
+          "description": "Το PipelineForge εκτελεί JUnit tests μέσω Jenkins και Gradle, με automated quality gates πριν από το packaging και το container validation."
         },
         "deploy": {
-          "title": "Από τον κώδικα σε λειτουργικό αποτέλεσμα",
-          "description": "Δημοσίευσα prototype του PriceWise στο Railway. Ξεχωριστά, στο Jenkins lab υλοποίησα packaging, αρχειοθέτηση και διατήρηση build artifacts."
+          "title": "Packaging εφαρμογών σε αναπαραγώγιμα artifacts",
+          "description": "Το PipelineForge πακετάρει την Spring Boot εφαρμογή και δημιουργεί versioned Docker images μέσω Jenkins σε dedicated Linux Docker build agent."
         },
         "monitor": {
-          "title": "Παρακολούθηση και ανάλυση των builds",
-          "description": "Στο Jenkins reliability lab χρησιμοποιώ το REST API για παρακολούθηση αποτελεσμάτων builds, διαθεσιμότητας agents, κατάστασης της ουράς και αποτυχιών."
+          "title": "Παρακολούθηση CI υποδομής και διερεύνηση αποτυχιών",
+          "description": "Το Jenkins CI Reliability Lab χρησιμοποιεί το Jenkins REST API για παρακολούθηση builds, agents, queues και failure conditions μαζί με operational troubleshooting."
         }
       }
     },
@@ -218,16 +221,16 @@
       "seeAll": "Περισσότερα"
     },
     "skills": {
-      "eyebrow": "ΤΕΧΝΟΛΟΓΙΕΣ",
-      "title": "Δεξιότητες",
-      "description": "Τα εργαλεία και οι τεχνολογίες μου ανά κατηγορία.",
+      "eyebrow": "ENGINEERING TOOLKIT",
+      "title": "Τεχνικές Δεξιότητες",
+      "description": "Τεχνολογίες οργανωμένες με βάση τη χρήση τους σε software development, CI/CD και reliability.",
       "groups": {
-        "development": "Ανάπτυξη Λογισμικού",
-        "frontendMobile": "Frontend & Mobile",
+        "devopsCicd": "DevOps & CI/CD",
         "backendApis": "Backend & APIs",
-        "testingQuality": "Testing & Ποιότητα",
+        "development": "Ανάπτυξη Λογισμικού",
+        "testingQuality": "Testing & Quality",
         "data": "Δεδομένα",
-        "toolsDesign": "Εργαλεία & Σχεδιασμός"
+        "frontendMobile": "Frontend & Mobile"
       },
       "preview": "ΑΥΤΟΜΑΤΗ ΠΡΟΒΟΛΗ - 2 ΔΕΥΤ.",
       "pause": "Παύση",
@@ -235,9 +238,9 @@
     },
     "contact": {
       "eyebrow": "ΕΠΙΚΟΙΝΩΝΙΑ",
-      "title": "Επικοινωνία",
-      "description": "Διαθέσιμη για θέσεις Software Engineering.",
-      "portraitAlt": "Φωτογραφία της Εμμανουέλας Τσακαλίδου, software developer, με φόντο το γραφείο της.",
+      "title": "Ας δημιουργήσουμε αξιόπιστο λογισμικό",
+      "description": "Διαθέσιμη για θέσεις Software Engineering, DevOps και CI/CD στην Ευρώπη.",
+      "portraitAlt": "Φωτογραφία της Emmanouela Tsakalidou",
       "emailMe": "Στείλτε μου email",
       "copyEmail": "Αντιγραφή email"
     }
@@ -417,16 +420,123 @@
         "resultsAlt": "Η σελίδα αποτελεσμάτων του PriceWise",
         "listAlt": "Η λίστα αγορών του PriceWise σε κινητό"
       },
+      "pipelineforge": {
+        "architecture": {
+          "eyebrow": "SYSTEM ARCHITECTURE",
+          "title": "Ένα τοπικό CI/CD environment με ξεχωριστές ευθύνες.",
+          "description": "Το PipelineForge διαχωρίζει το source control, το CI orchestration, τα application builds, τα container builds και το runtime validation ώστε κάθε μέρος του delivery workflow να μπορεί να ελεγχθεί και να γίνει troubleshoot ανεξάρτητα.",
+          "nodes": {
+            "source": {
+              "title": "GitHub",
+              "description": "Source control, feature branches και ανάπτυξη μέσω pull requests."
+            },
+            "jenkins": {
+              "title": "Jenkins Controller",
+              "description": "Φορτώνει το Jenkinsfile από το repository και συντονίζει την εκτέλεση του pipeline."
+            },
+            "buildAgent": {
+              "title": "Linux Build Agent",
+              "description": "Κάνει compile το Spring Boot service, εκτελεί JUnit tests και δημιουργεί το application package."
+            },
+            "dockerAgent": {
+              "title": "Docker Build Agent",
+              "description": "Δημιουργεί versioned Docker images και εκτελεί container validation."
+            },
+            "runtime": {
+              "title": "Running Container",
+              "description": "Το packaged service εκκινείται και ελέγχεται μέσω πραγματικών HTTP smoke tests."
+            }
+          }
+        },
+        "pipeline": {
+          "eyebrow": "PIPELINE AS CODE",
+          "title": "Κάθε αλλαγή περνά από αυτοματοποιημένα build και validation stages.",
+          "description": "Το Jenkinsfile ορίζει ολόκληρο το CI workflow μέσα στο source control, ώστε η διαδικασία να είναι επαναλήψιμη, reviewable και ευκολότερη στο troubleshooting.",
+          "stages": {
+            "checkout": {
+              "title": "Checkout",
+              "description": "Ανάκτηση του ακριβούς source revision που θα κάνει build και validate το Jenkins."
+            },
+            "verify": {
+              "title": "Verify Environment",
+              "description": "Έλεγχος των απαιτούμενων Java, Git και build tools πριν ξεκινήσει το application build."
+            },
+            "compile": {
+              "title": "Compile",
+              "description": "Compile της Spring Boot εφαρμογής και προετοιμασία των test classes μέσω Gradle."
+            },
+            "test": {
+              "title": "Unit Tests",
+              "description": "Εκτέλεση JUnit tests και δημοσίευση των test results μέσα στο Jenkins."
+            },
+            "package": {
+              "title": "Package",
+              "description": "Δημιουργία του executable Spring Boot JAR μόνο αφού περάσουν οι προηγούμενοι quality checks."
+            },
+            "image": {
+              "title": "Docker Image",
+              "description": "Δημιουργία versioned container image με Jenkins build number και Git commit SHA."
+            },
+            "smoke": {
+              "title": "Smoke Test",
+              "description": "Εκκίνηση του container και έλεγχος των πραγματικών health και application endpoints πριν γίνει αποδεκτό το build."
+            }
+          }
+        },
+        "reliability": {
+          "eyebrow": "FAILURE & RECOVERY",
+          "title": "Το pipeline ελέγχεται και όταν κάτι πάει λάθος.",
+          "description": "Το PipelineForge δεν παρουσιάζει μόνο successful builds. Περιλαμβάνει controlled failure exercises ώστε να επιβεβαιώνεται ότι τα CI quality gates εντοπίζουν μη υγιή application behaviour.",
+          "steps": {
+            "failure": {
+              "title": "Controlled failure",
+              "description": "Έγινε σκόπιμη αλλαγή στο health-endpoint configuration ώστε το container να ξεκινά χωρίς το endpoint που περίμενε το smoke test."
+            },
+            "detection": {
+              "title": "Το CI μπλοκάρει το unhealthy build",
+              "description": "Compilation, unit tests, packaging και image creation ολοκληρώθηκαν, αλλά το runtime smoke-test stage απέτυχε σωστά."
+            },
+            "recovery": {
+              "title": "Diagnosis, fix και verification",
+              "description": "Το configuration problem εντοπίστηκε, διορθώθηκε και επαληθεύτηκε με νέα εκτέλεση του ίδιου automated pipeline."
+            }
+          },
+          "resultTitle": "Γιατί είναι σημαντικό",
+          "resultDescription": "Ένα επιτυχημένο container build δεν αποδεικνύει ότι η εφαρμογή λειτουργεί σωστά. Το runtime validation προσθέτει ένα επιπλέον quality gate πριν θεωρηθεί το software έτοιμο για παράδοση."
+        },
+        "evidence": {
+          "eyebrow": "VERIFIED ENGINEERING EVIDENCE",
+          "title": "Πραγματικά CI runs και όχι μόνο architecture diagrams.",
+          "description": "Τα screenshots προέρχονται απευθείας από το τοπικό PipelineForge Jenkins environment και καταγράφουν successful builds, automated tests και ένα deliberate runtime failure.",
+          "items": {
+            "success": {
+              "title": "Successful Jenkins CI pipeline",
+              "description": "Το pipeline ολοκληρώνει checkout, environment verification, compilation, automated tests, packaging και τα επόμενα CI stages.",
+              "alt": "Successful PipelineForge Jenkins pipeline με πράσινα build stages."
+            },
+            "tests": {
+              "title": "Automated JUnit test results",
+              "description": "Το Gradle test report εμφανίζει έξι επιτυχημένα tests στα application, controller και service layers.",
+              "alt": "Gradle report με έξι επιτυχημένα PipelineForge tests και μηδενικές αποτυχίες."
+            },
+            "failure": {
+              "title": "Deliberate smoke-test failure",
+              "description": "Η εφαρμογή γίνεται build με επιτυχία, αλλά το Jenkins απορρίπτει το container όταν το αναμενόμενο runtime health endpoint δεν είναι διαθέσιμο.",
+              "alt": "PipelineForge Jenkins build όπου το Docker smoke-test stage αποτυγχάνει μετά από deliberate health-endpoint configuration change."
+            }
+          }
+        }
+      },
       "tryLivePrototype": "Live Demo",
       "backToTop": "Επιστροφή στην κορυφή"
     }
   },
   "resumePage": {
-    "metaTitle": "Βιογραφικό - {{name}}",
-    "metaDescription": "Βιογραφικό της {{name}}, Software Engineer.",
+    "metaTitle": "Software Engineering & DevOps Βιογραφικό - {{name}}",
+    "metaDescription": "Βιογραφικό της {{name}}, Software Engineer με έμφαση σε DevOps, CI/CD, backend systems και software quality.",
     "eyebrow": "Βιογραφικό",
-    "title": "Εμπειρία, εκπαίδευση και τεχνικές δεξιότητες",
-    "description": "Δείτε το βιογραφικό μου απευθείας μέσα από το portfolio ή κατεβάστε το πρωτότυπο PDF.",
+    "title": "Software Engineering & DevOps",
+    "description": "Εμπειρία, projects και τεχνικές δεξιότητες σε software development, CI/CD, automation, testing και reliable application delivery.",
     "documentTitle": "{{name}} - CV"
   },
   "recommendationPage": {
@@ -694,7 +804,7 @@
     }
   },
   "footer": {
-    "tagline": "Ανάπτυξη λογισμικού, ποιότητα λογισμικού και διεπαφές με επίκεντρο τον χρήστη.",
+    "tagline": "Software engineering, DevOps, CI/CD και αξιόπιστη παράδοση εφαρμογών.",
     "builtWith": "Δημιουργήθηκε με React + TypeScript"
   }
 }

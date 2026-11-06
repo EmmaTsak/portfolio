@@ -35,9 +35,9 @@
   },
   "home": {
     "hero": {
-      "availability": "Open to software engineering roles · Europe · Greek & English",
+      "availability": "Open to Software Engineering & DevOps roles · Europe · Greek & English",
       "role": "Software Engineer",
-      "positioning": "I create practical full-stack software and improve how it is tested and delivered.",
+      "positioning": "I build software and the engineering workflows that test, package and deliver it reliably.",
       "softwareDevelopment": "Software Development",
       "qualityEngineering": "Quality Engineering",
       "uiux": "UI/UX",
@@ -50,7 +50,7 @@
       "design": "Design",
       "designDescription": "User-centred interfaces",
       "metaTitle": "{{name}} | Portfolio",
-      "metaDescription": "Software Engineer building full-stack applications, testing tools and CI workflows.",
+      "metaDescription": "Software Engineer focused on DevOps, CI/CD, backend systems, automation and reliable software delivery.",
       "engineeringFocus": "Engineering focus",
       "email": "Email",
       "headlineFirst": "Software",
@@ -62,19 +62,22 @@
         "deploy": "Deploy",
         "monitor": "Monitor"
       },
-      "orbitCaption": "DESIGN / ENGINEER / IMPROVE"
+      "orbitCaption": "BUILD / TEST / AUTOMATE / IMPROVE"
     },
     "about": {
       "eyebrow": "CORE STRENGTHS",
-      "title": "About Me",
-      "description": "Curious about the details, I enjoy turning user needs into clear interfaces and solving problems through thoughtful debugging.",
+      "title": "Engineering Focus",
+      "description": "I enjoy building software and improving the systems used to test, package and deliver it reliably.",
       "relocation": "Open to relocation across Europe · Greek & English",
-      "fullStackTitle": "Full-stack foundation",
-      "fullStackDescription": "React, Node.js, APIs, relational and NoSQL databases.",
-      "qualityTitle": "Quality mindset",
-      "qualityDescription": "Jest, manual validation, API testing, debugging and defect investigation.",
-      "uxTitle": "UI/UX awareness",
-      "uxDescription": "Figma, research, personas, journeys and responsive interface decisions."
+
+      "devopsTitle": "DevOps & CI/CD",
+      "devopsDescription": "Jenkins, Docker, Linux and automated CI/CD workflows.",
+
+      "softwareTitle": "Software Engineering",
+      "softwareDescription": "Backend and full-stack development with Java, Python, TypeScript and Node.js.",
+
+      "qualityTitle": "Reliability & Quality",
+      "qualityDescription": "Automated testing, debugging, smoke tests and failure investigation."
     },
     "selectedWork": {
       "eyebrow": "FEATURED PROJECTS",
@@ -94,27 +97,27 @@
       "releaseDescription": "Consistency, integration and expected behaviour"
     },
     "workflow": {
-      "eyebrow": "HOW I WORK",
-      "title": "Build · Test · Deploy · Monitor",
-      "description": "Explore my engineering workflow through real projects.",
-      "evidence": "Project example",
-      "viewProject": "View More",
+      "eyebrow": "ENGINEERING WORKFLOW",
+      "title": "Build · Test · Package · Monitor",
+      "description": "How I approach software delivery through real development and DevOps projects.",
+      "evidence": "Project evidence",
+      "viewProject": "View Project",
       "stages": {
         "build": {
-          "title": "Build applications that solve real problems",
-          "description": "I developed PriceWise using React, TypeScript, Node.js and PostgreSQL, combining supermarket price comparison with scheduled data collection and a shopping-list experience."
+          "title": "Build software that solves real problems",
+          "description": "PriceWise demonstrates full-stack application development using React, TypeScript, Node.js, PostgreSQL and scheduled data-collection workflows."
         },
         "test": {
-          "title": "Validate behaviour before delivery",
-          "description": "During my Valmore internship, I wrote Jest tests and investigated defects. In my Jenkins lab, I configured automated pytest and Ruff checks within CI pipelines."
+          "title": "Automate validation before delivery",
+          "description": "PipelineForge runs JUnit tests through Jenkins and Gradle, using automated quality gates before application packaging and container validation."
         },
         "deploy": {
-          "title": "Turn working code into deliverable software",
-          "description": "I published a PriceWise prototype on Railway. Separately, my Jenkins lab demonstrates packaging, archiving and retaining build artifacts."
+          "title": "Package applications into reproducible artifacts",
+          "description": "PipelineForge packages the Spring Boot application and builds versioned Docker images through Jenkins on a dedicated Linux Docker build agent."
         },
         "monitor": {
-          "title": "Understand what happens after a build",
-          "description": "My Jenkins reliability lab uses REST API monitoring to inspect build results, agent availability, queue conditions and failures."
+          "title": "Observe CI infrastructure and investigate failures",
+          "description": "My Jenkins CI Reliability Lab uses the Jenkins REST API to inspect builds, agents, queues and failure conditions while documenting operational troubleshooting."
         }
       }
     },
@@ -218,16 +221,16 @@
       "seeAll": "View More"
     },
     "skills": {
-      "eyebrow": "TECH TOOLKIT",
-      "title": "Skills",
-      "description": "My tools, grouped by how I use them.",
+      "eyebrow": "ENGINEERING TOOLKIT",
+      "title": "Technical Skills",
+      "description": "Technologies grouped by how I use them across software development, CI/CD and reliability.",
       "groups": {
-        "development": "Development",
-        "frontendMobile": "Frontend & Mobile",
+        "devopsCicd": "DevOps & CI/CD",
         "backendApis": "Backend & APIs",
+        "development": "Development",
         "testingQuality": "Testing & Quality",
         "data": "Data",
-        "toolsDesign": "Tools & Design"
+        "frontendMobile": "Frontend & Mobile"
       },
       "preview": "AUTO PREVIEW - 2 SEC",
       "pause": "Pause",
@@ -235,8 +238,8 @@
     },
     "contact": {
       "eyebrow": "LET'S CONNECT",
-      "title": "Contact",
-      "description": "Open to Software Engineering opportunities.",
+      "title": "Let's build reliable software",
+      "description": "Open to Software Engineering, DevOps and CI/CD opportunities across Europe.",
       "portraitAlt": "Portrait of Emmanouela Tsakalidou",
       "emailMe": "Email me",
       "copyEmail": "Copy email"
@@ -256,13 +259,14 @@
     },
     "page": {
       "metaTitle": "Projects - Emmanouela Tsakalidou",
-      "metaDescription": "Selected software-development projects across full stack, backend, mobile, C++, testing and UI/UX.",
+      "metaDescription": "Software engineering and DevOps projects covering CI/CD, Jenkins, Docker, backend development, automation, testing and systems engineering.",
       "eyebrow": "Projects",
       "title": "Projects",
       "description": "Browse by technology or project type.",
       "filterLabel": "Filter projects",
       "filters": {
         "all": "All",
+        "devopsCicd": "DevOps / CI/CD",
         "fullStack": "Full Stack",
         "backend": "Backend",
         "mobile": "Mobile",
@@ -417,16 +421,123 @@
         "resultsAlt": "PriceWise product results interface",
         "listAlt": "PriceWise mobile shopping list interface"
       },
+      "pipelineforge": {
+        "architecture": {
+          "eyebrow": "SYSTEM ARCHITECTURE",
+          "title": "A local CI/CD environment built around separated responsibilities.",
+          "description": "PipelineForge separates source control, CI orchestration, application builds, container builds and runtime validation so each part of the delivery workflow can be tested and troubleshot independently.",
+          "nodes": {
+            "source": {
+              "title": "GitHub",
+              "description": "Source control, feature branches and pull-request driven development."
+            },
+            "jenkins": {
+              "title": "Jenkins Controller",
+              "description": "Loads the Jenkinsfile from source control and coordinates pipeline execution."
+            },
+            "buildAgent": {
+              "title": "Linux Build Agent",
+              "description": "Compiles the Spring Boot service, runs JUnit tests and packages the application."
+            },
+            "dockerAgent": {
+              "title": "Docker Build Agent",
+              "description": "Builds versioned Docker images and executes container validation."
+            },
+            "runtime": {
+              "title": "Running Container",
+              "description": "The packaged service is started and checked through live HTTP smoke tests."
+            }
+          }
+        },
+        "pipeline": {
+          "eyebrow": "PIPELINE AS CODE",
+          "title": "Every change passes through automated build and validation stages.",
+          "description": "The Jenkinsfile defines the complete CI workflow in source control, making the process repeatable, reviewable and easier to troubleshoot.",
+          "stages": {
+            "checkout": {
+              "title": "Checkout",
+              "description": "Retrieve the exact source revision that Jenkins will build and validate."
+            },
+            "verify": {
+              "title": "Verify Environment",
+              "description": "Confirm required Java, Git and build tooling before starting the application build."
+            },
+            "compile": {
+              "title": "Compile",
+              "description": "Compile the Spring Boot application and prepare test classes with Gradle."
+            },
+            "test": {
+              "title": "Unit Tests",
+              "description": "Run JUnit tests and publish machine-readable test results back into Jenkins."
+            },
+            "package": {
+              "title": "Package",
+              "description": "Produce the executable Spring Boot JAR only after the earlier quality checks pass."
+            },
+            "image": {
+              "title": "Docker Image",
+              "description": "Build a versioned container image using the Jenkins build number and Git commit SHA."
+            },
+            "smoke": {
+              "title": "Smoke Test",
+              "description": "Start the container and verify live health and application endpoints before accepting the build."
+            }
+          }
+        },
+        "reliability": {
+          "eyebrow": "FAILURE & RECOVERY",
+          "title": "The pipeline is also tested when things go wrong.",
+          "description": "Instead of demonstrating only successful builds, PipelineForge includes controlled failure exercises to verify that CI quality gates detect unhealthy application behaviour.",
+          "steps": {
+            "failure": {
+              "title": "Introduce a controlled failure",
+              "description": "A health-endpoint configuration was deliberately changed so the container would start without exposing the endpoint expected by the smoke test."
+            },
+            "detection": {
+              "title": "CI blocks the unhealthy build",
+              "description": "Compilation, unit tests, packaging and image creation succeeded, but the runtime smoke-test stage correctly failed."
+            },
+            "recovery": {
+              "title": "Diagnose, fix and verify",
+              "description": "The configuration problem was identified, corrected and validated by rerunning the same automated pipeline."
+            }
+          },
+          "resultTitle": "Why this matters",
+          "resultDescription": "A successful container build does not prove that an application is healthy. Runtime validation adds another quality gate before software is treated as deliverable."
+        },
+        "evidence": {
+          "eyebrow": "VERIFIED ENGINEERING EVIDENCE",
+          "title": "Real CI runs rather than architecture-only claims.",
+          "description": "These screenshots come directly from the local PipelineForge Jenkins environment and document successful builds, automated tests and a deliberately induced runtime failure.",
+          "items": {
+            "success": {
+              "title": "Successful Jenkins CI pipeline",
+              "description": "The pipeline completes checkout, environment verification, compilation, automated tests, packaging and subsequent CI stages.",
+              "alt": "Successful PipelineForge Jenkins pipeline showing green build stages."
+            },
+            "tests": {
+              "title": "Automated JUnit test results",
+              "description": "Gradle test reporting shows six tests passing across the application, controller and service layers.",
+              "alt": "Gradle report showing six PipelineForge tests passing with no failures."
+            },
+            "failure": {
+              "title": "Deliberate smoke-test failure",
+              "description": "The application builds successfully, but Jenkins rejects the container after the expected runtime health endpoint becomes unavailable.",
+              "alt": "PipelineForge Jenkins build showing the Docker smoke-test stage failing after a deliberate health-endpoint configuration change."
+            }
+          }
+        }
+      },
       "tryLivePrototype": "Live Demo",
       "backToTop": "Back to Top"
     }
   },
   "resumePage": {
-    "metaTitle": "Resume - {{name}}",
-    "metaDescription": "Resume for {{name}}, Software Engineer.",
+    "metaTitle": "Software Engineering & DevOps Resume - {{name}}",
+    "metaDescription": "Resume for {{name}}, Software Engineer focused on DevOps, CI/CD, backend systems and software quality.",
     "eyebrow": "Resume",
-    "title": "Experience, education and technical skills",
-    "description": "View my CV directly in the portfolio or download the original PDF.",
+    "title": "Software Engineering & DevOps",
+    "description": "Experience, projects and technical skills across software development, CI/CD, automation, testing and reliable application delivery.",
     "documentTitle": "{{name}} - CV"
   },
   "recommendationPage": {
@@ -694,7 +805,7 @@
     }
   },
   "footer": {
-    "tagline": "Software development, software quality and user-centred interfaces.",
+    "tagline": "Software engineering, DevOps, CI/CD and reliable application delivery.",
     "builtWith": "Built with React + TypeScript"
   }
 }

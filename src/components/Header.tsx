@@ -74,51 +74,57 @@ export function Header() {
 
     const updateActiveSection = () => {
       const sections = [
-        {
-          id: 'Projects',
-          element:
-            document.getElementById('projects'),
-        },
-        {
-          id: 'Education',
-          element:
-            document.getElementById('education'),
-        },
-        {
-          id: 'Experience',
-          element:
-            document.getElementById('experience'),
-        },
-        {
-          id: 'Skills',
-          element:
-            document.getElementById('skills'),
-        },
-        {
-          id: 'Contact',
-          element:
-            document.getElementById('contact'),
-        },
-      ].filter(
+      {
+        id: 'Projects',
+        element:
+          document.getElementById('projects'),
+      },
+      {
+        id: 'Skills',
+        element:
+          document.getElementById('skills'),
+      },
+      {
+        id: 'Experience',
+        element:
+          document.getElementById('experience'),
+      },
+      {
+        id: 'Education',
+        element:
+          document.getElementById('education'),
+      },
+      {
+        id: 'Contact',
+        element:
+          document.getElementById('contact'),
+      },
+    ]
+      .filter(
         (
           section
         ): section is {
           id: string;
           element: HTMLElement;
         } => Boolean(section.element)
-      ).sort((a, b) => a.element.offsetTop - b.element.offsetTop);
+      )
+      .map((section) => ({
+        ...section,
+        top:
+          section.element.getBoundingClientRect()
+            .top + window.scrollY,
+      }))
+      .sort((a, b) => a.top - b.top);
 
-      const position = window.scrollY + 180;
+    const position = window.scrollY + 180;
 
-      let currentSection = 'Home';
+    let currentSection = 'Home';
 
-      sections.forEach((section) => {
-        if (
-          position >= section.element.offsetTop
-        ) {
-          currentSection = section.id;
-        }
-      });
+    sections.forEach((section) => {
+      if (position >= section.top) {
+        currentSection = section.id;
+      }
+    });
 
       setActiveSection(currentSection);
     };

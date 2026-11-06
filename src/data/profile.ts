@@ -4,7 +4,8 @@ export const profile = {
   email: 'tsakalidouemmanouela@gmail.com',
   github: 'https://github.com/EmmaTsak',
   linkedin: 'https://www.linkedin.com/in/etsakalidou/',
-  positioning:  'Software engineer building reliable applications and engineering tooling across frontend, backend, APIs and CI workflows - with software quality considered from the start.',
+  positioning:
+    'Software engineer focused on DevOps, CI/CD automation and reliable application delivery, with hands-on project experience across backend/full-stack systems, Jenkins, Docker, Linux and testing.',
 };
 
 export const experience = [
@@ -22,33 +23,78 @@ export const experience = [
 ];
 
 export const skillGroups = [
-  { title: 'Development', items: ['TypeScript', 'JavaScript', 'Python', 'Java', 'C#', 'C', 'C++', 'PHP', 'SQL'] },
-  { title: 'Frontend & Mobile', items: ['React', 'React Native', 'Jetpack Compose', 'HTML/CSS', 'Responsive interfaces'] },
-  { title: 'Backend & APIs', items: ['Node.js', 'Express', 'RESTful APIs', 'FastAPI', 'JWT foundations'] },
+  {
+    title: 'DevOps & CI/CD',
+    items: [
+      'Jenkins',
+      'Docker',
+      'Git',
+      'GitHub',
+      'GitHub Actions',
+      'Linux/Unix CLI',
+      'Bash',
+      'CI/CD',
+    ],
+  },
+  {
+    title: 'Backend & APIs',
+    items: [
+      'Node.js',
+      'Express',
+      'RESTful APIs',
+      'FastAPI',
+      'Spring Boot',
+      'JWT foundations',
+    ],
+  },
+  {
+    title: 'Development',
+    items: [
+      'TypeScript',
+      'JavaScript',
+      'Python',
+      'Java',
+      'C#',
+      'C',
+      'C++',
+      'PHP',
+      'SQL',
+    ],
+  },
   {
     title: 'Testing & Quality',
     items: [
+      'JUnit',
       'Jest',
       'pytest',
       'Postman',
       'API testing',
+      'Smoke testing',
       'Manual testing',
       'Debugging',
       'Defect investigation',
+      'Playwright',
     ],
   },
-  { title: 'Data', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Prisma', 'Mongoose', 'Relational & NoSQL concepts'] },
   {
-    title: 'Tools & Design',
+    title: 'Data',
     items: [
-      'Git',
-      'GitHub',
-      'Docker',
-      'Jenkins',
-      'Playwright',
-      'Figma',
-      'Linux/Unix CLI',
-      'WordPress',
+      'PostgreSQL',
+      'MySQL',
+      'MongoDB',
+      'Prisma',
+      'Mongoose',
+      'Relational & NoSQL concepts',
+    ],
+  },
+  {
+    title: 'Frontend & Mobile',
+    items: [
+      'React',
+      'React Native',
+      'Jetpack Compose',
+      'HTML/CSS',
+      'Responsive interfaces',
     ],
   },
 ];
