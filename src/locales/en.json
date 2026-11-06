@@ -532,11 +532,11 @@
     }
   },
   "resumePage": {
-    "metaTitle": "Resume - {{name}}",
-    "metaDescription": "Resume for {{name}}, Software Engineer.",
+    "metaTitle": "Software Engineering & DevOps Resume - {{name}}",
+    "metaDescription": "Resume for {{name}}, Software Engineer focused on DevOps, CI/CD, backend systems and software quality.",
     "eyebrow": "Resume",
-    "title": "Experience, education and technical skills",
-    "description": "View my CV directly in the portfolio or download the original PDF.",
+    "title": "Software Engineering & DevOps",
+    "description": "Experience, projects and technical skills across software development, CI/CD, automation, testing and reliable application delivery.",
     "documentTitle": "{{name}} - CV"
   },
   "recommendationPage": {

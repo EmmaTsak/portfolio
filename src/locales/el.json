@@ -529,11 +529,11 @@
     }
   },
   "resumePage": {
-    "metaTitle": "Βιογραφικό - {{name}}",
-    "metaDescription": "Βιογραφικό της {{name}}, Software Engineer.",
+    "metaTitle": "Software Engineering & DevOps Βιογραφικό - {{name}}",
+    "metaDescription": "Βιογραφικό της {{name}}, Software Engineer με έμφαση σε DevOps, CI/CD, backend systems και software quality.",
     "eyebrow": "Βιογραφικό",
-    "title": "Εμπειρία, εκπαίδευση και τεχνικές δεξιότητες",
-    "description": "Δείτε το βιογραφικό μου απευθείας μέσα από το portfolio ή κατεβάστε το πρωτότυπο PDF.",
+    "title": "Software Engineering & DevOps",
+    "description": "Εμπειρία, projects και τεχνικές δεξιότητες σε software development, CI/CD, automation, testing και reliable application delivery.",
     "documentTitle": "{{name}} - CV"
   },
   "recommendationPage": {
