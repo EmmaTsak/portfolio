@@ -417,6 +417,113 @@
         "resultsAlt": "Η σελίδα αποτελεσμάτων του PriceWise",
         "listAlt": "Η λίστα αγορών του PriceWise σε κινητό"
       },
+      "pipelineforge": {
+        "architecture": {
+          "eyebrow": "SYSTEM ARCHITECTURE",
+          "title": "Ένα τοπικό CI/CD environment με ξεχωριστές ευθύνες.",
+          "description": "Το PipelineForge διαχωρίζει το source control, το CI orchestration, τα application builds, τα container builds και το runtime validation ώστε κάθε μέρος του delivery workflow να μπορεί να ελεγχθεί και να γίνει troubleshoot ανεξάρτητα.",
+          "nodes": {
+            "source": {
+              "title": "GitHub",
+              "description": "Source control, feature branches και ανάπτυξη μέσω pull requests."
+            },
+            "jenkins": {
+              "title": "Jenkins Controller",
+              "description": "Φορτώνει το Jenkinsfile από το repository και συντονίζει την εκτέλεση του pipeline."
+            },
+            "buildAgent": {
+              "title": "Linux Build Agent",
+              "description": "Κάνει compile το Spring Boot service, εκτελεί JUnit tests και δημιουργεί το application package."
+            },
+            "dockerAgent": {
+              "title": "Docker Build Agent",
+              "description": "Δημιουργεί versioned Docker images και εκτελεί container validation."
+            },
+            "runtime": {
+              "title": "Running Container",
+              "description": "Το packaged service εκκινείται και ελέγχεται μέσω πραγματικών HTTP smoke tests."
+            }
+          }
+        },
+        "pipeline": {
+          "eyebrow": "PIPELINE AS CODE",
+          "title": "Κάθε αλλαγή περνά από αυτοματοποιημένα build και validation stages.",
+          "description": "Το Jenkinsfile ορίζει ολόκληρο το CI workflow μέσα στο source control, ώστε η διαδικασία να είναι επαναλήψιμη, reviewable και ευκολότερη στο troubleshooting.",
+          "stages": {
+            "checkout": {
+              "title": "Checkout",
+              "description": "Ανάκτηση του ακριβούς source revision που θα κάνει build και validate το Jenkins."
+            },
+            "verify": {
+              "title": "Verify Environment",
+              "description": "Έλεγχος των απαιτούμενων Java, Git και build tools πριν ξεκινήσει το application build."
+            },
+            "compile": {
+              "title": "Compile",
+              "description": "Compile της Spring Boot εφαρμογής και προετοιμασία των test classes μέσω Gradle."
+            },
+            "test": {
+              "title": "Unit Tests",
+              "description": "Εκτέλεση JUnit tests και δημοσίευση των test results μέσα στο Jenkins."
+            },
+            "package": {
+              "title": "Package",
+              "description": "Δημιουργία του executable Spring Boot JAR μόνο αφού περάσουν οι προηγούμενοι quality checks."
+            },
+            "image": {
+              "title": "Docker Image",
+              "description": "Δημιουργία versioned container image με Jenkins build number και Git commit SHA."
+            },
+            "smoke": {
+              "title": "Smoke Test",
+              "description": "Εκκίνηση του container και έλεγχος των πραγματικών health και application endpoints πριν γίνει αποδεκτό το build."
+            }
+          }
+        },
+        "reliability": {
+          "eyebrow": "FAILURE & RECOVERY",
+          "title": "Το pipeline ελέγχεται και όταν κάτι πάει λάθος.",
+          "description": "Το PipelineForge δεν παρουσιάζει μόνο successful builds. Περιλαμβάνει controlled failure exercises ώστε να επιβεβαιώνεται ότι τα CI quality gates εντοπίζουν μη υγιή application behaviour.",
+          "steps": {
+            "failure": {
+              "title": "Controlled failure",
+              "description": "Έγινε σκόπιμη αλλαγή στο health-endpoint configuration ώστε το container να ξεκινά χωρίς το endpoint που περίμενε το smoke test."
+            },
+            "detection": {
+              "title": "Το CI μπλοκάρει το unhealthy build",
+              "description": "Compilation, unit tests, packaging και image creation ολοκληρώθηκαν, αλλά το runtime smoke-test stage απέτυχε σωστά."
+            },
+            "recovery": {
+              "title": "Diagnosis, fix και verification",
+              "description": "Το configuration problem εντοπίστηκε, διορθώθηκε και επαληθεύτηκε με νέα εκτέλεση του ίδιου automated pipeline."
+            }
+          },
+          "resultTitle": "Γιατί είναι σημαντικό",
+          "resultDescription": "Ένα επιτυχημένο container build δεν αποδεικνύει ότι η εφαρμογή λειτουργεί σωστά. Το runtime validation προσθέτει ένα επιπλέον quality gate πριν θεωρηθεί το software έτοιμο για παράδοση."
+        },
+        "evidence": {
+          "eyebrow": "VERIFIED ENGINEERING EVIDENCE",
+          "title": "Πραγματικά CI runs και όχι μόνο architecture diagrams.",
+          "description": "Τα screenshots προέρχονται απευθείας από το τοπικό PipelineForge Jenkins environment και καταγράφουν successful builds, automated tests και ένα deliberate runtime failure.",
+          "items": {
+            "success": {
+              "title": "Successful Jenkins CI pipeline",
+              "description": "Το pipeline ολοκληρώνει checkout, environment verification, compilation, automated tests, packaging και τα επόμενα CI stages.",
+              "alt": "Successful PipelineForge Jenkins pipeline με πράσινα build stages."
+            },
+            "tests": {
+              "title": "Automated JUnit test results",
+              "description": "Το Gradle test report εμφανίζει έξι επιτυχημένα tests στα application, controller και service layers.",
+              "alt": "Gradle report με έξι επιτυχημένα PipelineForge tests και μηδενικές αποτυχίες."
+            },
+            "failure": {
+              "title": "Deliberate smoke-test failure",
+              "description": "Η εφαρμογή γίνεται build με επιτυχία, αλλά το Jenkins απορρίπτει το container όταν το αναμενόμενο runtime health endpoint δεν είναι διαθέσιμο.",
+              "alt": "PipelineForge Jenkins build όπου το Docker smoke-test stage αποτυγχάνει μετά από deliberate health-endpoint configuration change."
+            }
+          }
+        }
+      },
       "tryLivePrototype": "Live Demo",
       "backToTop": "Επιστροφή στην κορυφή"
     }
