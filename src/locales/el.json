@@ -66,16 +66,16 @@
     },
     "about": {
       "eyebrow": "ΤΕΧΝΙΚΗ ΚΑΤΕΥΘΥΝΣΗ",
-      "title": "Engineering Focus",
-      "description": "Μου αρέσει να αναπτύσσω λογισμικό και να βελτιώνω τα συστήματα που χρησιμοποιούνται για testing, packaging, troubleshooting και αξιόπιστη παράδοσή του.",
-      "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
-      "devopsTitle": "DevOps & CI/CD",
-      "devopsDescription": "Jenkins pipelines, Docker, Linux, GitHub Actions, build automation και container validation.",
-      "softwareTitle": "Software Engineering",
-      "softwareDescription": "Backend και full-stack ανάπτυξη με Java, Python, TypeScript, Node.js, REST APIs και βάσεις δεδομένων.",
-      "qualityTitle": "Reliability & Quality",
-      "qualityDescription": "Automated testing, CI quality gates, smoke tests, debugging, failure investigation και operational troubleshooting."
-    },
+        "title": "Engineering Focus",
+        "description": "Μου αρέσει να αναπτύσσω λογισμικό και να βελτιώνω τις διαδικασίες testing, packaging, troubleshooting και reliable delivery.",
+        "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
+        "devopsTitle": "DevOps & CI/CD",
+        "devopsDescription": "Jenkins pipelines, Docker, Linux, Git workflows και automated delivery.",
+        "softwareTitle": "Software Engineering",
+        "softwareDescription": "Backend και full-stack ανάπτυξη με Java, Python, TypeScript, Node.js και REST APIs.",
+        "qualityTitle": "Reliability & Quality",
+        "qualityDescription": "Automated testing, smoke tests, debugging, CI quality gates και διερεύνηση σφαλμάτων."
+      },
     "selectedWork": {
       "eyebrow": "PROJECTS",
       "title": "Projects",
@@ -235,9 +235,9 @@
     },
     "contact": {
       "eyebrow": "ΕΠΙΚΟΙΝΩΝΙΑ",
-      "title": "Επικοινωνία",
-      "description": "Διαθέσιμη για θέσεις Software Engineering.",
-      "portraitAlt": "Φωτογραφία της Εμμανουέλας Τσακαλίδου, software developer, με φόντο το γραφείο της.",
+      "title": "Ας δημιουργήσουμε αξιόπιστο λογισμικό",
+      "description": "Διαθέσιμη για θέσεις Software Engineering, DevOps και CI/CD στην Ευρώπη.",
+      "portraitAlt": "Φωτογραφία της Emmanouela Tsakalidou",
       "emailMe": "Στείλτε μου email",
       "copyEmail": "Αντιγραφή email"
     }
