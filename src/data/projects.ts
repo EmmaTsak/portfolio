@@ -1,4 +1,12 @@
-export type ProjectCategory = 'Full Stack' | 'Backend' | 'Mobile' | 'Systems' | 'Automation' | 'QA / Testing' | 'UI/UX';
+export type ProjectCategory =
+  | 'DevOps / CI/CD'
+  | 'Full Stack'
+  | 'Backend'
+  | 'Mobile'
+  | 'Systems'
+  | 'Automation'
+  | 'QA / Testing'
+  | 'UI/UX';
 
 export interface Project {
   slug: string;
@@ -50,6 +58,7 @@ export const projects: Project[] = [
     featured: true,
 
     categories: [
+      'DevOps / CI/CD',
       'Automation',
       'Systems',
       'QA / Testing',
@@ -102,6 +111,7 @@ export const projects: Project[] = [
     status: 'Completed lab',
     featured: true,
     categories: [
+      'DevOps / CI/CD',
       'Automation',
       'Systems',
       'QA / Testing',
@@ -245,4 +255,21 @@ export const projects: Project[] = [
   },
 ];
 
-export const featuredProjects = projects.filter((project) => project.featured);
+const featuredProjectOrder = [
+  'pipelineforge',
+  'pricewise',
+  'jenkins-ci-reliability-lab',
+  'vinted-relisting-assistant',
+];
+
+export const featuredProjects = featuredProjectOrder
+  .map((slug) =>
+    projects.find(
+      (project) =>
+        project.slug === slug && project.featured
+    )
+  )
+  .filter(
+    (project): project is Project =>
+      project !== undefined
+  );

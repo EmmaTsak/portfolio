@@ -34,12 +34,12 @@ import { useTranslation } from 'react-i18next';
 import { skillGroups } from '../data/profile';
 
 const skillGroupTranslationKeys: Record<string, string> = {
-  Development: 'development',
-  'Frontend & Mobile': 'frontendMobile',
+  'DevOps & CI/CD': 'devopsCicd',
   'Backend & APIs': 'backendApis',
+  Development: 'development',
   'Testing & Quality': 'testingQuality',
   Data: 'data',
-  'Tools & Design': 'toolsDesign',
+  'Frontend & Mobile': 'frontendMobile',
 };
 
 const skillIcons: Record<string, IconType> = {
@@ -106,8 +106,13 @@ function getInitials(name: string) {
 export function TechArsenal() {
   const { t } = useTranslation();
 
+  const visibleSkillGroups =
+  skillGroups.filter(
+    (group) => group.items.length > 0
+  );
+
   const [activeGroup, setActiveGroup] = useState(
-    skillGroups[0].title
+    visibleSkillGroups[0].title ?? ''
   );
   const rootRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -134,20 +139,53 @@ export function TechArsenal() {
   }, []);
 
   useEffect(() => {
-    if (!canRotate || !visible || paused) return;
+    if (
+      !canRotate ||
+      !visible ||
+      paused ||
+      visibleSkillGroups.length <= 1
+    ) {
+      return;
+    }
+
     const id = window.setInterval(() => {
       setActiveGroup((current) => {
-        const index = skillGroups.findIndex((g) => g.title === current);
-        return skillGroups[(index + 1) % skillGroups.length].title;
+        const index =
+          visibleSkillGroups.findIndex(
+            (group) =>
+              group.title === current
+          );
+
+        const nextIndex =
+          index >= 0
+            ? (index + 1) %
+              visibleSkillGroups.length
+            : 0;
+
+        return visibleSkillGroups[
+          nextIndex
+        ].title;
       });
     }, 3000);
-    return () => window.clearInterval(id);
-  }, [canRotate, visible, paused]);
+
+    return () =>
+      window.clearInterval(id);
+  }, [
+    canRotate,
+    visible,
+    paused,
+    visibleSkillGroups,
+  ]);
 
   const selectedGroup =
-    skillGroups.find(
-      (group) => group.title === activeGroup
-    ) ?? skillGroups[0];
+    visibleSkillGroups.find(
+      (group) =>
+        group.title === activeGroup
+    ) ?? visibleSkillGroups[0];
+
+  if (!selectedGroup) {
+    return null;
+  }
 
   const translationKey =
     skillGroupTranslationKeys[
@@ -180,13 +218,13 @@ export function TechArsenal() {
 
         <span className="tech-arsenal__counter">
           {String(
-            skillGroups.findIndex(
+            visibleSkillGroups.findIndex(
               (group) =>
                 group.title === activeGroup
             ) + 1
           ).padStart(2, '0')}
           {' / '}
-          {String(skillGroups.length).padStart(
+          {String(visibleSkillGroups.length).padStart(
             2,
             '0'
           )}
@@ -210,7 +248,7 @@ export function TechArsenal() {
         role="tablist"
         aria-label="Technology categories"
       >
-        {skillGroups.map((group, index) => {
+        {visibleSkillGroups.map((group, index) => {
           const key =
             skillGroupTranslationKeys[group.title];
 

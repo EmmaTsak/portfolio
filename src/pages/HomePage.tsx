@@ -109,9 +109,9 @@ const name = t('names.fullName');
       <section className="home-strengths">
         <div className="container home-strengths__grid">
           {([
-            ['01', 'fullStackTitle', 'fullStackDescription'],
-            ['02', 'qualityTitle', 'qualityDescription'],
-            ['03', 'uxTitle', 'uxDescription'],
+            ['01', 'devopsTitle', 'devopsDescription'],
+            ['02', 'softwareTitle', 'softwareDescription'],
+            ['03', 'qualityTitle', 'qualityDescription'],
           ] as const).map(([number, title, description]) => (
             <div className="home-strengths__item" key={number}>
               <span className="home-strengths__number">{number}</span>

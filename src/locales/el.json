@@ -35,9 +35,9 @@
   },
   "home": {
     "hero": {
-      "availability": "OPEN TO SOFTWARE ENGINEERING ROLES · EUROPE · Greek & English",
+      "availability": "OPEN TO SOFTWARE ENGINEERING & DEVOPS ROLES · EUROPE · Greek & English",
       "role": "Software Engineer",
-      "positioning": "Αναπτύσσω πρακτικές full-stack εφαρμογές και βελτιώνω τον τρόπο ελέγχου και παράδοσής τους.",
+      "positioning": "Αναπτύσσω λογισμικό και τα engineering workflows που το ελέγχουν, το πακετάρουν και το παραδίδουν με αξιοπιστία.",
       "softwareDevelopment": "Ανάπτυξη Λογισμικού",
       "qualityEngineering": "Ποιότητα Λογισμικού",
       "uiux": "UI/UX",
@@ -50,7 +50,7 @@
       "design": "Σχεδιασμός",
       "designDescription": "Διεπαφές με επίκεντρο τον χρήστη",
       "metaTitle": "{{name}} | Portfolio",
-      "metaDescription": "Software Engineer με εμπειρία σε full-stack εφαρμογές, testing και CI workflows.",
+      "metaDescription": "Software Engineer με έμφαση σε DevOps, CI/CD, backend συστήματα, automation και αξιόπιστη παράδοση λογισμικού.",
       "engineeringFocus": "Τεχνική κατεύθυνση",
       "email": "Email",
       "headlineFirst": "Software",
@@ -62,24 +62,24 @@
         "deploy": "Διάθεση",
         "monitor": "Παρακολούθηση"
       },
-      "orbitCaption": "DESIGN / ENGINEER / IMPROVE"
+      "orbitCaption": "BUILD / TEST / AUTOMATE / IMPROVE"
     },
     "about": {
-      "eyebrow": "ΔΥΝΑΤΑ ΣΗΜΕΙΑ",
-      "title": "Σχετικά με εμένα",
-      "description": "Μου αρέσει να μετατρέπω πραγματικές ανάγκες σε ξεκάθαρες διεπαφές και να λύνω προβλήματα μέσα από προσεκτικό debugging.",
+      "eyebrow": "ΤΕΧΝΙΚΗ ΚΑΤΕΥΘΥΝΣΗ",
+      "title": "Engineering Focus",
+      "description": "Μου αρέσει να αναπτύσσω λογισμικό και να βελτιώνω τα συστήματα που χρησιμοποιούνται για testing, packaging, troubleshooting και αξιόπιστη παράδοσή του.",
       "relocation": "Διαθέσιμη για μετεγκατάσταση στην Ευρώπη · Ελληνικά & Αγγλικά",
-      "fullStackTitle": "Full-stack βάση",
-      "fullStackDescription": "React, Node.js, APIs, σχεσιακές και NoSQL βάσεις δεδομένων.",
-      "qualityTitle": "Έμφαση στην ποιότητα",
-      "qualityDescription": "Jest, χειροκίνητοι έλεγχοι, API testing, debugging και διερεύνηση σφαλμάτων.",
-      "uxTitle": "Γνώση UI/UX",
-      "uxDescription": "Figma, έρευνα, personas, user journeys και responsive σχεδιασμός."
+      "devopsTitle": "DevOps & CI/CD",
+      "devopsDescription": "Jenkins pipelines, Docker, Linux, GitHub Actions, build automation και container validation.",
+      "softwareTitle": "Software Engineering",
+      "softwareDescription": "Backend και full-stack ανάπτυξη με Java, Python, TypeScript, Node.js, REST APIs και βάσεις δεδομένων.",
+      "qualityTitle": "Reliability & Quality",
+      "qualityDescription": "Automated testing, CI quality gates, smoke tests, debugging, failure investigation και operational troubleshooting."
     },
     "selectedWork": {
-      "eyebrow": "ΕΡΓΑ",
+      "eyebrow": "PROJECTS",
       "title": "Projects",
-      "description": "",
+      "description": "Software engineering projects σε DevOps, CI/CD, backend development, systems, automation και testing.",
       "seeAll": "Περισσότερα"
     },
     "quality": {
@@ -94,27 +94,27 @@
       "releaseDescription": "Συνέπεια, integration και αναμενόμενη συμπεριφορά"
     },
     "workflow": {
-      "eyebrow": "ΤΡΟΠΟΣ ΕΡΓΑΣΙΑΣ",
-      "title": "Ανάπτυξη · Έλεγχος · Deploy · Monitoring",
-      "description": "Η τεχνική μου προσέγγιση μέσα από πραγματικά projects.",
+      "eyebrow": "ENGINEERING WORKFLOW",
+      "title": "Build · Test · Package · Monitor",
+      "description": "Η προσέγγισή μου στο software delivery μέσα από πραγματικά development και DevOps projects.",
       "evidence": "Παράδειγμα από project",
-      "viewProject": "Περισσότερα",
+      "viewProject": "Προβολή Project",
       "stages": {
         "build": {
-          "title": "Ανάπτυξη εφαρμογών που λύνουν πραγματικά προβλήματα",
-          "description": "Ανέπτυξα το PriceWise με React, TypeScript, Node.js και PostgreSQL, συνδυάζοντας σύγκριση τιμών supermarket, προγραμματισμένη συλλογή δεδομένων και shopping list."
+          "title": "Ανάπτυξη λογισμικού που λύνει πραγματικά προβλήματα",
+          "description": "Το PriceWise παρουσιάζει full-stack ανάπτυξη με React, TypeScript, Node.js, PostgreSQL και scheduled data-collection workflows."
         },
         "test": {
-          "title": "Έλεγχος συμπεριφοράς πριν την παράδοση",
-          "description": "Στην πρακτική μου στη Valmore έγραφα Jest tests και διερευνούσα σφάλματα. Στο Jenkins lab υλοποίησα αυτοματοποιημένους ελέγχους pytest και Ruff σε CI pipelines."
+          "title": "Αυτοματοποιημένος έλεγχος πριν την παράδοση",
+          "description": "Το PipelineForge εκτελεί JUnit tests μέσω Jenkins και Gradle, με automated quality gates πριν από το packaging και το container validation."
         },
         "deploy": {
-          "title": "Από τον κώδικα σε λειτουργικό αποτέλεσμα",
-          "description": "Δημοσίευσα prototype του PriceWise στο Railway. Ξεχωριστά, στο Jenkins lab υλοποίησα packaging, αρχειοθέτηση και διατήρηση build artifacts."
+          "title": "Packaging εφαρμογών σε αναπαραγώγιμα artifacts",
+          "description": "Το PipelineForge πακετάρει την Spring Boot εφαρμογή και δημιουργεί versioned Docker images μέσω Jenkins σε dedicated Linux Docker build agent."
         },
         "monitor": {
-          "title": "Παρακολούθηση και ανάλυση των builds",
-          "description": "Στο Jenkins reliability lab χρησιμοποιώ το REST API για παρακολούθηση αποτελεσμάτων builds, διαθεσιμότητας agents, κατάστασης της ουράς και αποτυχιών."
+          "title": "Παρακολούθηση CI υποδομής και διερεύνηση αποτυχιών",
+          "description": "Το Jenkins CI Reliability Lab χρησιμοποιεί το Jenkins REST API για παρακολούθηση builds, agents, queues και failure conditions μαζί με operational troubleshooting."
         }
       }
     },
@@ -218,16 +218,16 @@
       "seeAll": "Περισσότερα"
     },
     "skills": {
-      "eyebrow": "ΤΕΧΝΟΛΟΓΙΕΣ",
-      "title": "Δεξιότητες",
-      "description": "Τα εργαλεία και οι τεχνολογίες μου ανά κατηγορία.",
+      "eyebrow": "ENGINEERING TOOLKIT",
+      "title": "Τεχνικές Δεξιότητες",
+      "description": "Τεχνολογίες οργανωμένες με βάση τη χρήση τους σε software development, CI/CD και reliability.",
       "groups": {
-        "development": "Ανάπτυξη Λογισμικού",
-        "frontendMobile": "Frontend & Mobile",
+        "devopsCicd": "DevOps & CI/CD",
         "backendApis": "Backend & APIs",
-        "testingQuality": "Testing & Ποιότητα",
+        "development": "Ανάπτυξη Λογισμικού",
+        "testingQuality": "Testing & Quality",
         "data": "Δεδομένα",
-        "toolsDesign": "Εργαλεία & Σχεδιασμός"
+        "frontendMobile": "Frontend & Mobile"
       },
       "preview": "ΑΥΤΟΜΑΤΗ ΠΡΟΒΟΛΗ - 2 ΔΕΥΤ.",
       "pause": "Παύση",
@@ -694,7 +694,7 @@
     }
   },
   "footer": {
-    "tagline": "Ανάπτυξη λογισμικού, ποιότητα λογισμικού και διεπαφές με επίκεντρο τον χρήστη.",
+    "tagline": "Software engineering, DevOps, CI/CD και αξιόπιστη παράδοση εφαρμογών.",
     "builtWith": "Δημιουργήθηκε με React + TypeScript"
   }
 }
