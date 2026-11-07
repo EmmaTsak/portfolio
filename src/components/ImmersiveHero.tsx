@@ -59,11 +59,6 @@ export function ImmersiveHero() {
           </Suspense>
         )}
       </div>
-
-      <div className="hero-engineering__core">
-        <span>ENGINEERING</span>
-        <strong>WORKFLOW</strong>
-      </div>
     </div>
   );
 }
